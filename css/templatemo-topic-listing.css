@@ -902,6 +902,40 @@ blockquote {
   height: 150px;
 }
 
+/*---------------------------------------
+  PROJECT CARDS (Portfolio)
+-----------------------------------------*/
+.project-card .card-title {
+  font-size: 1.05rem; /* uniform title size */
+  line-height: 1.3;
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: 0.25rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; /* keep single line for consistent height */
+}
+
+.project-card .card-text {
+  font-size: 0.95rem; /* uniform body size */
+  line-height: 1.5;
+  color: var(--p-color);
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* clamp to two lines for consistency */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: calc(1.5em * 2); /* reserve space for two lines */
+}
+
+.project-card .card-body { /* ensure consistent vertical layout */
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card .card-img-top { /* optional slight radius match */
+  border-top-left-radius: var(--border-radius-small);
+  border-top-right-radius: var(--border-radius-small);
+}
+
 /* Revamped contact styles */
 .contact-card {
   background: var(--white-color);

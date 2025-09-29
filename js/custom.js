@@ -85,4 +85,89 @@
     $(this).toggleClass('active');
   });
 
+  // Portfolio filters (show/hide by category)
+  $(function () {
+    if (!$('body').hasClass('portfolio-page')) return;
+
+    var $grid = $('.portfolio-grid');
+    var $items = $grid.find('[data-cats]');
+
+    function applyFilter(filter) {
+      $items.each(function () {
+        var cats = ($(this).attr('data-cats') || '').split(/\s+/);
+        var match = (filter === 'all') || cats.indexOf(filter) !== -1;
+        $(this).toggleClass('d-none', !match);
+      });
+    }
+
+    // initialize aria-pressed on active filter
+    var $activeBtn = $('.portfolio-filter [data-filter].active');
+    if ($activeBtn.length) { $activeBtn.attr('aria-pressed', 'true'); }
+
+    $(document).on('click', '.portfolio-filter [data-filter]', function () {
+      var filter = $(this).data('filter');
+      var $btns = $('.portfolio-filter [data-filter]');
+      $btns.removeClass('active').attr('aria-pressed', 'false');
+      $(this).addClass('active').attr('aria-pressed', 'true');
+      applyFilter(filter);
+    });
+  });
+
 })(window.jQuery);
+
+
+// Simple page fade transitions
+(function () {
+  var body = document.body;
+  if (!body) {
+    return;
+  }
+
+  function shouldHandleLink(link) {
+    var href = link.getAttribute('href');
+    if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:')) {
+      return false;
+    }
+    if (link.target && link.target !== '_self') {
+      return false;
+    }
+    if (link.hasAttribute('download') || (link.dataset && link.dataset.noTransition !== undefined)) {
+      return false;
+    }
+    var url = new URL(href, window.location.href);
+    if (url.origin !== window.location.origin) {
+      return false;
+    }
+    if (url.pathname === window.location.pathname && url.search === window.location.search && url.hash === '') {
+      return false;
+    }
+    return true;
+  }
+
+  document.querySelectorAll('a[href]').forEach(function (link) {
+    if (!shouldHandleLink(link)) {
+      return;
+    }
+
+    link.addEventListener('click', function (event) {
+      if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
+        return;
+      }
+
+      event.preventDefault();
+      var destination = link.href;
+
+      body.classList.add('is-page-transitioning');
+
+      window.setTimeout(function () {
+        window.location.href = destination;
+      }, 220);
+    });
+  });
+
+  window.addEventListener('pageshow', function (evt) {
+    if (evt.persisted) {
+      body.classList.remove('is-page-transitioning');
+    }
+  });
+})();

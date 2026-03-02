@@ -113,8 +113,13 @@
                     <h3 class="mb-2 h4 fw-bold">Project Details</h3>
                     <p class="text-muted mb-4 small">Give us a quick overview. We’ll come to the call prepared.</p>
 
-                    <form id="contactForm" action="#" method="post" class="custom-form contact-form" role="form"
-                        novalidate>
+                    <form id="contactForm" action="https://formsubmit.co/volatile-solutions@outlook.com" method="post"
+                        class="custom-form contact-form" role="form" novalidate>
+                        <!-- Formsubmit routing settings -->
+                        <input type="hidden" name="_subject" value="New Project Inquiry - Volatile Solutions">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_captcha" value="false"> <!-- Using AJAX negates standard captcha -->
+
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
@@ -166,6 +171,16 @@
                             </div>
                         </div>
                     </form>
+
+                    <!-- Success State -->
+                    <div id="formSuccess" class="text-center py-5" style="display: none;">
+                        <i class="bi bi-check-circle-fill text-primary" style="font-size: 3.5rem;"></i>
+                        <h4 class="mt-4 fw-bold text-dark">Request received.</h4>
+                        <p class="text-muted small mx-auto" style="max-width: 280px;">Thanks for reaching out. We will
+                            review your project details and respond within 1 business day.</p>
+                        <button class="btn btn-outline-primary mt-3" onclick="window.location.reload()">Send another
+                            message</button>
+                    </div>
                 </div>
             </div>
         </section>

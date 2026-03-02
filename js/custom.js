@@ -119,10 +119,30 @@
       }
 
       if (valid) {
-        // Show success state
-        $(form).find('.row').fadeOut(200, function () {
-          $('#formSuccess').fadeIn(300);
-        });
+        var $submitBtn = $(form).find('button[type="submit"]');
+        var originalText = $submitBtn.text();
+        $submitBtn.prop('disabled', true).html('<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Sending...');
+
+        var formData = new FormData(form);
+
+        fetch("https://formsubmit.co/ajax/volatile-solutions@outlook.com", {
+          method: "POST",
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        })
+          .then(function (response) { return response.json(); })
+          .then(function (data) {
+            // Show success state
+            $(form).find('.row').fadeOut(200, function () {
+              $('#formSuccess').fadeIn(300);
+            });
+          })
+          .catch(function (error) {
+            alert('There was an issue sending your request. Please try emailing volatile-solutions@outlook.com directly.');
+            $submitBtn.prop('disabled', false).text(originalText);
+          });
       }
     });
 

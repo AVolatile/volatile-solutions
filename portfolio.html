@@ -1,840 +1,381 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
 
-    <meta name="description" content="Portfolio of recent work by Volatile | Solutions">
-    <meta name="author" content="Volatile | Solutions">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="description"
+    content="Selected work by Volatile Solutions — websites, brand systems, and growth projects shipped for real clients.">
+  <meta name="author" content="Volatile | Solutions">
+  <title>Portfolio — Volatile Solutions</title>
 
-    <title>Portfolio — Volatile | Solutions</title>
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Portfolio — Volatile Solutions" />
+  <meta property="og:description" content="Websites, brand systems, and growth projects we've shipped for clients." />
+  <meta property="og:image" content="images/logo.png" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="canonical" href="https://volatilesolutions.com/portfolio.html" />
 
-    <!-- CSS FILES -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-icons.css" rel="stylesheet">
-    <link href="css/templatemo-topic-listing.css" rel="stylesheet">
-    <link rel="icon" type="image/png" href="images/favicon.png?v=1" />
-    <link rel="shortcut icon" type="image/png" href="images/favicon.png?v=1" />
-    <link rel="apple-touch-icon" href="images/favicon.png?v=1" />
-  </head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap"
+    rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-icons.css" rel="stylesheet">
+  <link href="css/templatemo-topic-listing.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/favicon.png?v=1" />
+  <link rel="shortcut icon" type="image/png" href="images/favicon.png?v=1" />
+  <link rel="apple-touch-icon" href="images/favicon.png?v=1" />
+</head>
 
-  <body class="portfolio-page" id="top">
-    <main>
-      <!-- NAV -->
-      <nav class="navbar navbar-expand-lg">
-        <div class="container">
-          <a class="navbar-brand" href="index.html">
-            <img src="images/logo.png" alt="Volatile | Solutions" class="logo-img">
-            <img src="images/vs-text.png" alt="Volatile | Solutions" class="logo-text-img">
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-lg-5 ms-lg-auto align-items-lg-center">
-              <li class="nav-item"><a class="nav-link" href="index.html#section_1">Home</a></li>
-              <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
-              <li class="nav-item"><a class="nav-link" href="index.html#section_3">Process</a></li>
-              <li class="nav-item"><a class="nav-link" href="index.html#section_4">FAQs</a></li>
-              <li class="nav-item"><a class="nav-link active" href="portfolio.html">Portfolio</a></li>
-              <li class="nav-item"><a class="nav-link" href="packages.html">Packages</a></li>
-              <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
-      <!-- HEADER -->
-      <header class="site-header d-flex flex-column justify-content-center align-items-center">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-lg-6 col-12">
-              <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="index.html">Homepage</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Portfolio</li>
-                </ol>
-              </nav>
-
-              <h2 class="text-white">Selected Work</h2>
-              <p class="text-white-50 mt-3 mb-0">Websites, brand systems, and growth projects we’ve shipped for clients.</p>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      <!-- Live Projects (Main Portfolio Grid) -->
-      <section id="projects" class="section-padding section-bg">
-        <div class="container">
-          <div class="row text-center pb-4">
-            <h2 class="col-md-8 m-auto h2">Live Projects</h2>
-            <p class="text-muted">A rotating selection of production builds. Each card links to the live site and repository.</p>
-          </div>
-          <div class="row pb-3">
-            <div class="col-12 text-center">
-              <div class="portfolio-filter" role="group" aria-label="Portfolio Filters">
-                <button type="button" class="btn btn-outline-primary btn-sm rounded-pill portfolio-filter-btn active" aria-pressed="true" data-filter="all">All</button>
-                <button type="button" class="btn btn-outline-primary btn-sm rounded-pill portfolio-filter-btn" aria-pressed="false" data-filter="websites">Websites</button>
-                <button type="button" class="btn btn-outline-primary btn-sm rounded-pill portfolio-filter-btn" aria-pressed="false" data-filter="apps">Apps</button>
-                <button type="button" class="btn btn-outline-primary btn-sm rounded-pill portfolio-filter-btn" aria-pressed="false" data-filter="ecommerce">E‑commerce</button>
-                <button type="button" class="btn btn-outline-primary btn-sm rounded-pill portfolio-filter-btn" aria-pressed="false" data-filter="saas">SaaS</button>
-                <button type="button" class="btn btn-outline-primary btn-sm rounded-pill portfolio-filter-btn" aria-pressed="false" data-filter="finance">Financial</button>
-                <button type="button" class="btn btn-outline-primary btn-sm rounded-pill portfolio-filter-btn" aria-pressed="false" data-filter="education">Education</button>
-                <button type="button" class="btn btn-outline-primary btn-sm rounded-pill portfolio-filter-btn" aria-pressed="false" data-filter="branding">Branding</button>
-                <button type="button" class="btn btn-outline-primary btn-sm rounded-pill portfolio-filter-btn" aria-pressed="false" data-filter="games">Games</button>
-                <button type="button" class="btn btn-outline-primary btn-sm rounded-pill portfolio-filter-btn" aria-pressed="false" data-filter="other">Other</button>
-              </div>
-            </div>
-          </div>
-          <div class="portfolio-grid row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 g-lg-4">
-            <div class="col" data-cats="websites apps saas">
-              <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-                <img src="images/portfolio/cloud-keep-thumbnail.png" class="card-img-top rounded-top-3" alt="Cloud Keep project thumbnail">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 card-title mb-2">Cloud Keep</h3>
-                  <p class="card-text text-muted flex-grow-1">Secure, fast, and intelligent file management for modern teams. Collaborate seamlessly across your organization.</p>
-                  <div class="mt-3 d-flex gap-2">
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="https://cloud-keep.netlify.app/" target="_blank" rel="noopener">Live</a>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#" target="_blank" rel="noopener">GitHub</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col" data-cats="websites apps">
-              <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-                <img src="images/portfolio/jobly-thumbnail.png" class="card-img-top rounded-top-3" alt="Jobly project thumbnail">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 card-title mb-2">Jobly</h3>
-                  <p class="card-text text-muted flex-grow-1">Job search app with auth, filtering, and saved roles.</p>
-                  <div class="mt-3 d-flex gap-2">
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="https://jobly-jobsearch.netlify.app/" target="_blank" rel="noopener">Live</a>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#" target="_blank" rel="noopener">GitHub</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col" data-cats="websites ecommerce branding">
-              <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-                <img src="images/portfolio/birdie-bay-thumbnail.png" class="card-img-top rounded-top-3" alt="Birdie Bay project thumbnail">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 card-title mb-2">Birdie Bay</h3>
-                  <p class="card-text text-muted flex-grow-1">E‑commerce concept with product pages and checkout flow.</p>
-                  <div class="mt-3 d-flex gap-2">
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="https://birdie-bay.netlify.app/" target="_blank" rel="noopener">Live</a>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#" target="_blank" rel="noopener">GitHub</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col" data-cats="websites saas branding">
-              <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-                <img src="images/portfolio/frost-thumbnail.png" class="card-img-top rounded-top-3" alt="Frost project thumbnail">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 card-title mb-2">Frost</h3>
-                  <p class="card-text text-muted flex-grow-1">Online fitness coaching. Custom programs, hands-on feedback, and accountability designed around your life.</p>
-                  <div class="mt-3 d-flex gap-2">
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="https://frost-fitness.netlify.app/" target="_blank" rel="noopener">Live</a>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#" target="_blank" rel="noopener">GitHub</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col" data-cats="websites branding">
-              <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-                <img src="images/portfolio/moody-brewer-thumbnail.png" class="card-img-top rounded-top-3" alt="Moody Brewer project thumbnail">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 card-title mb-2">Moody Brewer</h3>
-                  <p class="card-text text-muted flex-grow-1">Brand + site concept with playful visuals and motion.</p>
-                  <div class="mt-3 d-flex gap-2">
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="#" target="_blank" rel="noopener">Live</a>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#" target="_blank" rel="noopener">GitHub</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col" data-cats="finance apps">
-              <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-                <img src="images/portfolio/mula-thumbnail.png" class="card-img-top rounded-top-3" alt="Mula project thumbnail">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 card-title mb-2">Mula</h3>
-                  <p class="card-text text-muted flex-grow-1">Expense manager with charts, filters, and export.</p>
-                  <div class="mt-3 d-flex gap-2">
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="#" target="_blank" rel="noopener">Live</a>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#" target="_blank" rel="noopener">GitHub</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col" data-cats="websites education">
-              <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-                <img src="images/portfolio/scholar-link-thumbnail.png" class="card-img-top rounded-top-3" alt="ScholarLink project thumbnail">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 card-title mb-2">ScholarLink</h3>
-                  <p class="card-text text-muted flex-grow-1">A website that helps you connect with tutors and teachers.</p>
-                  <div class="mt-3 d-flex gap-2">
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="https://scholar-link.netlify.app/" target="_blank" rel="noopener">Live</a>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#" target="_blank" rel="noopener">GitHub</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Future: Websites -->
-            <div class="col" data-cats="websites">
-              <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-                <img src="https://placehold.co/600x400?text=Nova+Orbit" class="card-img-top rounded-top-3" alt="Nova Orbit concept preview">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 card-title mb-2">Nova Orbit</h3>
-                  <p class="card-text text-muted flex-grow-1">A space-tech marketing site combining immersive visuals with investor-ready metrics.</p>
-                  <div class="mt-3 d-flex gap-2">
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Preview</a>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Project Brief</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col" data-cats="websites">
-              <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-                <img src="https://placehold.co/600x400?text=Verve+Creative" class="card-img-top rounded-top-3" alt="Verve Creative concept preview">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 card-title mb-2">Verve Creative</h3>
-                  <p class="card-text text-muted flex-grow-1">Boutique creative agency portfolio with motion-rich case studies and inbound funnels.</p>
-                  <div class="mt-3 d-flex gap-2">
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Preview</a>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Project Brief</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col" data-cats="websites">
-              <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-                <img src="https://placehold.co/600x400?text=Forward+Founders" class="card-img-top rounded-top-3" alt="Forward Founders concept preview">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 card-title mb-2">Forward Founders</h3>
-                  <p class="card-text text-muted flex-grow-1">Accelerator site outlining programs, mentor network, and application timelines.</p>
-                  <div class="mt-3 d-flex gap-2">
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Preview</a>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Project Brief</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col" data-cats="websites">
-              <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-                <img src="https://placehold.co/600x400?text=Pulse+Clinic" class="card-img-top rounded-top-3" alt="Pulse Clinic concept preview">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 card-title mb-2">Pulse Clinic</h3>
-                  <p class="card-text text-muted flex-grow-1">Telehealth clinic experience with care pathways, provider bios, and booking flow.</p>
-                  <div class="mt-3 d-flex gap-2">
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Preview</a>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Project Brief</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col" data-cats="websites">
-              <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-                <img src="https://placehold.co/600x400?text=Route+Atlas" class="card-img-top rounded-top-3" alt="Route Atlas concept preview">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 card-title mb-2">Route Atlas</h3>
-                  <p class="card-text text-muted flex-grow-1">Logistics brand homepage showing coverage maps, integrations, and enterprise CTAs.</p>
-                  <div class="mt-3 d-flex gap-2">
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Preview</a>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Project Brief</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Future: Apps -->
-            <div class="col" data-cats="apps">
-              <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-                <img src="https://placehold.co/600x400?text=SyncSpark" class="card-img-top rounded-top-3" alt="SyncSpark concept preview">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 card-title mb-2">SyncSpark</h3>
-                  <p class="card-text text-muted flex-grow-1">Collaboration app for distributed teams with shared dashboards and async handoffs.</p>
-                  <div class="mt-3 d-flex gap-2">
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Preview</a>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Project Brief</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col" data-cats="apps">
-              <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-                <img src="https://placehold.co/600x400?text=HabitFlow" class="card-img-top rounded-top-3" alt="HabitFlow concept preview">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 card-title mb-2">HabitFlow</h3>
-                  <p class="card-text text-muted flex-grow-1">Productivity coach that turns daily routines into streaks with friendly nudges.</p>
-                  <div class="mt-3 d-flex gap-2">
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Preview</a>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Project Brief</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col" data-cats="apps">
-              <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-                <img src="https://placehold.co/600x400?text=TransitTrail" class="card-img-top rounded-top-3" alt="TransitTrail concept preview">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 card-title mb-2">TransitTrail</h3>
-                  <p class="card-text text-muted flex-grow-1">City mobility planner blending transit data, bike share availability, and last-mile routes.</p>
-                  <div class="mt-3 d-flex gap-2">
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Preview</a>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Project Brief</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col" data-cats="apps education">
-              <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-                <img src="https://placehold.co/600x400?text=StoryVerse" class="card-img-top rounded-top-3" alt="StoryVerse concept preview">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 card-title mb-2">StoryVerse</h3>
-                  <p class="card-text text-muted flex-grow-1">Interactive reading companion that gamifies literacy with branching stories.</p>
-                  <div class="mt-3 d-flex gap-2">
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Preview</a>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Project Brief</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col" data-cats="apps education">
-              <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-                <img src="https://placehold.co/600x400?text=CampusConnect" class="card-img-top rounded-top-3" alt="CampusConnect concept preview">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 card-title mb-2">CampusConnect</h3>
-                  <p class="card-text text-muted flex-grow-1">Campus hub app unifying events, clubs, and resources for college students.</p>
-                  <div class="mt-3 d-flex gap-2">
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Preview</a>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Project Brief</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Future: E‑commerce -->
-            <div class="col" data-cats="ecommerce websites">
-              <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-                <img src="https://placehold.co/600x400?text=Artisan+Grove" class="card-img-top rounded-top-3" alt="Artisan Grove concept preview">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 card-title mb-2">Artisan Grove</h3>
-                  <p class="card-text text-muted flex-grow-1">Marketplace for independent makers with curated collections and storytelling.</p>
-                  <div class="mt-3 d-flex gap-2">
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Preview</a>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Project Brief</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col" data-cats="ecommerce websites">
-              <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-                <img src="https://placehold.co/600x400?text=GearGrid" class="card-img-top rounded-top-3" alt="GearGrid concept preview">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 card-title mb-2">GearGrid</h3>
-                  <p class="card-text text-muted flex-grow-1">Premium outdoor gear shop featuring shoppable lookbooks and comparison tools.</p>
-                  <div class="mt-3 d-flex gap-2">
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Preview</a>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Project Brief</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col" data-cats="ecommerce websites">
-              <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-                <img src="https://placehold.co/600x400?text=BloomBox" class="card-img-top rounded-top-3" alt="BloomBox concept preview">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 card-title mb-2">BloomBox</h3>
-                  <p class="card-text text-muted flex-grow-1">Seasonal flower subscription with customization and care tutorials.</p>
-                  <div class="mt-3 d-flex gap-2">
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Preview</a>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Project Brief</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col" data-cats="ecommerce websites">
-              <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-                <img src="https://placehold.co/600x400?text=StellarSneaks" class="card-img-top rounded-top-3" alt="StellarSneaks concept preview">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 card-title mb-2">StellarSneaks</h3>
-                  <p class="card-text text-muted flex-grow-1">Limited release sneaker boutique with drop timers and community reviews.</p>
-                  <div class="mt-3 d-flex gap-2">
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Preview</a>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Project Brief</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col" data-cats="ecommerce websites">
-              <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-                <img src="https://placehold.co/600x400?text=BrewBoutique" class="card-img-top rounded-top-3" alt="BrewBoutique concept preview">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 card-title mb-2">BrewBoutique</h3>
-                  <p class="card-text text-muted flex-grow-1">Craft coffee storefront offering subscriptions, origin stories, and brewing guides.</p>
-                  <div class="mt-3 d-flex gap-2">
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Preview</a>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Project Brief</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Future: SaaS -->
-            <div class="col" data-cats="saas">
-              <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-                <img src="https://placehold.co/600x400?text=MetricsPilot" class="card-img-top rounded-top-3" alt="MetricsPilot concept preview">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 card-title mb-2">MetricsPilot</h3>
-                  <p class="card-text text-muted flex-grow-1">Analytics SaaS homepage with use cases, data visualizations, and trial activation flow.</p>
-                  <div class="mt-3 d-flex gap-2">
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Preview</a>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Project Brief</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col" data-cats="saas">
-              <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-                <img src="https://placehold.co/600x400?text=SupportSphere" class="card-img-top rounded-top-3" alt="SupportSphere concept preview">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 card-title mb-2">SupportSphere</h3>
-                  <p class="card-text text-muted flex-grow-1">Customer success platform detailing features, roadmap, and ROI calculator.</p>
-                  <div class="mt-3 d-flex gap-2">
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Preview</a>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Project Brief</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col" data-cats="saas">
-              <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-                <img src="https://placehold.co/600x400?text=AutoDeploy" class="card-img-top rounded-top-3" alt="AutoDeploy concept preview">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 card-title mb-2">AutoDeploy</h3>
-                  <p class="card-text text-muted flex-grow-1">Continuous deployment platform with pipeline visualization and integration gallery.</p>
-                  <div class="mt-3 d-flex gap-2">
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Preview</a>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Project Brief</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col" data-cats="saas">
-              <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-                <img src="https://placehold.co/600x400?text=InsightBridge" class="card-img-top rounded-top-3" alt="InsightBridge concept preview">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 card-title mb-2">InsightBridge</h3>
-                  <p class="card-text text-muted flex-grow-1">Research automation SaaS showcasing survey builders, analysis, and security.</p>
-                  <div class="mt-3 d-flex gap-2">
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Preview</a>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Project Brief</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col" data-cats="saas">
-              <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-                <img src="https://placehold.co/600x400?text=OrbitOps" class="card-img-top rounded-top-3" alt="OrbitOps concept preview">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 card-title mb-2">OrbitOps</h3>
-                  <p class="card-text text-muted flex-grow-1">Operations intelligence suite featuring scenario planning and resource management.</p>
-                  <div class="mt-3 d-flex gap-2">
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Preview</a>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Project Brief</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Future: Financial -->
-            <div class="col" data-cats="finance">
-              <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-                <img src="https://placehold.co/600x400?text=Ledgerly" class="card-img-top rounded-top-3" alt="Ledgerly concept preview">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 card-title mb-2">Ledgerly</h3>
-                  <p class="card-text text-muted flex-grow-1">Cloud bookkeeping dashboard with KPI snapshots and small-business testimonials.</p>
-                  <div class="mt-3 d-flex gap-2">
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Preview</a>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Project Brief</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col" data-cats="finance">
-              <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-                <img src="https://placehold.co/600x400?text=SummitFunds" class="card-img-top rounded-top-3" alt="SummitFunds concept preview">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 card-title mb-2">SummitFunds</h3>
-                  <p class="card-text text-muted flex-grow-1">Investment advisory site with fund comparison, performance charts, and compliance-ready docs.</p>
-                  <div class="mt-3 d-flex gap-2">
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Preview</a>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Project Brief</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col" data-cats="finance">
-              <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-                <img src="https://placehold.co/600x400?text=QuantaTax" class="card-img-top rounded-top-3" alt="QuantaTax concept preview">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 card-title mb-2">QuantaTax</h3>
-                  <p class="card-text text-muted flex-grow-1">Modern tax automation product outlining workflows, integrations, and security.</p>
-                  <div class="mt-3 d-flex gap-2">
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Preview</a>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Project Brief</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col" data-cats="finance">
-              <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-                <img src="https://placehold.co/600x400?text=SecureNest" class="card-img-top rounded-top-3" alt="SecureNest concept preview">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 card-title mb-2">SecureNest</h3>
-                  <p class="card-text text-muted flex-grow-1">Digital insurance platform with coverage calculators and trust-building social proof.</p>
-                  <div class="mt-3 d-flex gap-2">
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Preview</a>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Project Brief</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col" data-cats="finance">
-              <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-                <img src="https://placehold.co/600x400?text=PocketPilot" class="card-img-top rounded-top-3" alt="PocketPilot concept preview">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 card-title mb-2">PocketPilot</h3>
-                  <p class="card-text text-muted flex-grow-1">Personal finance coaching brand featuring budgeting tools and cohort programs.</p>
-                  <div class="mt-3 d-flex gap-2">
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Preview</a>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Project Brief</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Future: Education -->
-            <div class="col" data-cats="education">
-              <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-                <img src="https://placehold.co/600x400?text=MentorHub" class="card-img-top rounded-top-3" alt="MentorHub concept preview">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 card-title mb-2">MentorHub</h3>
-                  <p class="card-text text-muted flex-grow-1">Mentorship marketplace connecting students with industry experts and progress tracking.</p>
-                  <div class="mt-3 d-flex gap-2">
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Preview</a>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Project Brief</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col" data-cats="education">
-              <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-                <img src="https://placehold.co/600x400?text=STEMSpark" class="card-img-top rounded-top-3" alt="STEMSpark concept preview">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 card-title mb-2">STEMSpark</h3>
-                  <p class="card-text text-muted flex-grow-1">After-school STEM program site with curriculum tracks and instructor bios.</p>
-                  <div class="mt-3 d-flex gap-2">
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Preview</a>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Project Brief</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col" data-cats="education">
-              <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-                <img src="https://placehold.co/600x400?text=LanguageLoop" class="card-img-top rounded-top-3" alt="LanguageLoop concept preview">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 card-title mb-2">LanguageLoop</h3>
-                  <p class="card-text text-muted flex-grow-1">Language learning platform with adaptive lessons and tutor matching.</p>
-                  <div class="mt-3 d-flex gap-2">
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Preview</a>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Project Brief</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col" data-cats="education">
-              <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-                <img src="https://placehold.co/600x400?text=ScholarStudio" class="card-img-top rounded-top-3" alt="ScholarStudio concept preview">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 card-title mb-2">ScholarStudio</h3>
-                  <p class="card-text text-muted flex-grow-1">Course builder dashboard for educators with modular content tools.</p>
-                  <div class="mt-3 d-flex gap-2">
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Preview</a>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Project Brief</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col" data-cats="education">
-              <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-                <img src="https://placehold.co/600x400?text=ParentPulse" class="card-img-top rounded-top-3" alt="ParentPulse concept preview">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 card-title mb-2">ParentPulse</h3>
-                  <p class="card-text text-muted flex-grow-1">Parent communication portal with newsletters, volunteer coordination, and dashboards.</p>
-                  <div class="mt-3 d-flex gap-2">
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Preview</a>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Project Brief</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Future: Branding -->
-            <div class="col" data-cats="branding">
-              <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-                <img src="https://placehold.co/600x400?text=Canvas+%26+Co" class="card-img-top rounded-top-3" alt="Canvas & Co concept preview">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 card-title mb-2">Canvas & Co</h3>
-                  <p class="card-text text-muted flex-grow-1">Brand identity microsite showcasing visual systems and tone guidelines.</p>
-                  <div class="mt-3 d-flex gap-2">
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Preview</a>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Project Brief</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col" data-cats="branding">
-              <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-                <img src="https://placehold.co/600x400?text=Neon+Narratives" class="card-img-top rounded-top-3" alt="Neon Narratives concept preview">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 card-title mb-2">Neon Narratives</h3>
-                  <p class="card-text text-muted flex-grow-1">Creative collective with highlighted campaigns, moodboards, and contact CTAs.</p>
-                  <div class="mt-3 d-flex gap-2">
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Preview</a>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Project Brief</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col" data-cats="branding">
-              <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-                <img src="https://placehold.co/600x400?text=EchoMark" class="card-img-top rounded-top-3" alt="EchoMark concept preview">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 card-title mb-2">EchoMark</h3>
-                  <p class="card-text text-muted flex-grow-1">Consultancy site aligning positioning workshops with logo/voice deliverables.</p>
-                  <div class="mt-3 d-flex gap-2">
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Preview</a>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Project Brief</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col" data-cats="branding">
-              <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-                <img src="https://placehold.co/600x400?text=Palette+Press" class="card-img-top rounded-top-3" alt="Palette Press concept preview">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 card-title mb-2">Palette Press</h3>
-                  <p class="card-text text-muted flex-grow-1">Print and packaging studio featuring tactile process stories and lookbooks.</p>
-                  <div class="mt-3 d-flex gap-2">
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Preview</a>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Project Brief</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col" data-cats="branding">
-              <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-                <img src="https://placehold.co/600x400?text=Iconic+Edge" class="card-img-top rounded-top-3" alt="Iconic Edge concept preview">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 card-title mb-2">Iconic Edge</h3>
-                  <p class="card-text text-muted flex-grow-1">Brand refresh concept with before/after galleries and motion explorations.</p>
-                  <div class="mt-3 d-flex gap-2">
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Preview</a>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Project Brief</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Future: Games -->
-            <div class="col" data-cats="games">
-              <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-                <img src="https://placehold.co/600x400?text=SketchGuess" class="card-img-top rounded-top-3" alt="SketchGuess concept preview">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 card-title mb-2">SketchGuess</h3>
-                  <p class="card-text text-muted flex-grow-1">Multiplayer guess-the-drawing game built with socket rooms and a simple canvas.</p>
-                  <div class="mt-3 d-flex gap-2">
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Preview</a>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Project Brief</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col" data-cats="games">
-              <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-                <img src="https://placehold.co/600x400?text=Hangman+Hub" class="card-img-top rounded-top-3" alt="Hangman Hub concept preview">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 card-title mb-2">Hangman Hub</h3>
-                  <p class="card-text text-muted flex-grow-1">Responsive hangman game with category packs, limited lives, and animations.</p>
-                  <div class="mt-3 d-flex gap-2">
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Preview</a>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Project Brief</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col" data-cats="games">
-              <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-                <img src="https://placehold.co/600x400?text=MatchMind" class="card-img-top rounded-top-3" alt="MatchMind concept preview">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 card-title mb-2">MatchMind</h3>
-                  <p class="card-text text-muted flex-grow-1">Flip-to-match memory game with timer, streak bonuses, and difficulty modes.</p>
-                  <div class="mt-3 d-flex gap-2">
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Preview</a>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Project Brief</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col" data-cats="games">
-              <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-                <img src="https://placehold.co/600x400?text=TriviaSprint" class="card-img-top rounded-top-3" alt="TriviaSprint concept preview">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 card-title mb-2">TriviaSprint</h3>
-                  <p class="card-text text-muted flex-grow-1">Real-time trivia game featuring timed rounds, leaderboards, and themed question sets.</p>
-                  <div class="mt-3 d-flex gap-2">
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Preview</a>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Project Brief</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col" data-cats="games">
-              <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-                <img src="https://placehold.co/600x400?text=PixelMaze" class="card-img-top rounded-top-3" alt="PixelMaze concept preview">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 card-title mb-2">PixelMaze</h3>
-                  <p class="card-text text-muted flex-grow-1">Simple maze runner where players dodge obstacles and collect coins for high scores.</p>
-                  <div class="mt-3 d-flex gap-2">
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Preview</a>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Project Brief</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Future: Other -->
-            <div class="col" data-cats="other">
-              <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-                <img src="https://placehold.co/600x400?text=CitySoul" class="card-img-top rounded-top-3" alt="CitySoul concept preview">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 card-title mb-2">CitySoul</h3>
-                  <p class="card-text text-muted flex-grow-1">Community nonprofit site with impact stories, donation flows, and volunteer signups.</p>
-                  <div class="mt-3 d-flex gap-2">
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Preview</a>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Project Brief</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col" data-cats="other">
-              <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-                <img src="https://placehold.co/600x400?text=GreenGrid" class="card-img-top rounded-top-3" alt="GreenGrid concept preview">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 card-title mb-2">GreenGrid</h3>
-                  <p class="card-text text-muted flex-grow-1">Sustainability initiative hub highlighting carbon goals and partner spotlights.</p>
-                  <div class="mt-3 d-flex gap-2">
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Preview</a>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Project Brief</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col" data-cats="other">
-              <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-                <img src="https://placehold.co/600x400?text=EventPulse" class="card-img-top rounded-top-3" alt="EventPulse concept preview">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 card-title mb-2">EventPulse</h3>
-                  <p class="card-text text-muted flex-grow-1">Event production studio with showreel, service tiers, and inquiry form.</p>
-                  <div class="mt-3 d-flex gap-2">
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Preview</a>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Project Brief</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col" data-cats="other">
-              <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-                <img src="https://placehold.co/600x400?text=MakerSpace" class="card-img-top rounded-top-3" alt="MakerSpace concept preview">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 card-title mb-2">MakerSpace</h3>
-                  <p class="card-text text-muted flex-grow-1">Makerspace membership portal featuring equipment catalogs and booking tools.</p>
-                  <div class="mt-3 d-flex gap-2">
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Preview</a>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Project Brief</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col" data-cats="other">
-              <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-                <img src="https://placehold.co/600x400?text=StudioSync" class="card-img-top rounded-top-3" alt="StudioSync concept preview">
-                <div class="card-body d-flex flex-column">
-                  <h3 class="h5 card-title mb-2">StudioSync</h3>
-                  <p class="card-text text-muted flex-grow-1">Photography studio showcase with portfolio galleries and client proofing.</p>
-                  <div class="mt-3 d-flex gap-2">
-                    <a class="btn btn-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Preview</a>
-                    <a class="btn btn-outline-primary btn-sm rounded-pill px-3" href="#!" target="_blank" rel="noopener">Project Brief</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-      </section>
-
-      <!-- CTA -->
-      <section class="section-padding section-bg">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-8 col-12 mx-auto text-center">
-              <h3 class="mb-3">Have a project in mind?</h3>
-              <p>We handle strategy, design, development, and launch. Tell us about your goals and we’ll propose the simplest path to results.</p>
-              <a class="btn custom-btn mt-2" href="contact.html">Start a Project</a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="site-footer section-padding">
+<body class="portfolio-page" id="top">
+  <main>
+    <nav class="navbar navbar-expand-lg" aria-label="Main menu">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-3 col-12 mb-4 pb-2">
-            <a class="navbar-brand mb-2" href="index.html">
-              <img src="images/logo.png" alt="Volatile | Solutions" class="logo-img">
-              <img src="images/vs-text.png" alt="Volatile | Solutions" class="logo-text-img">
-            </a>
-          </div>
+        <a class="navbar-brand" href="index.html">
+          <img src="images/logo.png" alt="Volatile Solutions" class="logo-img">
+          <img src="images/vs-text.png" alt="Volatile Solutions" class="logo-text-img">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-lg-5 ms-lg-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="index.html#section_1">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#section_3">Process</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#section_4">FAQs</a></li>
+            <li class="nav-item"><a class="nav-link active" href="portfolio.html">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="packages.html">Packages</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-          <div class="col-lg-3 col-md-4 col-6">
-            <h6 class="site-footer-title mb-3">Resources</h6>
-            <ul class="site-footer-links">
-              <li class="site-footer-link-item"><a href="index.html#section_1" class="site-footer-link">Home</a></li>
-              <li class="site-footer-link-item"><a href="index.html#section_2" class="site-footer-link">Services</a></li>
-              <li class="site-footer-link-item"><a href="portfolio.html" class="site-footer-link">Portfolio</a></li>
-              <li class="site-footer-link-item"><a href="index.html#section_5" class="site-footer-link">Contact</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-6 mb-4 mb-lg-0">
-            <h6 class="site-footer-title mb-3">Information</h6>
-            <p class="text-white d-flex mb-1"><a href="tel: 401-545-6860" class="site-footer-link">401-545-6860</a></p>
-            <p class="text-white d-flex"><a href="mailto:volatile-soulutions@outlook.com" class="site-footer-link">volatile-soulutions@outlook.com</a></p>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-12 mt-4 mt-lg-0 ms-auto">
-            <p class="copyright-text mt-lg-5 mt-4">Copyright © 2025 Volatile | Solutions. All rights reserved.
-              <br><br> <a rel="nofollow" href="https://templatemo.com" target="_blank"></a>
+    <header class="site-header d-flex flex-column justify-content-center align-items-center">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 col-12">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Homepage</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Portfolio</li>
+              </ol>
+            </nav>
+            <h1 class="text-white">Selected Work</h1>
+            <p class="text-white-50 mt-3 mb-0">Websites, brand systems, and growth projects we've shipped for clients.
             </p>
           </div>
         </div>
       </div>
-    </footer>
+    </header>
 
-    <!-- JS -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/jquery.sticky.js"></script>
-    <script src="js/click-scroll.js"></script>
-    <script src="js/custom.js"></script>
-  </body>
+    <!-- Mid-page CTA -->
+    <section class="section-padding" style="padding-bottom:0;">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-8">
+            <p class="section-lead">Have a similar project in mind? <a href="contact.html" class="link-arrow">Start a
+                Project</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Live Projects -->
+    <section id="projects" class="section-padding section-bg">
+      <div class="container">
+        <div class="row text-center pb-4">
+          <h2 class="col-md-8 m-auto h2">Live Projects</h2>
+          <p class="text-muted">Production builds with live links. Each card shows the project type and key
+            deliverables.</p>
+        </div>
+        <div class="row pb-3">
+          <div class="col-12 text-center">
+            <div class="portfolio-filter" role="group" aria-label="Portfolio Filters">
+              <button type="button" class="btn btn-outline-primary btn-sm rounded-pill portfolio-filter-btn active"
+                aria-pressed="true" data-filter="all">All</button>
+              <button type="button" class="btn btn-outline-primary btn-sm rounded-pill portfolio-filter-btn"
+                aria-pressed="false" data-filter="websites">Websites</button>
+              <button type="button" class="btn btn-outline-primary btn-sm rounded-pill portfolio-filter-btn"
+                aria-pressed="false" data-filter="apps">Apps</button>
+              <button type="button" class="btn btn-outline-primary btn-sm rounded-pill portfolio-filter-btn"
+                aria-pressed="false" data-filter="ecommerce">E‑commerce</button>
+              <button type="button" class="btn btn-outline-primary btn-sm rounded-pill portfolio-filter-btn"
+                aria-pressed="false" data-filter="branding">Branding</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-grid row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 g-lg-4">
+          <!-- Cloud Keep -->
+          <div class="col" data-cats="websites apps">
+            <div class="card project-card h-100 shadow-sm border-0 rounded-3">
+              <img src="images/portfolio/cloud-keep-thumbnail.png" class="card-img-top rounded-top-3"
+                alt="Cloud Keep project — file management dashboard">
+              <div class="card-body d-flex flex-column">
+                <div class="d-flex gap-2 mb-2 flex-wrap">
+                  <span class="badge bg-light text-dark">SaaS</span>
+                  <span class="badge bg-light text-dark">Web App</span>
+                </div>
+                <h3 class="h5 card-title mb-2">Cloud Keep</h3>
+                <p class="card-text text-muted flex-grow-1">Secure, fast, intelligent file management for modern teams.
+                  Collaboration features, role-based access, and smart search.</p>
+                <p class="card-text"><small class="text-muted"><strong>Deliverables:</strong> Strategy, UX, Full-stack
+                    build</small></p>
+                <div class="mt-3 d-flex gap-2">
+                  <a class="btn btn-primary btn-sm rounded-pill px-3" href="https://cloud-keep.netlify.app/"
+                    target="_blank" rel="noopener">Live Site</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Jobly -->
+          <div class="col" data-cats="websites apps">
+            <div class="card project-card h-100 shadow-sm border-0 rounded-3">
+              <img src="images/portfolio/jobly-thumbnail.png" class="card-img-top rounded-top-3"
+                alt="Jobly project — job search application">
+              <div class="card-body d-flex flex-column">
+                <div class="d-flex gap-2 mb-2 flex-wrap">
+                  <span class="badge bg-light text-dark">Web App</span>
+                  <span class="badge bg-light text-dark">Landing Page</span>
+                </div>
+                <h3 class="h5 card-title mb-2">Jobly</h3>
+                <p class="card-text text-muted flex-grow-1">Job search app with auth, filtering, saved roles, and a
+                  clean discovery experience.</p>
+                <p class="card-text"><small class="text-muted"><strong>Deliverables:</strong> UX Design, Build, Auth
+                    integration</small></p>
+                <div class="mt-3 d-flex gap-2">
+                  <a class="btn btn-primary btn-sm rounded-pill px-3" href="https://jobly-jobsearch.netlify.app/"
+                    target="_blank" rel="noopener">Live Site</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Birdie Bay -->
+          <div class="col" data-cats="websites ecommerce branding">
+            <div class="card project-card h-100 shadow-sm border-0 rounded-3">
+              <img src="images/portfolio/birdie-bay-thumbnail.png" class="card-img-top rounded-top-3"
+                alt="Birdie Bay project — e-commerce storefront">
+              <div class="card-body d-flex flex-column">
+                <div class="d-flex gap-2 mb-2 flex-wrap">
+                  <span class="badge bg-light text-dark">E‑commerce</span>
+                  <span class="badge bg-light text-dark">Branding</span>
+                </div>
+                <h3 class="h5 card-title mb-2">Birdie Bay</h3>
+                <p class="card-text text-muted flex-grow-1">E-commerce concept with product pages, checkout flow, and
+                  full brand identity design.</p>
+                <p class="card-text"><small class="text-muted"><strong>Deliverables:</strong> Brand, Design, Storefront
+                    build</small></p>
+                <div class="mt-3 d-flex gap-2">
+                  <a class="btn btn-primary btn-sm rounded-pill px-3" href="https://birdie-bay.netlify.app/"
+                    target="_blank" rel="noopener">Live Site</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Frost -->
+          <div class="col" data-cats="websites branding">
+            <div class="card project-card h-100 shadow-sm border-0 rounded-3">
+              <img src="images/portfolio/frost-thumbnail.png" class="card-img-top rounded-top-3"
+                alt="Frost project — fitness coaching website">
+              <div class="card-body d-flex flex-column">
+                <div class="d-flex gap-2 mb-2 flex-wrap">
+                  <span class="badge bg-light text-dark">Marketing Site</span>
+                  <span class="badge bg-light text-dark">Branding</span>
+                </div>
+                <h3 class="h5 card-title mb-2">Frost</h3>
+                <p class="card-text text-muted flex-grow-1">Online fitness coaching. Custom programs, hands-on feedback,
+                  and accountability designed around your life.</p>
+                <p class="card-text"><small class="text-muted"><strong>Deliverables:</strong> Strategy, Brand, Website
+                    build</small></p>
+                <div class="mt-3 d-flex gap-2">
+                  <a class="btn btn-primary btn-sm rounded-pill px-3" href="https://frost-fitness.netlify.app/"
+                    target="_blank" rel="noopener">Live Site</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Moody Brewer -->
+          <div class="col" data-cats="websites branding">
+            <div class="card project-card h-100 shadow-sm border-0 rounded-3">
+              <img src="images/portfolio/moody-brewer-thumbnail.png" class="card-img-top rounded-top-3"
+                alt="Moody Brewer project — branding concept">
+              <div class="card-body d-flex flex-column">
+                <div class="d-flex gap-2 mb-2 flex-wrap">
+                  <span class="badge bg-light text-dark">Branding</span>
+                  <span class="badge bg-light text-dark">Landing Page</span>
+                </div>
+                <h3 class="h5 card-title mb-2">Moody Brewer</h3>
+                <p class="card-text text-muted flex-grow-1">Brand + site concept with playful visuals, motion design,
+                  and strong identity system.</p>
+                <p class="card-text"><small class="text-muted"><strong>Deliverables:</strong> Visual identity, Motion,
+                    Web concept</small></p>
+                <div class="mt-3 d-flex gap-2">
+                  <span class="btn btn-outline-secondary btn-sm rounded-pill px-3 disabled">Coming Soon</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mula -->
+          <div class="col" data-cats="apps">
+            <div class="card project-card h-100 shadow-sm border-0 rounded-3">
+              <img src="images/portfolio/mula-thumbnail.png" class="card-img-top rounded-top-3"
+                alt="Mula project — expense manager app">
+              <div class="card-body d-flex flex-column">
+                <div class="d-flex gap-2 mb-2 flex-wrap">
+                  <span class="badge bg-light text-dark">Web App</span>
+                  <span class="badge bg-light text-dark">Finance</span>
+                </div>
+                <h3 class="h5 card-title mb-2">Mula</h3>
+                <p class="card-text text-muted flex-grow-1">Expense manager with charts, filters, category tracking, and
+                  CSV export.</p>
+                <p class="card-text"><small class="text-muted"><strong>Deliverables:</strong> UX, Charts, Full-stack
+                    build</small></p>
+                <div class="mt-3 d-flex gap-2">
+                  <span class="btn btn-outline-secondary btn-sm rounded-pill px-3 disabled">Coming Soon</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ScholarLink -->
+          <div class="col" data-cats="websites">
+            <div class="card project-card h-100 shadow-sm border-0 rounded-3">
+              <img src="images/portfolio/scholar-link-thumbnail.png" class="card-img-top rounded-top-3"
+                alt="ScholarLink project — tutoring platform">
+              <div class="card-body d-flex flex-column">
+                <div class="d-flex gap-2 mb-2 flex-wrap">
+                  <span class="badge bg-light text-dark">Marketing Site</span>
+                  <span class="badge bg-light text-dark">Education</span>
+                </div>
+                <h3 class="h5 card-title mb-2">ScholarLink</h3>
+                <p class="card-text text-muted flex-grow-1">A website connecting students with tutors and teachers.
+                  Course browsing and profile matching.</p>
+                <p class="card-text"><small class="text-muted"><strong>Deliverables:</strong> Strategy, Design,
+                    Build</small></p>
+                <div class="mt-3 d-flex gap-2">
+                  <a class="btn btn-primary btn-sm rounded-pill px-3" href="https://scholar-link.netlify.app/"
+                    target="_blank" rel="noopener">Live Site</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Health Sync -->
+          <div class="col" data-cats="websites apps">
+            <div class="card project-card h-100 shadow-sm border-0 rounded-3">
+              <img src="images/portfolio/health-sync-thumbnail.png" class="card-img-top rounded-top-3"
+                alt="Health Sync project — health tracking dashboard">
+              <div class="card-body d-flex flex-column">
+                <div class="d-flex gap-2 mb-2 flex-wrap">
+                  <span class="badge bg-light text-dark">Web App</span>
+                  <span class="badge bg-light text-dark">Dashboard</span>
+                </div>
+                <h3 class="h5 card-title mb-2">Health Sync</h3>
+                <p class="card-text text-muted flex-grow-1">Health tracking dashboard with data visualization, goal
+                  setting, and progress reporting.</p>
+                <p class="card-text"><small class="text-muted"><strong>Deliverables:</strong> UX, Data viz,
+                    Build</small></p>
+                <div class="mt-3 d-flex gap-2">
+                  <span class="btn btn-outline-secondary btn-sm rounded-pill px-3 disabled">Coming Soon</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section-padding section-bg">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 col-12 mx-auto text-center">
+            <h3 class="mb-3">Have a project in mind?</h3>
+            <p>We handle strategy, design, development, and launch. Tell us about your goals and we'll propose the
+              simplest path to results.</p>
+            <a class="btn custom-btn mt-2" href="contact.html">Start a Project</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="footer-logo" href="index.html">
+            <img src="images/logo.png" alt="Volatile Solutions logo" class="footer-logo-mark" />
+            <img src="images/vs-text.png" alt="Volatile Solutions" class="footer-logo-text" />
+          </a>
+          <p class="footer-copy">Fractional web teams for founders and marketing leaders. We build, launch, and iterate
+            websites that keep momentum.</p>
+          <div class="footer-social">
+            <a href="https://www.linkedin.com/in/anthony-volatile-6836062ab/" class="footer-social-link"
+              aria-label="LinkedIn"><i class="bi-linkedin"></i></a>
+            <a href="https://github.com/AVolatile" class="footer-social-link" aria-label="GitHub"><i
+                class="bi-github"></i></a>
+            <a href="mailto:volatile-soulutions@outlook.com" class="footer-social-link" aria-label="Email"><i
+                class="bi-envelope"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div class="footer-column">
+            <h6>Company</h6>
+            <ul>
+              <li><a href="index.html#services" class="footer-link">Services</a></li>
+              <li><a href="index.html#section_3" class="footer-link">Process</a></li>
+              <li><a href="portfolio.html" class="footer-link">Work</a></li>
+              <li><a href="about.html" class="footer-link">About</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h6>Support</h6>
+            <ul>
+              <li><a href="index.html#section_4" class="footer-link">FAQs</a></li>
+              <li><a href="packages.html" class="footer-link">Pricing</a></li>
+              <li><a href="contact.html" class="footer-link">Contact</a></li>
+              <li><a href="mailto:volatile-soulutions@outlook.com" class="footer-link">Email us</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h6>Contact</h6>
+            <ul>
+              <li><a href="tel:401-545-6860" class="footer-link">401-545-6860</a></li>
+              <li><a href="mailto:volatile-soulutions@outlook.com"
+                  class="footer-link">volatile-soulutions@outlook.com</a></li>
+              <li><span class="footer-label">Based in Providence, RI</span></li>
+            </ul>
+            <a href="contact.html" class="btn footer-cta">Book a discovery call</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-meta">© 2025 Volatile | Solutions. All rights reserved.</p>
+        <div class="footer-meta-links">
+          <a href="privacy.html" class="footer-link" data-no-transition>Privacy</a>
+          <a href="terms.html" class="footer-link" data-no-transition>Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/jquery.sticky.js"></script>
+  <script src="js/click-scroll.js"></script>
+  <script src="js/custom.js"></script>
+</body>
+
 </html>

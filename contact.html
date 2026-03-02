@@ -118,22 +118,22 @@
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" name="name" id="contact-name"
-                                        class="form-control form-control-premium" placeholder="Name" required>
+                                    <input type="text" name="name" id="contact-name" class="form-control"
+                                        placeholder="Name" required>
                                     <label for="contact-name">Your Name</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="email" name="email" id="contact-email"
-                                        class="form-control form-control-premium" placeholder="Email address" required>
+                                    <input type="email" name="email" id="contact-email" class="form-control"
+                                        placeholder="Email address" required>
                                     <label for="contact-email">Work Email</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <select class="form-select form-control-premium" id="project-type"
-                                        name="projectType" aria-label="Project Type">
+                                    <select class="form-select" id="project-type" name="projectType"
+                                        aria-label="Project Type">
                                         <option selected>Select Project Type</option>
                                         <option value="website">New Website Build</option>
                                         <option value="webapp">Web Application</option>
@@ -145,27 +145,24 @@
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <select class="form-select form-control-premium" id="budget" name="budget"
-                                        aria-label="Budget">
-                                        <option selected>Select Scope</option>
-                                        <option value="small">Under $5k</option>
-                                        <option value="medium">$5k - $15k</option>
-                                        <option value="large">$15k+</option>
+                                    <select class="form-select" id="budget" name="budget" aria-label="Budget">
+                                        <option>Select Scope</option>
+                                        <option value="small" selected>Small Scope</option>
+                                        <option value="medium">Medium Scope</option>
+                                        <option value="large">Large Scope</option>
                                     </select>
                                     <label for="budget">Estimated Scope</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control form-control-premium contact-textarea"
-                                        id="contact-message" name="message" placeholder="Project goals"
-                                        required></textarea>
+                                    <textarea class="form-control contact-textarea" id="contact-message" name="message"
+                                        placeholder="Project goals" required></textarea>
                                     <label for="contact-message">Project goals & timeline</label>
                                 </div>
                             </div>
                             <div class="col-12 mt-4">
-                                <button type="submit" class="btn custom-btn w-100 py-3 rounded-pill fw-bold">Submit
-                                    Request</button>
+                                <button type="submit" class="btn btn-primary w-100 mt-2">Submit Request</button>
                             </div>
                         </div>
                     </form>

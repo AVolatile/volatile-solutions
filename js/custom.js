@@ -42,11 +42,11 @@
   (function highlightNav() {
     var currentPage = window.location.pathname.split('/').pop() || 'index.html';
     if (currentPage === '') currentPage = 'index.html';
-    
+
     $('.navbar-nav .nav-link').each(function () {
       var href = $(this).attr('href') || '';
       var linkPage = href.split('#')[0];
-      
+
       // Only auto-highlight on sub-pages (not index anchors)
       if (currentPage !== 'index.html' && linkPage === currentPage) {
         $(this).addClass('active');
@@ -146,32 +146,32 @@
   /* ─── Packages Page: Pricing Estimator ─── */
   var $estimatorForm = $('#pricing-estimator-form');
   if ($estimatorForm.length) {
-    
+
     // Configuration object
     var pricingConfig = {
       base: {
-        launch:     { min: 2500, max: 4000, weeksMin: 1, weeksMax: 3, label: 'Launch' },
-        business:   { min: 5000, max: 8000, weeksMin: 3, weeksMax: 6, label: 'Business' },
-        growth:     { min: 8000, max: 15000, weeksMin: 6, weeksMax: 10, label: 'Growth' },
+        launch: { min: 2500, max: 4000, weeksMin: 1, weeksMax: 3, label: 'Launch' },
+        business: { min: 5000, max: 8000, weeksMin: 3, weeksMax: 6, label: 'Business' },
+        growth: { min: 8000, max: 15000, weeksMin: 6, weeksMax: 10, label: 'Growth' },
         enterprise: { min: 15000, max: 25000, weeksMin: 10, weeksMax: 16, label: 'Enterprise' }
       },
       perPage: { min: 100, max: 200 }, // added to base after 5 pages
       copywriting: {
-        client:   { min: 0, max: 0, wMin: 0, wMax: 0, list: 'Client-provided copy' },
+        client: { min: 0, max: 0, wMin: 0, wMax: 0, list: 'Client-provided copy' },
         assisted: { min: 800, max: 1500, wMin: 1, wMax: 2, list: 'Assisted copywriting' },
-        full:     { min: 2000, max: 4500, wMin: 2, wMax: 4, list: 'Full copywriting' }
+        full: { min: 2000, max: 4500, wMin: 2, wMax: 4, list: 'Full copywriting' }
       },
       cms: {
-        none:  { min: 0, max: 0, wMin: 0, wMax: 0, list: 'Static pages (No CMS)' },
+        none: { min: 0, max: 0, wMin: 0, wMax: 0, list: 'Static pages (No CMS)' },
         basic: { min: 600, max: 1200, wMin: 1, wMax: 2, list: 'Basic CMS mapping' },
-        full:  { min: 1500, max: 3500, wMin: 2, wMax: 4, list: 'Full CMS integration' }
+        full: { min: 1500, max: 3500, wMin: 2, wMax: 4, list: 'Full CMS integration' }
       },
       ecommerce: { min: 2500, max: 6000, wMin: 2, wMax: 4, list: 'E-commerce setup' },
-      seo:       { min: 800, max: 1800, wMin: 1, wMax: 2, list: 'Advanced SEO' },
-      a11y:      { min: 1000, max: 2500, wMin: 1, wMax: 2, list: 'Enhanced ADA/WCAG' },
+      seo: { min: 800, max: 1800, wMin: 1, wMax: 2, list: 'Advanced SEO' },
+      a11y: { min: 1000, max: 2500, wMin: 1, wMax: 2, list: 'Enhanced ADA/WCAG' },
       support: {
-        none:      { list: 'Standard warranty' },
-        monthly:   { list: 'Monthly Retainer' },
+        none: { list: 'Standard warranty' },
+        monthly: { list: 'Monthly Retainer' },
         quarterly: { list: 'Quarterly Audits' }
       }
     };
@@ -234,21 +234,24 @@
         mWeeks += pricingConfig.a11y.wMin; maxWeeks += pricingConfig.a11y.wMax;
         summaryItems.push(pricingConfig.a11y.list);
       }
-      
+
       summaryItems.push(pricingConfig.support[support].list);
 
-      // Formatting
-      var formatCurrency = function(val) {
-        return '$' + val.toLocaleString('en-US');
-      };
+      // Pricing mapped to descriptive strings
+      var priceString = "Flexible options available";
+      if (mPrice < 5000) {
+        priceString = "Cost-effective options";
+      } else if (mPrice >= 5000 && mPrice < 10000) {
+        priceString = "Standard growth options";
+      } else if (mPrice >= 10000 && mPrice < 20000) {
+        priceString = "Tailored project scope";
+      } else {
+        priceString = "Custom enterprise quote";
+      }
 
       // Updates
-      $('#calc-price-range').fadeOut(150, function() {
-        if (type === 'enterprise' && mPrice > 15000) {
-           $(this).text(formatCurrency(mPrice) + '+').fadeIn(150);
-        } else {
-           $(this).text(formatCurrency(mPrice) + ' – ' + formatCurrency(maxPrice)).fadeIn(150);
-        }
+      $('#calc-price-range').fadeOut(150, function () {
+        $(this).text(priceString).fadeIn(150);
       });
 
       $('#calc-timeline').text(mWeeks + '–' + maxWeeks + ' Weeks');
@@ -257,30 +260,30 @@
       // Update Summary List Elements cleanly
       var $summaryList = $('#calc-summary-list');
       $summaryList.empty();
-      summaryItems.forEach(function(item) {
+      summaryItems.forEach(function (item) {
         $summaryList.append('<li class="mb-2"><i class="bi bi-arrow-right-short text-primary fs-6 me-1"></i> <span class="summary-text">' + item + '</span></li>');
       });
     }
 
     // Attach listeners
-    $estimatorForm.on('change input', 'select, input', function() {
+    $estimatorForm.on('change input', 'select, input', function () {
       updateEstimator();
     });
 
     // Handle "Customize this package" buttons from Tier Section
-    $('.select-tier-btn').on('click', function(e) {
+    $('.select-tier-btn').on('click', function (e) {
       e.preventDefault();
       var tier = $(this).data('tier');
       $('#est-site-type').val(tier);
-      
+
       // Auto-adjust pages based on tier preset logic
       if (tier === 'launch') { $('#est-pages').val(2); $('#est-cms').val('none'); }
       if (tier === 'business') { $('#est-pages').val(8); $('#est-cms').val('basic'); }
       if (tier === 'growth') { $('#est-pages').val(15); $('#est-cms').val('full'); }
       if (tier === 'enterprise') { $('#est-pages').val(25); $('#est-cms').val('full'); }
-      
+
       updateEstimator();
-      
+
       // Scroll to estimator smoothly
       $('html, body').animate({
         scrollTop: $('#estimator').offset().top - 80

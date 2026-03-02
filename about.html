@@ -57,140 +57,165 @@
       </div>
     </nav>
 
-    <section class="about-social-hero">
-      <div class="container">
-        <div class="about-social-cover">
-          <img src="images/colleagues-working-cozy-office-medium-shot.jpg" alt="Collaborative digital strategy session"
-            class="about-social-cover-image">
-          <div class="about-social-cover-overlay"></div>
-          <div class="about-social-handle">
-            <span class="about-social-dot" aria-hidden="true"></span>
-            <span>@anthonyvolatile</span>
+    <!-- 1. Founder Hero Section -->
+    <header class="founder-hero section-padding pt-5">
+      <div class="container text-center pt-5 mt-4">
+        <div class="founder-avatar-wrapper mx-auto mb-4">
+          <div class="shadow-lg rounded-circle"
+            style="width: 140px; height: 140px; border: 4px solid var(--white-color); overflow: hidden; position: relative; background-color: white;">
+            <img src="images/aboutme/about-me-photo1.PNG" alt="Anthony Volatile" class="founder-avatar-img"
+              style="width: 100%; height: 100%; object-fit: cover;">
           </div>
         </div>
-        <div class="about-social-profile">
-          <div class="about-social-profile-main">
-            <img src="images/aboutme/about-me-photo1.PNG" alt="Anthony Volatile" class="about-social-avatar">
-            <div class="about-social-identity">
-              <p class="about-social-kicker">Founder • Volatile Solutions</p>
-              <h1>Anthony Volatile</h1>
-              <p class="about-social-role">Fractional web strategist and lead builder helping businesses launch premium
-                websites fast, with structure and clarity from day one.</p>
-              <div class="about-social-metrics" aria-label="Profile highlights">
-                <div>
-                  <strong>30+</strong>
-                  <span>Web launches</span>
-                </div>
-                <div>
-                  <strong>2-6 weeks</strong>
-                  <span>Typical timeline</span>
-                </div>
-                <div>
-                  <strong>Founder-led</strong>
-                  <span>Every engagement</span>
-                </div>
-              </div>
+        <h1 class="display-4 fw-bold text-dark mb-3">Anthony Volatile</h1>
+        <p class="lead text-muted mx-auto" style="max-width: 600px;">
+          I help service businesses, startups, and agencies launch premium websites fast—with strict structural
+          discipline and deep clarity from day one.
+        </p>
+        <div class="d-flex justify-content-center gap-3 mt-4">
+          <a href="contact.html" class="btn btn--primary">Book Discovery Call</a>
+          <a href="https://www.linkedin.com/in/anthony-volatile-6836062ab/" class="btn btn--secondary" target="_blank"
+            rel="noopener">
+            <i class="bi-linkedin me-2"></i>Connect
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- 2. The Professional Narrative -->
+    <section class="founder-narrative section-padding bg-white">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <h2 class="h3 fw-bold mb-4">The Origin Story</h2>
+            <div class="narrative-content prose prose-lg text-muted" style="line-height: 1.8; font-size: 1.1rem;">
+              <p class="mb-4">I kept seeing the exact same pattern in the industry: founders and marketing teams needed
+                better websites quickly, but the two available options were broken. Traditional agency timelines were
+                too heavy, expensive, and bloated. But pure execution freelancers completely missed the strategy and
+                positioning layers necessary to drive conversions.</p>
+
+              <p class="mb-4"><strong>Volatile Solutions exists to bridge both worlds.</strong></p>
+
+              <p class="mb-4">Every project I take on isn't just a design exercise; it starts with deep positioning and
+                conversion strategy. Only then do we move into building scalable design systems and clean implementation
+                that your team can actually maintain long after launch.</p>
             </div>
-          </div>
-          <div class="about-social-actions">
-            <a href="contact.html" class="btn custom-btn">Book Discovery Call</a>
-            <a href="https://www.linkedin.com/in/anthony-volatile-6836062ab/" class="btn custom-border-btn"
-              target="_blank" rel="noopener">Connect on LinkedIn</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section-padding about-social-section">
+    <!-- 3. Supporting Visual / Process Layout -->
+    <section class="founder-process-visual section-padding" style="background: var(--surface);">
       <div class="container">
-        <div class="row g-4 align-items-start">
-          <div class="col-lg-8">
-            <article class="about-feed-card">
-              <div class="about-feed-head">
-                <div>
-                  <p class="about-feed-label">Pinned post</p>
-                  <h2>Why I built Volatile Solutions</h2>
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <img src="images/aboutme/about-me-photo2.jpg" alt="Collaborative digital strategy session"
+              class="img-fluid rounded-4 shadow-sm" style="object-fit: cover; aspect-ratio: 4/3;">
+          </div>
+          <div class="col-lg-6">
+            <span class="badge badge--accent mb-3">The Fractional Advantage</span>
+            <h2 class="h3 fw-bold mb-4">How we execute projects</h2>
+            <ul class="list-unstyled d-flex flex-column gap-4">
+              <li class="d-flex align-items-start">
+                <div
+                  class="icon-box bg-white text-primary rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 shadow-sm"
+                  style="width: 48px; height: 48px;">
+                  <i class="bi-bullseye fs-5"></i>
                 </div>
-                <span class="about-feed-time">Updated this week</span>
-              </div>
-              <p>I kept seeing the same pattern: teams needed better websites quickly, but traditional agency timelines
-                were too heavy and pure execution freelancers missed the strategy layer.</p>
-              <p>Volatile Solutions exists to bridge both worlds. Every project starts with positioning and conversion
-                strategy, then moves into scalable design systems and clean implementation that your team can maintain.
-              </p>
-              <div class="about-feed-tags">
-                <span>#WebStrategy</span>
-                <span>#ConversionDesign</span>
-                <span>#LaunchOps</span>
-              </div>
-            </article>
+                <div class="ms-3">
+                  <h4 class="h6 fw-bold mb-1">1. Strategic Positioning</h4>
+                  <p class="text-muted small mb-0">We define messaging, user flow, and page hierarchy before drawing a
+                    single wireframe.</p>
+                </div>
+              </li>
+              <li class="d-flex align-items-start">
+                <div
+                  class="icon-box bg-white text-primary rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 shadow-sm"
+                  style="width: 48px; height: 48px;">
+                  <i class="bi-box fs-5"></i>
+                </div>
+                <div class="ms-3">
+                  <h4 class="h6 fw-bold mb-1">2. Component Systems</h4>
+                  <p class="text-muted small mb-0">We build reusable UI components so future pages ship faster and stay
+                    rigidly consistent.</p>
+                </div>
+              </li>
+              <li class="d-flex align-items-start">
+                <div
+                  class="icon-box bg-white text-primary rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 shadow-sm"
+                  style="width: 48px; height: 48px;">
+                  <i class="bi-rocket-takeoff fs-5"></i>
+                </div>
+                <div class="ms-3">
+                  <h4 class="h6 fw-bold mb-1">3. Launch Operations</h4>
+                  <p class="text-muted small mb-0">We deploy with analytics, SEO foundations, and full handoff
+                    documentation already in place.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <article class="about-feed-card about-feed-card-media">
-              <div class="about-feed-head">
-                <div>
-                  <p class="about-feed-label">Latest update</p>
-                  <h2>Current build focus</h2>
-                </div>
-                <span class="about-feed-time">Active sprint</span>
-              </div>
-              <p>Right now I am focused on performance-first redesigns for service businesses and startups that need a
-                stronger conversion path from first visit to booked call.</p>
-              <img src="images/aboutme/about-me-photo1.PNG" alt="Anthony Volatile working on client strategy"
-                class="about-feed-image">
-              <div class="about-feed-engagement" aria-label="Engagement metrics">
-                <span><i class="bi bi-heart"></i>126</span>
-                <span><i class="bi bi-chat"></i>34</span>
-                <span><i class="bi bi-bookmark"></i>58 saves</span>
-              </div>
-            </article>
+    <!-- 4. Experience & Skills Stack
+    <section class="founder-skills-grid section-padding bg-white">
+      <div class="container">
+        <div class="row justify-content-center mb-5 text-center">
+          <div class="col-lg-6">
+            <h2 class="h3 fw-bold">The Toolkit & Focus</h2>
+            <p class="text-muted">The technologies and specialties I leverage to build scalable systems.</p>
+          </div>
+        </div>
 
-            <article class="about-feed-card">
-              <div class="about-feed-head">
-                <div>
-                  <p class="about-feed-label">Process snapshot</p>
-                  <h2>How we run projects</h2>
-                </div>
-                <span class="about-feed-time">Always on</span>
-              </div>
-              <ul class="about-feed-list">
-                <li>Define positioning, messaging, and page hierarchy before design.</li>
-                <li>Build reusable components so future pages ship faster and stay consistent.</li>
-                <li>Launch with analytics, SEO foundations, and handoff documentation in place.</li>
-                <li>Support iteration after launch with focused growth sprints.</li>
+        <div class="row g-4 justify-content-center">
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100 border-0 shadow-sm p-4 rounded-4" style="background: var(--surface);">
+              <h4 class="h6 fw-bold mb-3 text-primary">Current Build Focus</h4>
+              <ul class="list-unstyled text-muted small d-flex flex-column gap-2 mb-0">
+                <li><i class="bi-check2 text-primary me-2"></i> Enterprise-style homepage redesigns</li>
+                <li><i class="bi-check2 text-primary me-2"></i> High-conversion service funnels</li>
+                <li><i class="bi-check2 text-primary me-2"></i> SaaS product marketing sites</li>
+                <li><i class="bi-check2 text-primary me-2"></i> Post-launch optimization retainers</li>
               </ul>
-            </article>
+            </div>
           </div>
 
-          <div class="col-lg-4">
-            <div class="about-side-rail">
-              <aside class="about-widget">
-                <h3>Currently focused on</h3>
-                <ul class="about-widget-list">
-                  <li>Enterprise-style homepage redesigns</li>
-                  <li>High-conversion service funnels</li>
-                  <li>Post-launch optimization retainers</li>
-                </ul>
-              </aside>
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100 border-0 shadow-sm p-4 rounded-4" style="background: var(--surface);">
+              <h4 class="h6 fw-bold mb-3 text-primary">Tech Stack I Ship With</h4>
+              <div class="d-flex flex-wrap gap-2">
+                <span class="badge bg-white text-dark border shadow-sm px-3 py-2">Figma</span>
+                <span class="badge bg-white text-dark border shadow-sm px-3 py-2">Webflow</span>
+                <span class="badge bg-white text-dark border shadow-sm px-3 py-2">HTML/CSS/JS</span>
+                <span class="badge bg-white text-dark border shadow-sm px-3 py-2">Next.js</span>
+                <span class="badge bg-white text-dark border shadow-sm px-3 py-2">Tailwind</span>
+                <span class="badge bg-white text-dark border shadow-sm px-3 py-2">React</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
 
-              <aside class="about-widget">
-                <h3>Stack I ship with</h3>
-                <div class="about-stack-chips">
-                  <span>Figma</span>
-                  <span>Webflow</span>
-                  <span>HTML/CSS/JS</span>
-                  <span>Next.js</span>
-                  <span>Tailwind</span>
-                  <span>GA4</span>
-                  <span>Vercel</span>
-                  <span>Notion</span>
-                </div>
-              </aside>
-
-              <aside class="about-widget about-widget-cta">
-                <h3>Open for Q2 builds</h3>
-                <p>Need a premium site or launch page with a tight timeline? Let’s scope it quickly and move.</p>
-                <a href="contact.html" class="btn custom-btn">Start a Project</a>
-              </aside>
+    <!-- 5. Personal Philosophy / CTA -->
+    <section class="founder-philosophy section-padding">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div
+            class="col-lg-8 text-center bg-primary text-white p-5 rounded-4 shadow-lg position-relative overflow-hidden"
+            style="background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);">
+            <div class="position-relative z-1">
+              <i class="bi-quote opacity-25 display-1 position-absolute top-0 start-0 translate-middle"
+                style="color: var(--secondary-color);"></i>
+              <h2 class="h3 fw-bold mb-4 text-white">Open for new builds.</h2>
+              <p class="lead mb-4 text-white-50 mx-auto" style="max-width: 500px;">
+                Need a premium site or launch page with a tight timeline? Let's scope it quickly and engineer the
+                simplest path to undeniable results.
+              </p>
+              <a href="contact.html" class="btn btn-light btn-lg px-5 shadow-sm text-primary fw-bold">Start a
+                Project</a>
             </div>
           </div>
         </div>
@@ -223,8 +248,8 @@
         <nav class="enterprise-footer__col" aria-label="Contact">
           <h6>Contact</h6>
           <a href="contact.html" class="enterprise-footer__link">Contact Page</a>
-          <a href="mailto:volatile-soulutions@outlook.com"
-            class="enterprise-footer__link">volatile-soulutions@outlook.com</a>
+          <a href="mailto:volatile-solutions@outlook.com"
+            class="enterprise-footer__link">volatile-solutions@outlook.com</a>
           <a href="tel:401-545-6860" class="enterprise-footer__link">401-545-6860</a>
           <span class="enterprise-footer__meta">Providence, Rhode Island</span>
         </nav>
@@ -242,7 +267,7 @@
             target="_blank" rel="noopener">LinkedIn</a>
           <a href="https://github.com/AVolatile" class="enterprise-footer__link" target="_blank"
             rel="noopener">GitHub</a>
-          <a href="mailto:volatile-soulutions@outlook.com" class="enterprise-footer__link">Email Support</a>
+          <a href="mailto:volatile-solutions@outlook.com" class="enterprise-footer__link">Email Support</a>
         </nav>
       </div>
 

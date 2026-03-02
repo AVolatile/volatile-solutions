@@ -34,11 +34,11 @@
   <main>
     <nav class="navbar navbar-expand-lg" aria-label="Main menu">
       <div class="container">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand px-lg-0 px-3" href="index.html">
           <img src="images/logo.png" alt="Volatile Solutions" class="logo-img">
           <img src="images/vs-text.png" alt="Volatile Solutions" class="logo-text-img">
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -57,225 +57,645 @@
       </div>
     </nav>
 
-    <header class="packages-hero">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-7">
-            <nav aria-label="breadcrumb" class="packages-breadcrumb">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Homepage</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Packages</li>
-              </ol>
-            </nav>
-            <h1 class="packages-title">Websites built for clarity, credibility, and conversion.</h1>
-            <p class="packages-intro">Every engagement blends strategy, design, and build. Choose the starting point
-              that matches your launch stage — we'll tailor scope, team, and timeline from there.</p>
-            <div class="packages-hero-meta d-flex flex-wrap">
-              <div class="packages-hero-stat">
-                <span class="stat-value">30+</span>
-                <span class="stat-label">Sites launched</span>
-              </div>
-              <div class="packages-hero-stat">
-                <span class="stat-value">2–8 weeks</span>
-                <span class="stat-label">Typical build window</span>
-              </div>
-              <div class="packages-hero-stat">
-                <span class="stat-value">Figma + Webflow</span>
-                <span class="stat-label">Preferred toolset</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-5 mt-4 mt-lg-0">
-            <div class="packages-hero-card">
-              <div class="card-eyebrow">What you get</div>
-              <ul class="hero-card-list">
-                <li><i class="bi-check-circle-fill"></i> Collaborative strategy workshop</li>
-                <li><i class="bi-check-circle-fill"></i> Brand-aligned design system</li>
-                <li><i class="bi-check-circle-fill"></i> Responsive build &amp; QA</li>
-                <li><i class="bi-check-circle-fill"></i> Launch playbook &amp; training</li>
-              </ul>
-              <a class="btn btn-light w-100 mt-3" href="contact.html">Schedule a Project Call</a>
-            </div>
-          </div>
+    <!-- SECTION 1: Header / Positioning -->
+    <header class="enterprise-pricing-hero section-padding pt-5">
+      <div class="container text-center pt-5 mt-4">
+        <p class="badge badge--outline mb-3">Project Investment</p>
+        <h1 class="display-4 fw-bold text-dark mb-4">Transparent pricing, clear scopes.</h1>
+        <p class="lead text-muted mx-auto mb-5" style="max-width: 650px;">
+          Pricing depends on scope and complexity. The estimates below are standard ranges intended to set expectations.
+          Formal, fixed-price proposals follow a dedicated discovery call.
+        </p>
+        <div class="d-flex justify-content-center gap-3">
+          <a href="#estimator" class="btn btn--primary">Build an Estimate</a>
+          <a href="contact.html" class="btn btn--secondary">Request a Proposal</a>
         </div>
       </div>
     </header>
 
-    <section class="section-padding pricing-section">
+    <!-- SECTION 2: Package Tiers -->
+    <section class="enterprise-tiers section-padding section-bg" id="tiers">
       <div class="container">
-        <div class="section-heading text-center">
-          <span class="section-eyebrow">Website Packages</span>
-          <h2 class="section-title">Pick your launch plan</h2>
-          <p class="section-lead">Pricing reflects the average investment for similar projects. We'll confirm scope and
-            a fixed fee after a quick discovery call.</p>
+        <div class="row g-4">
+          <!-- Tier 1: Launch -->
+          <div class="col-xl-3 col-lg-6">
+            <div class="pricing-tier-card position-relative h-100 bg-white p-4 p-xl-5 shadow-sm">
+              <div class="tier-header mb-4">
+                <h3 class="h4 fw-bold mb-2">Launch</h3>
+                <p class="text-muted small mb-3">For new ventures validating an idea.</p>
+                <div class="tier-price-range mb-1">
+                  <span class="fs-3 fw-bold text-dark">$2.5k – $4k</span>
+                </div>
+                <div class="tier-timeline text-muted small"><i class="bi bi-clock me-1"></i> 1–3 weeks</div>
+              </div>
+
+              <div class="tier-features flex-grow-1">
+                <p class="small fw-semibold text-uppercase tracking-wider mb-3 text-muted">Included:</p>
+                <ul class="list-unstyled mb-4 tier-list">
+                  <li><i class="bi bi-check-circle-fill text-primary"></i> <span>1-2 Page landing site</span></li>
+                  <li><i class="bi bi-check-circle-fill text-primary"></i> <span>Template-based design</span></li>
+                  <li><i class="bi bi-check-circle-fill text-primary"></i> <span>Basic lead capture</span></li>
+                  <li><i class="bi bi-check-circle-fill text-primary"></i> <span>Baseline SEO & Performance</span></li>
+                </ul>
+                <div class="tier-addons mb-4">
+                  <p class="small fw-semibold text-uppercase tracking-wider mb-2 text-muted">Compatible Add-ons:</p>
+                  <div class="d-flex flex-wrap gap-1">
+                    <span class="badge border bg-light text-dark">Copywriting</span>
+                    <span class="badge border bg-light text-dark">Basic Support</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tier-action mt-auto">
+                <button type="button" class="btn btn--primary w-100 select-tier-btn" data-tier="launch">Customize this
+                  package</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tier 2: Business -->
+          <div class="col-xl-3 col-lg-6">
+            <div class="pricing-tier-card position-relative h-100 bg-white p-4 p-xl-5 shadow-md tier-featured">
+              <span
+                class="badge bg-primary text-white position-absolute start-50 translate-middle py-2 px-4 rounded-pill h6 mb-0"
+                style="top: -12px;">Most Popular</span>
+              <div class="tier-header mb-4">
+                <h3 class="h4 fw-bold mb-2">Business</h3>
+                <p class="text-muted small mb-3">For scaling teams needing credibility.</p>
+                <div class="tier-price-range mb-1">
+                  <span class="fs-3 fw-bold text-dark">$5k – $8k</span>
+                </div>
+                <div class="tier-timeline text-muted small"><i class="bi bi-clock me-1"></i> 3–6 weeks</div>
+              </div>
+
+              <div class="tier-features flex-grow-1">
+                <p class="small fw-semibold text-uppercase tracking-wider mb-3 text-muted">Included:</p>
+                <ul class="list-unstyled mb-4 tier-list">
+                  <li><i class="bi bi-check-circle-fill text-primary"></i> <span>Multi-page website (up to 8)</span>
+                  </li>
+                  <li><i class="bi bi-check-circle-fill text-primary"></i> <span>Custom brand-aligned design</span></li>
+                  <li><i class="bi bi-check-circle-fill text-primary"></i> <span>CMS integration for edits</span></li>
+                  <li><i class="bi bi-check-circle-fill text-primary"></i> <span>1-2 external integrations</span></li>
+                </ul>
+                <div class="tier-addons mb-4">
+                  <p class="small fw-semibold text-uppercase tracking-wider mb-2 text-muted">Compatible Add-ons:</p>
+                  <div class="d-flex flex-wrap gap-1">
+                    <span class="badge border bg-light text-dark">Assisted Copy</span>
+                    <span class="badge border bg-light text-dark">Quarterly Support</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tier-action mt-auto">
+                <button type="button" class="btn btn--primary w-100 select-tier-btn" data-tier="business">Customize this
+                  package</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tier 3: Growth -->
+          <div class="col-xl-3 col-lg-6">
+            <div class="pricing-tier-card position-relative h-100 bg-white p-4 p-xl-5 shadow-sm">
+              <div class="tier-header mb-4">
+                <h3 class="h4 fw-bold mb-2">Growth</h3>
+                <p class="text-muted small mb-3">For brands driven by content & conversion.</p>
+                <div class="tier-price-range mb-1">
+                  <span class="fs-3 fw-bold text-dark">$8k – $15k</span>
+                </div>
+                <div class="tier-timeline text-muted small"><i class="bi bi-clock me-1"></i> 6–10 weeks</div>
+              </div>
+
+              <div class="tier-features flex-grow-1">
+                <p class="small fw-semibold text-uppercase tracking-wider mb-3 text-muted">Included:</p>
+                <ul class="list-unstyled mb-4 tier-list">
+                  <li><i class="bi bi-check-circle-fill text-primary"></i> <span>Structure up to 15 pages</span></li>
+                  <li><i class="bi bi-check-circle-fill text-primary"></i> <span>Full CMS system + Blog setup</span>
+                  </li>
+                  <li><i class="bi bi-check-circle-fill text-primary"></i> <span>Growth SEO & Performance pass</span>
+                  </li>
+                  <li><i class="bi bi-check-circle-fill text-primary"></i> <span>Multiple API integrations</span></li>
+                </ul>
+                <div class="tier-addons mb-4">
+                  <p class="small fw-semibold text-uppercase tracking-wider mb-2 text-muted">Compatible Add-ons:</p>
+                  <div class="d-flex flex-wrap gap-1">
+                    <span class="badge border bg-light text-dark">Full Copywriting</span>
+                    <span class="badge border bg-light text-dark">Monthly Support</span>
+                    <span class="badge border bg-light text-dark">Light E-commerce</span>
+                  </div>
+                </div>
+              </div>
+              <div class="tier-action mt-auto">
+                <button type="button" class="btn btn--primary w-100 select-tier-btn" data-tier="growth">Customize this
+                  package</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tier 4: Enterprise -->
+          <div class="col-xl-3 col-lg-6">
+            <div
+              class="pricing-tier-card tier-enterprise position-relative h-100 bg-white p-4 p-xl-5 shadow-sm border-dark">
+              <div class="tier-header mb-4">
+                <h3 class="h4 fw-bold mb-2">Enterprise</h3>
+                <p class="text-muted small mb-3">Complex integrations, multi-stakeholder.</p>
+                <div class="tier-price-range mb-1">
+                  <span class="fs-3 fw-bold text-dark">$15k+</span>
+                </div>
+                <div class="tier-timeline text-muted small"><i class="bi bi-clock me-1"></i> 10+ weeks</div>
+              </div>
+
+              <div class="tier-features flex-grow-1">
+                <p class="small fw-semibold text-uppercase tracking-wider mb-3 text-muted">Included:</p>
+                <ul class="list-unstyled mb-4 tier-list">
+                  <li><i class="bi bi-check-circle-fill text-primary"></i> <span>Unlimited scaling patterns</span></li>
+                  <li><i class="bi bi-check-circle-fill text-primary"></i> <span>Custom application styling</span></li>
+                  <li><i class="bi bi-check-circle-fill text-primary"></i> <span>WCAG 2.1 AA best practices</span></li>
+                  <li><i class="bi bi-check-circle-fill text-primary"></i> <span>Dedicated strategy workshops</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="tier-action mt-auto">
+                <button type="button" class="btn btn--primary w-100"
+                  onclick="window.location.href='contact.html'">Request Custom Scope</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: Interactive Estimator -->
+    <section class="enterprise-estimator section-padding" id="estimator">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center">
+            <h2 class="h3 fw-bold">Build an Estimate</h2>
+            <p class="text-muted">Configure your project requirements below to receive an instant, zero-commitment price
+              range.</p>
+          </div>
+        </div>
+        <div class="row g-5">
+          <!-- Estimator Inputs -->
+          <div class="col-lg-8">
+            <form id="pricing-estimator-form" class="estimator-form p-4 p-md-5 bg-white shadow-sm"
+              style="border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+
+              <div class="estimator-group mb-4 pb-4 border-bottom">
+                <label for="est-site-type" class="form-label fw-bold">1. Site Foundation</label>
+                <select id="est-site-type" class="form-select form-select-lg">
+                  <option value="launch">Launch (1-2 pages, template-driven)</option>
+                  <option value="business" selected>Business (Up to 8 pages, custom design)</option>
+                  <option value="growth">Growth (Up to 15 pages, custom design + CMS)</option>
+                  <option value="enterprise">Enterprise (Fully custom, advanced requirements)</option>
+                </select>
+                <div class="form-text text-muted mt-2">Sets the baseline complexity and core framework for the project.
+                </div>
+              </div>
+
+              <div class="estimator-group mb-4 pb-4 border-bottom">
+                <label for="est-pages" class="form-label fw-bold">2. Total Unique Pages</label>
+                <div class="d-flex align-items-center gap-3">
+                  <input type="range" class="form-range flex-grow-1" min="1" max="30" value="8" id="est-pages">
+                  <span class="fs-5 fw-bold" id="est-pages-display"
+                    style="min-width: 40px; text-align: center;">8</span>
+                </div>
+                <div class="form-text text-muted mt-2">Select the approximate number of unique page templates required
+                  (e.g. Home, About, Services counts as 3).</div>
+              </div>
+
+              <div class="estimator-group mb-4 pb-4 border-bottom">
+                <label for="est-copywriting" class="form-label fw-bold">3. Content & Copywriting</label>
+                <select id="est-copywriting" class="form-select form-select-lg">
+                  <option value="client">Client-provided (We design around your final copy)</option>
+                  <option value="assisted">Assisted (We review, refine, and optimize your drafts)</option>
+                  <option value="full">Full Copywriting (We write everything from scratch)</option>
+                </select>
+              </div>
+
+              <div class="estimator-group mb-4 pb-4 border-bottom">
+                <label for="est-cms" class="form-label fw-bold">4. Content Management System (CMS)</label>
+                <select id="est-cms" class="form-select form-select-lg">
+                  <option value="none">None (Static site, code changes required)</option>
+                  <option value="basic">Basic (Edit text/images only)</option>
+                  <option value="full" selected>Full (Manage blogs, case studies, team members)</option>
+                </select>
+              </div>
+
+              <div class="estimator-group mb-4 pb-4 border-bottom">
+                <label class="form-label fw-bold">5. Advanced Requirements & Add-ons</label>
+
+                <div class="form-check form-switch mb-3 custom-switch">
+                  <input class="form-check-input flex-shrink-0" type="checkbox" id="est-ecommerce">
+                  <label class="form-check-label pt-1" for="est-ecommerce">
+                    <strong>E-commerce Functionality</strong><br>
+                    <span class="small text-muted">Shopping cart, digital products, or payment processing setup.</span>
+                  </label>
+                </div>
+
+                <div class="form-check form-switch mb-3 custom-switch">
+                  <input class="form-check-input flex-shrink-0" type="checkbox" id="est-seo" checked>
+                  <label class="form-check-label pt-1" for="est-seo">
+                    <strong>Advanced SEO Configuration</strong><br>
+                    <span class="small text-muted">Keyword mapping, deep metadata strategy, and schema markup (baseline
+                      SEO is always included).</span>
+                  </label>
+                </div>
+
+                <div class="form-check form-switch mb-3 custom-switch">
+                  <input class="form-check-input flex-shrink-0" type="checkbox" id="est-a11y">
+                  <label class="form-check-label pt-1" for="est-a11y">
+                    <strong>Enhanced Accessibility (ADA/WCAG Focus)</strong><br>
+                    <span class="small text-muted">Rigorous auditory/visual checks, keyboard parity, and extended
+                      compliance testing.</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="estimator-group">
+                <label for="est-support" class="form-label fw-bold">6. Post-Launch Support</label>
+                <select id="est-support" class="form-select form-select-lg">
+                  <option value="none">None (Standard 14-day bug warranty included)</option>
+                  <option value="monthly">Monthly Retainer (Priority requests, content updates)</option>
+                  <option value="quarterly">Quarterly Check-ins (Audit, tweak, and performance reports)</option>
+                </select>
+              </div>
+
+            </form>
+          </div>
+
+          <!-- Sticky Output Panel -->
+          <div class="col-lg-4">
+            <div class="estimator-output sticky-top p-4 bg-light shadow-sm"
+              style="top: 100px; border-radius: var(--radius-md); border: 1px solid var(--primary-color);">
+              <h4 class="h5 fw-bold mb-4">Estimated Range</h4>
+
+              <div class="output-price mb-3 pb-3 border-bottom border-secondary">
+                <span class="fs-1 fw-bold text-primary" id="calc-price-range">$5,500 – $7,200</span>
+                <p class="small text-muted mb-0">Total estimated investment</p>
+              </div>
+
+              <div class="output-meta mb-4">
+                <div class="d-flex justify-content-between mb-2">
+                  <span class="small text-muted">Timeline:</span>
+                  <strong class="small" id="calc-timeline">4–6 Weeks</strong>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <span class="small text-muted">Recommended Tier:</span>
+                  <span class="badge bg-primary px-2 py-1" id="calc-tier-badge">Business</span>
+                </div>
+              </div>
+
+              <div class="output-scope mb-4">
+                <h6 class="small fw-bold text-uppercase tracking-wider text-muted mb-3">Scope Summary:</h6>
+                <ul class="list-unstyled small text-muted" id="calc-summary-list">
+                  <li class="mb-2"><i class="bi bi-arrow-right-short text-primary"></i> <span class="summary-text">Up to
+                      8 Pages</span></li>
+                  <li class="mb-2"><i class="bi bi-arrow-right-short text-primary"></i> <span
+                      class="summary-text">Client-provided copy</span></li>
+                  <li class="mb-2"><i class="bi bi-arrow-right-short text-primary"></i> <span class="summary-text">Full
+                      CMS integration</span></li>
+                  <li class="mb-2"><i class="bi bi-arrow-right-short text-primary"></i> <span
+                      class="summary-text">Advanced SEO Configuration</span></li>
+                  <li class="mb-2"><i class="bi bi-arrow-right-short text-primary"></i> <span
+                      class="summary-text">Standard 14-day bug warranty</span></li>
+                </ul>
+              </div>
+
+              <div class="output-assumptions mb-4">
+                <p class="small text-muted" style="font-size: 0.8rem; line-height: 1.4;">
+                  <em>*Estimates are non-binding ranges and do not constitute a final quote. Ranges assume standard
+                    complexity and timely asset delivery.</em>
+                </p>
+              </div>
+
+              <div class="output-actions d-grid gap-2">
+                <a href="contact.html" class="btn btn--primary">Request Formal Proposal</a>
+                <button type="button" class="btn btn-outline-dark" onclick="window.print()">Save / Print
+                  Estimate</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: Compare Plans -->
+    <section class="enterprise-compare section-padding bg-white" id="compare">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="h3 fw-bold">Compare Tier Features</h2>
+            <p class="text-muted">A detailed breakdown of deliverables across our baseline packages.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="table-responsive d-none d-lg-block">
+              <table class="table table-hover align-middle border">
+                <thead class="table-light">
+                  <tr>
+                    <th scope="col" style="width: 20%;" class="ps-4 py-3">Deliverable</th>
+                    <th scope="col" style="width: 20%;" class="text-center py-3">Launch</th>
+                    <th scope="col" style="width: 20%;" class="text-center py-3">Business</th>
+                    <th scope="col" style="width: 20%;" class="text-center py-3">Growth</th>
+                    <th scope="col" style="width: 20%;" class="text-center py-3">Enterprise</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row" class="ps-4 fw-normal text-muted">Strategy & Architecture</th>
+                    <td class="text-center"><i class="bi bi-circle"></i> Basic Outline</td>
+                    <td class="text-center"><i class="bi bi-circle-half text-primary"></i> Sitemap & Wireframes</td>
+                    <td class="text-center"><i class="bi bi-circle-fill text-primary"></i> Full Content Architecture
+                    </td>
+                    <td class="text-center"><i class="bi bi-circle-fill text-info"></i> Dedicated Workshops</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="ps-4 fw-normal text-muted">Design Complexity</th>
+                    <td class="text-center">Template-based</td>
+                    <td class="text-center">Custom brand-aligned</td>
+                    <td class="text-center">Custom + Animations</td>
+                    <td class="text-center">Bespoke App Styling</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="ps-4 fw-normal text-muted">CMS Integration</th>
+                    <td class="text-center">—</td>
+                    <td class="text-center">Basic (Text/Images)</td>
+                    <td class="text-center"><i class="bi bi-check-lg text-primary fs-5"></i> Advanced Collections</td>
+                    <td class="text-center"><i class="bi bi-check-lg text-info fs-5"></i> Headless or Custom</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="ps-4 fw-normal text-muted">SEO Foundation</th>
+                    <td class="text-center"><i class="bi bi-check-lg text-muted fs-5"></i> Baseline</td>
+                    <td class="text-center"><i class="bi bi-check-lg text-primary fs-5"></i> Baseline + URL mapping</td>
+                    <td class="text-center"><i class="bi bi-check-lg text-primary fs-5"></i> Growth SEO Setup</td>
+                    <td class="text-center"><i class="bi bi-check-lg text-info fs-5"></i> Enterprise Strategy</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="ps-4 fw-normal text-muted">Accessibility (WCAG)</th>
+                    <td class="text-center">Standard structural</td>
+                    <td class="text-center">Standard structural</td>
+                    <td class="text-center"><i class="bi bi-check-lg text-primary fs-5"></i> Enhanced Checks</td>
+                    <td class="text-center"><i class="bi bi-check-lg text-info fs-5"></i> Strict 2.1 AA targets</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="ps-4 fw-normal text-muted">Analytics Setup</th>
+                    <td class="text-center"><i class="bi bi-check-lg text-muted fs-5"></i> Google Analytics</td>
+                    <td class="text-center"><i class="bi bi-check-lg text-primary fs-5"></i> + Custom Events</td>
+                    <td class="text-center"><i class="bi bi-check-lg text-primary fs-5"></i> + Conversion Tracking</td>
+                    <td class="text-center"><i class="bi bi-check-lg text-info fs-5"></i> Full Data Pipeline</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Mobile Accordion -->
+            <div class="accordion d-lg-none" id="compareAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingLaunch">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseLaunch" aria-expanded="false" aria-controls="collapseLaunch">
+                    Launch Tier Deliverables
+                  </button>
+                </h2>
+                <div id="collapseLaunch" class="accordion-collapse collapse" aria-labelledby="headingLaunch"
+                  data-bs-parent="#compareAccordion">
+                  <div class="accordion-body">
+                    <ul class="list-unstyled mb-0 small">
+                      <li class="mb-2"><strong>Strategy:</strong> Basic Outline</li>
+                      <li class="mb-2"><strong>Design:</strong> Template-based</li>
+                      <li class="mb-2"><strong>CMS:</strong> None</li>
+                      <li class="mb-2"><strong>SEO:</strong> Baseline</li>
+                      <li class="mb-2"><strong>Accessibility:</strong> Standard structural</li>
+                      <li><strong>Analytics:</strong> Google Analytics Default</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingBusiness">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseBusiness" aria-expanded="false" aria-controls="collapseBusiness">
+                    Business Tier Deliverables
+                  </button>
+                </h2>
+                <div id="collapseBusiness" class="accordion-collapse collapse" aria-labelledby="headingBusiness"
+                  data-bs-parent="#compareAccordion">
+                  <div class="accordion-body">
+                    <ul class="list-unstyled mb-0 small">
+                      <li class="mb-2"><strong>Strategy:</strong> Sitemap & Wireframes</li>
+                      <li class="mb-2"><strong>Design:</strong> Custom brand-aligned</li>
+                      <li class="mb-2"><strong>CMS:</strong> Basic (Text/Images)</li>
+                      <li class="mb-2"><strong>SEO:</strong> Baseline + URL mapping</li>
+                      <li class="mb-2"><strong>Accessibility:</strong> Standard structural</li>
+                      <li><strong>Analytics:</strong> + Custom Events</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: Process / How Engagement Works -->
+    <section class="enterprise-process section-padding section-bg">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="h3 fw-bold">How Engagement Works</h2>
+            <p class="text-muted">A predictable, milestone-driven delivery process.</p>
+          </div>
         </div>
         <div class="row g-4">
-          <div class="col-lg-4 col-md-6">
-            <article class="pricing-card">
-              <div class="pricing-card-body">
-                <div class="pricing-top">
-                  <span class="pricing-label">For new ventures</span>
-                  <h3 class="pricing-title">Starter</h3>
-                  <div class="pricing-price"><span class="currency">$</span>2.8k</div>
-                  <p class="pricing-description">One-page marketing site that tells your story and captures leads.</p>
-                  <div class="pricing-meta">1–2 weeks • Up to 4 sections</div>
-                </div>
-                <ul class="pricing-features">
-                  <li><i class="bi-check"></i> Messaging workshop + copy polish</li>
-                  <li><i class="bi-check"></i> High-impact hero, offer, and social proof</li>
-                  <li><i class="bi-check"></i> Lead capture or booking integration</li>
-                  <li><i class="bi-check"></i> Speed + SEO essentials covered</li>
-                </ul>
+          <div class="col-md-3">
+            <div class="process-step text-center px-2">
+              <div
+                class="process-icon bg-white shadow-sm rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3"
+                style="width: 64px; height: 64px; border: 1px solid var(--border-color);">
+                <i class="bi bi-search fs-4 text-primary"></i>
               </div>
-              <div class="pricing-footer">
-                <a class="btn btn-outline-primary w-100" href="contact.html">Start with Starter</a>
-                <span class="pricing-note">Includes go-live assistance + 14 days of support</span>
-              </div>
-            </article>
+              <h5 class="h6 fw-bold">1. Discovery</h5>
+              <p class="small text-muted">We align on requirements, privacy expectations, and project boundaries.</p>
+            </div>
           </div>
-
-          <div class="col-lg-4 col-md-6">
-            <article class="pricing-card pricing-card-featured">
-              <div class="pricing-card-body">
-                <div class="pricing-top">
-                  <span class="pricing-badge">Most Popular</span>
-                  <span class="pricing-label">For scaling teams</span>
-                  <h3 class="pricing-title">Standard</h3>
-                  <div class="pricing-price"><span class="currency">$</span>5.4k</div>
-                  <p class="pricing-description">Multi-page website with clear positioning, product storytelling, and
-                    conversion paths.</p>
-                  <div class="pricing-meta">4–6 weeks • Up to 8 pages</div>
-                </div>
-                <ul class="pricing-features">
-                  <li><i class="bi-check"></i> Sitemap &amp; content architecture</li>
-                  <li><i class="bi-check"></i> Modular design system in Figma</li>
-                  <li><i class="bi-check"></i> Webflow build or custom codebase</li>
-                  <li><i class="bi-check"></i> CMS collections + blog setup</li>
-                  <li><i class="bi-check"></i> Analytics, SEO, and launch QA</li>
-                </ul>
+          <div class="col-md-3">
+            <div class="process-step text-center px-2">
+              <div
+                class="process-icon bg-white shadow-sm rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3"
+                style="width: 64px; height: 64px; border: 1px solid var(--border-color);">
+                <i class="bi bi-file-earmark-text fs-4 text-primary"></i>
               </div>
-              <div class="pricing-footer">
-                <a class="btn btn-primary w-100" href="contact.html">Build a Standard Site</a>
-                <span class="pricing-note">Payment plans available • 30-day post-launch tune-ups</span>
-              </div>
-            </article>
+              <h5 class="h6 fw-bold">2. Scope & Estimate</h5>
+              <p class="small text-muted">Estimates are non-binding. We supply a fixed-price written proposal for formal
+                approval.</p>
+            </div>
           </div>
-
-          <div class="col-lg-4 col-md-6">
-            <article class="pricing-card">
-              <div class="pricing-card-body">
-                <div class="pricing-top">
-                  <span class="pricing-label">For established brands</span>
-                  <h3 class="pricing-title">Premium</h3>
-                  <div class="pricing-price"><span class="currency">$</span>8.8k</div>
-                  <p class="pricing-description">End-to-end redesign with advanced integrations, custom animations, and
-                    team enablement.</p>
-                  <div class="pricing-meta">6–8 weeks • Up to 12 pages</div>
-                </div>
-                <ul class="pricing-features">
-                  <li><i class="bi-check"></i> Deep-dive brand + UX audit</li>
-                  <li><i class="bi-check"></i> Scalable component library + guidelines</li>
-                  <li><i class="bi-check"></i> Complex forms, memberships, or integrations</li>
-                  <li><i class="bi-check"></i> Performance budgeting &amp; monitoring</li>
-                  <li><i class="bi-check"></i> Internal team training &amp; documentation</li>
-                </ul>
+          <div class="col-md-3">
+            <div class="process-step text-center px-2">
+              <div
+                class="process-icon bg-white shadow-sm rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3"
+                style="width: 64px; height: 64px; border: 1px solid var(--border-color);">
+                <i class="bi bi-code-slash fs-4 text-primary"></i>
               </div>
-              <div class="pricing-footer">
-                <a class="btn btn-outline-primary w-100" href="contact.html">Plan a Premium Project</a>
-                <span class="pricing-note">Bundle with retainers for iterative rollouts</span>
-              </div>
-            </article>
+              <h5 class="h6 fw-bold">3. Build & Review</h5>
+              <p class="small text-muted">Iterative development with structured approval gates and staging access.</p>
+            </div>
           </div>
-        </div>
-
-        <!-- Comparison Table -->
-        <div class="row justify-content-center mt-5">
-          <div class="col-lg-10">
-            <div class="package-includes">
-              <h4 class="mb-4 text-center">Quick comparison</h4>
-              <div class="table-responsive">
-                <table class="table table-borderless align-middle text-center mb-0">
-                  <thead>
-                    <tr>
-                      <th class="text-start" style="width:40%"></th>
-                      <th>Starter</th>
-                      <th>Standard</th>
-                      <th>Premium</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="text-start">Strategy workshop</td>
-                      <td><i class="bi-check-circle-fill text-primary"></i></td>
-                      <td><i class="bi-check-circle-fill text-primary"></i></td>
-                      <td><i class="bi-check-circle-fill text-primary"></i></td>
-                    </tr>
-                    <tr>
-                      <td class="text-start">Custom design</td>
-                      <td><i class="bi-check-circle-fill text-primary"></i></td>
-                      <td><i class="bi-check-circle-fill text-primary"></i></td>
-                      <td><i class="bi-check-circle-fill text-primary"></i></td>
-                    </tr>
-                    <tr>
-                      <td class="text-start">Pages</td>
-                      <td>1 (up to 4 sections)</td>
-                      <td>Up to 8</td>
-                      <td>Up to 12</td>
-                    </tr>
-                    <tr>
-                      <td class="text-start">CMS / Blog</td>
-                      <td>—</td>
-                      <td><i class="bi-check-circle-fill text-primary"></i></td>
-                      <td><i class="bi-check-circle-fill text-primary"></i></td>
-                    </tr>
-                    <tr>
-                      <td class="text-start">Design system in Figma</td>
-                      <td>—</td>
-                      <td><i class="bi-check-circle-fill text-primary"></i></td>
-                      <td><i class="bi-check-circle-fill text-primary"></i></td>
-                    </tr>
-                    <tr>
-                      <td class="text-start">Advanced integrations</td>
-                      <td>—</td>
-                      <td>—</td>
-                      <td><i class="bi-check-circle-fill text-primary"></i></td>
-                    </tr>
-                    <tr>
-                      <td class="text-start">Team training &amp; docs</td>
-                      <td>—</td>
-                      <td>—</td>
-                      <td><i class="bi-check-circle-fill text-primary"></i></td>
-                    </tr>
-                    <tr>
-                      <td class="text-start">Typical timeline</td>
-                      <td>1–2 wk</td>
-                      <td>4–6 wk</td>
-                      <td>6–8 wk</td>
-                    </tr>
-                    <tr>
-                      <td class="text-start">Investment</td>
-                      <td><strong>$2.8k</strong></td>
-                      <td><strong>$5.4k</strong></td>
-                      <td><strong>$8.8k</strong></td>
-                    </tr>
-                  </tbody>
-                </table>
+          <div class="col-md-3">
+            <div class="process-step text-center px-2">
+              <div
+                class="process-icon bg-white shadow-sm rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3"
+                style="width: 64px; height: 64px; border: 1px solid var(--border-color);">
+                <i class="bi bi-send fs-4 text-primary"></i>
               </div>
+              <h5 class="h6 fw-bold">4. Launch & Support</h5>
+              <p class="small text-muted">Seamless deployment, team training, and a standard 14-day QA warranty.</p>
             </div>
           </div>
         </div>
+      </div>
+    </section>
 
+    <!-- SECTION 6: Trust & Standards -->
+    <section class="enterprise-trust section-padding bg-white">
+      <div class="container">
+        <div class="row g-4 align-items-stretch justify-content-center">
+          <div class="col-lg-4 col-md-6">
+            <div class="trust-card p-4 rounded bg-light h-100" style="border-left: 4px solid var(--primary-color);">
+              <i class="bi bi-shield-lock-fill fs-3 text-primary mb-3 d-block"></i>
+              <h5 class="h6 fw-bold">Privacy-First Architecture</h5>
+              <p class="small text-muted mb-0">Forms built for minimal data collection. Secure, encrypted handoff of
+                credentials without relying on raw email storage.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="trust-card p-4 rounded bg-light h-100" style="border-left: 4px solid var(--primary-color);">
+              <i class="bi bi-universal-access-circle fs-3 text-primary mb-3 d-block"></i>
+              <h5 class="h6 fw-bold">Accessibility Aware</h5>
+              <p class="small text-muted mb-0">We build with WCAG 2.1 AA best practices in mind, ensuring semantic HTML,
+                keyboard focus states, and scalable contrast.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="trust-card p-4 rounded bg-light h-100" style="border-left: 4px solid var(--primary-color);">
+              <i class="bi bi-lightning-charge-fill fs-3 text-primary mb-3 d-block"></i>
+              <h5 class="h6 fw-bold">Performance Targets</h5>
+              <p class="small text-muted mb-0">Optimized DOM footprints, modern image formats, and minimal external
+                libraries to lock in fast Core Web Vitals.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: FAQ -->
+    <section class="enterprise-faq section-padding section-bg">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center">
+            <h2 class="h3 fw-bold">Frequently Asked Questions</h2>
+          </div>
+        </div>
         <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <div class="package-includes">
-              <h4>Every package includes</h4>
-              <div class="includes-grid">
-                <div class="include-item"><i class="bi-clipboard-check"></i> Project plan with clear milestones</div>
-                <div class="include-item"><i class="bi-palette"></i> Visual direction + design refinements</div>
-                <div class="include-item"><i class="bi-people"></i> Weekly syncs &amp; async updates</div>
-                <div class="include-item"><i class="bi-gear"></i> Technical setup + launch support</div>
-                <div class="include-item"><i class="bi-graph-up"></i> Performance + SEO baseline</div>
-                <div class="include-item"><i class="bi-journal-text"></i> Loom walkthroughs &amp; training docs</div>
+          <div class="col-lg-8">
+            <div class="accordion custom-accordion" id="pricingFaq">
+              <div class="accordion-item bg-white border mb-3 rounded shadow-sm">
+                <h2 class="accordion-header" id="faq1">
+                  <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseFaq1" aria-expanded="false" aria-controls="collapseFaq1">
+                    Why are these estimate ranges instead of exact pricing?
+                  </button>
+                </h2>
+                <div id="collapseFaq1" class="accordion-collapse collapse" aria-labelledby="faq1"
+                  data-bs-parent="#pricingFaq">
+                  <div class="accordion-body text-muted small">
+                    Every agency project is unique. A 10-page site with heavy integrations requires drastically more
+                    engineering hours than a 10-page static brochure. We provide transparent ranges to set expectations,
+                    and lock in a fixed-price proposal only after understanding your exact architectural needs.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item bg-white border mb-3 rounded shadow-sm">
+                <h2 class="accordion-header" id="faq2">
+                  <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseFaq2" aria-expanded="false" aria-controls="collapseFaq2">
+                    What is included in the revision process?
+                  </button>
+                </h2>
+                <div id="collapseFaq2" class="accordion-collapse collapse" aria-labelledby="faq2"
+                  data-bs-parent="#pricingFaq">
+                  <div class="accordion-body text-muted small">
+                    Standard and Growth tiers include two dedicated rounds of design consolidation before development
+                    begins. This ensures we lock in the visual strategy early, preventing scope creep and costly
+                    rebuilds during the engineering phase.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item bg-white border mb-3 rounded shadow-sm">
+                <h2 class="accordion-header" id="faq3">
+                  <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseFaq3" aria-expanded="false" aria-controls="collapseFaq3">
+                    Do you offer ongoing maintenance?
+                  </button>
+                </h2>
+                <div id="collapseFaq3" class="accordion-collapse collapse" aria-labelledby="faq3"
+                  data-bs-parent="#pricingFaq">
+                  <div class="accordion-body text-muted small">
+                    Yes. Every project includes a 14-day post-launch warranty for bug fixes. Beyond that, we offer
+                    monthly retainers or quarterly check-ins for organizations that require continuous support,
+                    performance monitoring, and content updates.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item bg-white border mb-3 rounded shadow-sm">
+                <h2 class="accordion-header" id="faq4">
+                  <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseFaq4" aria-expanded="false" aria-controls="collapseFaq4">
+                    Do you support ADA / accessibility needs?
+                  </button>
+                </h2>
+                <div id="collapseFaq4" class="accordion-collapse collapse" aria-labelledby="faq4"
+                  data-bs-parent="#pricingFaq">
+                  <div class="accordion-body text-muted small">
+                    Absolutely. All builds incorporate baseline semantic HTML and contrast standards. If your
+                    organization requires strict WCAG 2.1 AA target compliance, toggle the "Enhanced Accessibility"
+                    option in the estimator, and we will scope the necessary auditory and visual checks.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item bg-white border mb-3 rounded shadow-sm">
+                <h2 class="accordion-header" id="faq5">
+                  <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseFaq5" aria-expanded="false" aria-controls="collapseFaq5">
+                    What do you need from me to start?
+                  </button>
+                </h2>
+                <div id="collapseFaq5" class="accordion-collapse collapse" aria-labelledby="faq5"
+                  data-bs-parent="#pricingFaq">
+                  <div class="accordion-body text-muted small">
+                    To begin, we need a 30-minute discovery call to map out your goals. Following proposal approval,
+                    we'll ask for your existing brand assets (logos, fonts), access to any current platforms, and
+                    completion of our onboarding questionnaire.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item bg-white border rounded shadow-sm">
+                <h2 class="accordion-header" id="faq6">
+                  <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseFaq6" aria-expanded="false" aria-controls="collapseFaq6">
+                    Can you work with my existing brand?
+                  </button>
+                </h2>
+                <div id="collapseFaq6" class="accordion-collapse collapse" aria-labelledby="faq6"
+                  data-bs-parent="#pricingFaq">
+                  <div class="accordion-body text-muted small">
+                    Definitely. We frequently integrate existing brand guidelines, color palettes, and typography into
+                    our UI component systems to ensure structural consistency across your entire digital presence.
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -283,71 +703,25 @@
       </div>
     </section>
 
-    <section class="section-padding add-ons-section">
-      <div class="container">
-        <div class="row align-items-end g-4">
-          <div class="col-lg-5">
-            <span class="section-eyebrow">Add-ons &amp; retainers</span>
-            <h2 class="section-title">Extend the project for even more lift</h2>
-            <p class="section-lead">Layer in the support you need — whether it's content, growth experiments, or ongoing
-              optimization.</p>
-          </div>
-          <div class="col-lg-7">
-            <div class="row g-4">
-              <div class="col-md-6">
-                <article class="addon-card">
-                  <div class="addon-icon"><i class="bi-type"></i></div>
-                  <h5>Conversion Copy + Content</h5>
-                  <p>Messaging frameworks, page copy, and content outlines built to convert.</p>
-                  <span class="addon-meta">+$950 per bundle</span>
-                </article>
-              </div>
-              <div class="col-md-6">
-                <article class="addon-card">
-                  <div class="addon-icon"><i class="bi-layers"></i></div>
-                  <h5>Design System Sprint</h5>
-                  <p>Component audit, tokens, and Figma library for teams shipping fast.</p>
-                  <span class="addon-meta">From $1.8k</span>
-                </article>
-              </div>
-              <div class="col-md-6">
-                <article class="addon-card">
-                  <div class="addon-icon"><i class="bi-lightning-charge"></i></div>
-                  <h5>Growth Experiments</h5>
-                  <p>Landing pages, A/B tests, and campaign assets delivered in quick sprints.</p>
-                  <span class="addon-meta">Retainers from $1.2k/mo</span>
-                </article>
-              </div>
-              <div class="col-md-6">
-                <article class="addon-card">
-                  <div class="addon-icon"><i class="bi-shield-check"></i></div>
-                  <h5>Care &amp; Optimization</h5>
-                  <p>Monitoring, updates, and priority support to keep your launch sharp.</p>
-                  <span class="addon-meta">Plans from $350/mo</span>
-                </article>
-              </div>
-            </div>
+    <!-- SECTION 8: Final CTA -->
+    <section class="enterprise-final-cta section-padding position-relative"
+      style="background: linear-gradient(135deg, #13547a 0%, #0e2f48 100%); overflow: hidden;">
+      <div class="position-absolute opacity-10"
+        style="top: -50%; right: -10%; width: 50vw; height: 50vw; background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%); border-radius: 50%; pointer-events: none;">
+      </div>
+
+      <div class="container position-relative z-1">
+        <div class="row text-center">
+          <div class="col-lg-8 mx-auto text-white">
+            <h2 class="h2 fw-bold text-white mb-3">Ready to structure your next launch?</h2>
+            <p class="lead text-white-50 mb-5">Submit your requirements and get a detailed execution roadmap and formal
+              proposal within 24–48 hours.</p>
+            <a href="contact.html" class="btn btn-light btn-lg px-5 fw-bold shadow">Start a Project</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Not sure? -->
-    <section class="section-padding section-bg packages-cta">
-      <div class="container">
-        <div class="row align-items-center g-4">
-          <div class="col-lg-7">
-            <h3>Not sure which package fits?</h3>
-            <p>Share a bit about your product, timeline, and goals. We'll map the right engagement and send a tailored
-              proposal within 48 hours.</p>
-          </div>
-          <div class="col-lg-5 text-lg-end">
-            <a class="btn custom-btn me-lg-3 mb-3 mb-lg-0" href="contact.html">Book a Discovery Call</a>
-            <a class="btn btn-outline-dark" href="portfolio.html">See recent launches</a>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer class="site-footer enterprise-footer">
@@ -375,8 +749,8 @@
         <nav class="enterprise-footer__col" aria-label="Contact">
           <h6>Contact</h6>
           <a href="contact.html" class="enterprise-footer__link">Contact Page</a>
-          <a href="mailto:volatile-soulutions@outlook.com"
-            class="enterprise-footer__link">volatile-soulutions@outlook.com</a>
+          <a href="mailto:volatile-solutions@outlook.com"
+            class="enterprise-footer__link">volatile-solutions@outlook.com</a>
           <a href="tel:401-545-6860" class="enterprise-footer__link">401-545-6860</a>
           <span class="enterprise-footer__meta">Providence, Rhode Island</span>
         </nav>
@@ -394,7 +768,7 @@
             target="_blank" rel="noopener">LinkedIn</a>
           <a href="https://github.com/AVolatile" class="enterprise-footer__link" target="_blank"
             rel="noopener">GitHub</a>
-          <a href="mailto:volatile-soulutions@outlook.com" class="enterprise-footer__link">Email Support</a>
+          <a href="mailto:volatile-solutions@outlook.com" class="enterprise-footer__link">Email Support</a>
         </nav>
       </div>
 

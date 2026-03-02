@@ -56,80 +56,125 @@
       </div>
     </nav>
 
-    <header class="site-header d-flex flex-column justify-content-center align-items-center">
+    <header class="site-header site-header--agency d-flex flex-column justify-content-center align-items-center">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-lg-6 col-12">
-            <nav aria-label="breadcrumb">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Homepage</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Portfolio</li>
-              </ol>
-            </nav>
-            <h1 class="text-white">Selected Work</h1>
-            <p class="text-white-50 mt-3 mb-0">Websites, brand systems, and growth projects we've shipped for clients.
+          <div class="col-lg-8 col-12 mx-auto text-center">
+            <h1 class="text-white display-4 fw-bold mb-3">Selected Work</h1>
+            <p class="text-white-50 lead mb-0">Websites, brand systems, and growth projects we've shipped for clients.
             </p>
           </div>
         </div>
       </div>
     </header>
 
-    <!-- Mid-page CTA -->
-    <section class="section-padding" style="padding-bottom:0;">
+    <!-- Featured Project -->
+    <section class="section-padding section-bg pb-0">
       <div class="container">
-        <div class="row justify-content-center text-center">
-          <div class="col-lg-8">
-            <p class="section-lead">Have a similar project in mind? <a href="contact.html" class="link-arrow">Start a
-                Project</a></p>
+        <div class="row align-items-center mb-5">
+          <div class="col-12">
+            <div class="d-flex align-items-center mb-4">
+              <span class="badge bg-primary rounded-pill px-3 py-2 text-uppercase tracking-wider fw-semibold"
+                style="letter-spacing: 0.05em; font-size: 0.75rem;">Featured</span>
+              <div class="ms-3" style="height: 1px; flex-grow: 1; background-color: rgba(19, 84, 122, 0.1);"></div>
+            </div>
+
+            <div class="agency-featured-card">
+              <div class="row g-0 align-items-center">
+                <div class="col-lg-6 col-12 p-4 p-lg-5 order-2 order-lg-1">
+                  <div class="d-flex gap-2 mb-3 flex-wrap">
+                    <span class="badge bg-light text-dark shadow-sm">SaaS Application</span>
+                    <span class="badge bg-light text-dark shadow-sm">Enterprise Identity</span>
+                  </div>
+                  <h2 class="h1 fw-bold mb-3 text-dark">Cloud Keep Enterprise</h2>
+                  <p class="text-muted lead mb-4">A complete ground-up rebuild of the Cloud Keep client portal. We
+                    engineered a robust, intuitive interface for managing complex data hierarchies while establishing a
+                    commanding new brand identity.</p>
+
+                  <div class="agency-metrics-grid mb-4">
+                    <div class="metric-item">
+                      <strong class="d-block text-primary h4 mb-0">+40%</strong>
+                      <span class="text-muted small text-uppercase" style="letter-spacing: 0.05em;">User
+                        Retention</span>
+                    </div>
+                    <div class="metric-item">
+                      <strong class="d-block text-primary h4 mb-0">React</strong>
+                      <span class="text-muted small text-uppercase" style="letter-spacing: 0.05em;">Frontend
+                        Stack</span>
+                    </div>
+                    <div class="metric-item">
+                      <strong class="d-block text-primary h4 mb-0">6 Wks</strong>
+                      <span class="text-muted small text-uppercase" style="letter-spacing: 0.05em;">Total Build
+                        Time</span>
+                    </div>
+                  </div>
+
+                  <div class="d-flex gap-3 mt-2">
+                    <a class="btn btn--primary btn--lg" href="https://cloud-keep.netlify.app/" target="_blank"
+                      rel="noopener">View Live Site <i class="bi-arrow-right ms-2"></i></a>
+                    <button class="btn btn--secondary btn--lg" disabled>Case Study Coming Soon</button>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-12 order-1 order-lg-2">
+                  <div class="featured-image-wrapper p-3 p-lg-0">
+                    <img src="images/portfolio/cloud-keep-thumbnail.png" class="img-fluid rounded-4 shadow-lg w-100"
+                      alt="Cloud Keep Showcase" style="object-fit: cover; aspect-ratio: 4/3;">
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Live Projects -->
-    <section id="projects" class="section-padding section-bg">
+    <!-- Agency Grid -->
+    <section id="projects" class="section-padding section-bg pt-5">
       <div class="container">
-        <div class="row text-center pb-4">
-          <h2 class="col-md-8 m-auto h2">Live Projects</h2>
-          <p class="text-muted">Production builds with live links. Each card shows the project type and key
-            deliverables.</p>
-        </div>
-        <div class="row pb-3">
-          <div class="col-12 text-center">
-            <div class="portfolio-filter" role="group" aria-label="Portfolio Filters">
-              <button type="button" class="btn btn-outline-primary btn-sm rounded-pill portfolio-filter-btn active"
-                aria-pressed="true" data-filter="all">All</button>
-              <button type="button" class="btn btn-outline-primary btn-sm rounded-pill portfolio-filter-btn"
-                aria-pressed="false" data-filter="websites">Websites</button>
-              <button type="button" class="btn btn-outline-primary btn-sm rounded-pill portfolio-filter-btn"
-                aria-pressed="false" data-filter="apps">Apps</button>
-              <button type="button" class="btn btn-outline-primary btn-sm rounded-pill portfolio-filter-btn"
-                aria-pressed="false" data-filter="ecommerce">E‑commerce</button>
-              <button type="button" class="btn btn-outline-primary btn-sm rounded-pill portfolio-filter-btn"
-                aria-pressed="false" data-filter="branding">Branding</button>
+        <!-- Filter Horizon -->
+        <div class="row mb-5">
+          <div class="col-12">
+            <div class="agency-filter-container">
+              <div class="agency-filter-scroll" role="group" aria-label="Portfolio Filters">
+                <button type="button" class="agency-chip active" aria-pressed="true" data-filter="all">All
+                  Projects</button>
+                <button type="button" class="agency-chip" aria-pressed="false" data-filter="websites">Websites &
+                  Portals</button>
+                <button type="button" class="agency-chip" aria-pressed="false" data-filter="apps">Web
+                  Applications</button>
+                <button type="button" class="agency-chip" aria-pressed="false"
+                  data-filter="ecommerce">E‑commerce</button>
+                <button type="button" class="agency-chip" aria-pressed="false" data-filter="branding">Brand
+                  Systems</button>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="portfolio-grid row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 g-lg-4">
+        <div class="portfolio-grid row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 g-lg-5">
           <!-- Cloud Keep -->
           <div class="col" data-cats="websites apps">
-            <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-              <img src="images/portfolio/cloud-keep-thumbnail.png" class="card-img-top rounded-top-3"
-                alt="Cloud Keep project — file management dashboard">
-              <div class="card-body d-flex flex-column">
+            <div class="agency-project-card">
+              <div class="agency-project-thumb">
+                <img src="images/portfolio/cloud-keep-thumbnail.png" alt="Cloud Keep">
+              </div>
+              <div class="agency-project-content">
                 <div class="d-flex gap-2 mb-2 flex-wrap">
-                  <span class="badge bg-light text-dark">SaaS</span>
-                  <span class="badge bg-light text-dark">Web App</span>
+                  <span class="agency-tag">SaaS</span>
+                  <span class="agency-tag">Web App</span>
                 </div>
-                <h3 class="h5 card-title mb-2">Cloud Keep</h3>
-                <p class="card-text text-muted flex-grow-1">Secure, fast, intelligent file management for modern teams.
-                  Collaboration features, role-based access, and smart search.</p>
-                <p class="card-text"><small class="text-muted"><strong>Deliverables:</strong> Strategy, UX, Full-stack
-                    build</small></p>
-                <div class="mt-3 d-flex gap-2">
-                  <a class="btn btn-primary btn-sm rounded-pill px-3" href="https://cloud-keep.netlify.app/"
-                    target="_blank" rel="noopener">Live Site</a>
+                <h3 class="agency-project-title">Cloud Keep</h3>
+                <p class="agency-project-desc">Secure, fast, intelligent file management for modern teams. Collaboration
+                  features, role-based access, and smart search.</p>
+                <div class="agency-project-metrics">
+                  <div class="metric"><i class="bi-check-circle text-primary me-1"></i> Strategy</div>
+                  <div class="metric"><i class="bi-check-circle text-primary me-1"></i> UX/UI Design</div>
+                  <div class="metric"><i class="bi-check-circle text-primary me-1"></i> Full-Stack Build</div>
+                </div>
+                <div class="agency-project-actions">
+                  <a class="btn btn--primary btn--sm btn--full mb-2" href="https://cloud-keep.netlify.app/"
+                    target="_blank" rel="noopener">View Live Site</a>
+                  <button class="btn btn--secondary btn--sm btn--full" disabled>Case Study</button>
                 </div>
               </div>
             </div>
@@ -137,22 +182,27 @@
 
           <!-- Jobly -->
           <div class="col" data-cats="websites apps">
-            <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-              <img src="images/portfolio/jobly-thumbnail.png" class="card-img-top rounded-top-3"
-                alt="Jobly project — job search application">
-              <div class="card-body d-flex flex-column">
+            <div class="agency-project-card">
+              <div class="agency-project-thumb">
+                <img src="images/portfolio/jobly-thumbnail.png" alt="Jobly">
+              </div>
+              <div class="agency-project-content">
                 <div class="d-flex gap-2 mb-2 flex-wrap">
-                  <span class="badge bg-light text-dark">Web App</span>
-                  <span class="badge bg-light text-dark">Landing Page</span>
+                  <span class="agency-tag">Web App</span>
+                  <span class="agency-tag">Landing Page</span>
                 </div>
-                <h3 class="h5 card-title mb-2">Jobly</h3>
-                <p class="card-text text-muted flex-grow-1">Job search app with auth, filtering, saved roles, and a
-                  clean discovery experience.</p>
-                <p class="card-text"><small class="text-muted"><strong>Deliverables:</strong> UX Design, Build, Auth
-                    integration</small></p>
-                <div class="mt-3 d-flex gap-2">
-                  <a class="btn btn-primary btn-sm rounded-pill px-3" href="https://jobly-jobsearch.netlify.app/"
-                    target="_blank" rel="noopener">Live Site</a>
+                <h3 class="agency-project-title">Jobly</h3>
+                <p class="agency-project-desc">Job search app with auth, filtering, saved roles, and a clean discovery
+                  experience built for speed.</p>
+                <div class="agency-project-metrics">
+                  <div class="metric"><i class="bi-check-circle text-primary me-1"></i> UX Design</div>
+                  <div class="metric"><i class="bi-check-circle text-primary me-1"></i> React Build</div>
+                  <div class="metric"><i class="bi-check-circle text-primary me-1"></i> Auth Flow</div>
+                </div>
+                <div class="agency-project-actions">
+                  <a class="btn btn--primary btn--sm btn--full mb-2" href="https://jobly-jobsearch.netlify.app/"
+                    target="_blank" rel="noopener">View Live Site</a>
+                  <button class="btn btn--secondary btn--sm btn--full" disabled>Case Study</button>
                 </div>
               </div>
             </div>
@@ -160,22 +210,27 @@
 
           <!-- Birdie Bay -->
           <div class="col" data-cats="websites ecommerce branding">
-            <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-              <img src="images/portfolio/birdie-bay-thumbnail.png" class="card-img-top rounded-top-3"
-                alt="Birdie Bay project — e-commerce storefront">
-              <div class="card-body d-flex flex-column">
+            <div class="agency-project-card">
+              <div class="agency-project-thumb">
+                <img src="images/portfolio/birdie-bay-thumbnail.png" alt="Birdie Bay">
+              </div>
+              <div class="agency-project-content">
                 <div class="d-flex gap-2 mb-2 flex-wrap">
-                  <span class="badge bg-light text-dark">E‑commerce</span>
-                  <span class="badge bg-light text-dark">Branding</span>
+                  <span class="agency-tag">E-commerce</span>
+                  <span class="agency-tag">Branding</span>
                 </div>
-                <h3 class="h5 card-title mb-2">Birdie Bay</h3>
-                <p class="card-text text-muted flex-grow-1">E-commerce concept with product pages, checkout flow, and
-                  full brand identity design.</p>
-                <p class="card-text"><small class="text-muted"><strong>Deliverables:</strong> Brand, Design, Storefront
-                    build</small></p>
-                <div class="mt-3 d-flex gap-2">
-                  <a class="btn btn-primary btn-sm rounded-pill px-3" href="https://birdie-bay.netlify.app/"
-                    target="_blank" rel="noopener">Live Site</a>
+                <h3 class="agency-project-title">Birdie Bay</h3>
+                <p class="agency-project-desc">E-commerce concept with product pages, intuitive checkout flow, and full
+                  brand identity design.</p>
+                <div class="agency-project-metrics">
+                  <div class="metric"><i class="bi-check-circle text-primary me-1"></i> Brand Identity</div>
+                  <div class="metric"><i class="bi-check-circle text-primary me-1"></i> UI/UX Design</div>
+                  <div class="metric"><i class="bi-check-circle text-primary me-1"></i> Storefront</div>
+                </div>
+                <div class="agency-project-actions">
+                  <a class="btn btn--primary btn--sm btn--full mb-2" href="https://birdie-bay.netlify.app/"
+                    target="_blank" rel="noopener">View Live Site</a>
+                  <button class="btn btn--secondary btn--sm btn--full" disabled>Case Study</button>
                 </div>
               </div>
             </div>
@@ -183,22 +238,27 @@
 
           <!-- Frost -->
           <div class="col" data-cats="websites branding">
-            <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-              <img src="images/portfolio/frost-thumbnail.png" class="card-img-top rounded-top-3"
-                alt="Frost project — fitness coaching website">
-              <div class="card-body d-flex flex-column">
+            <div class="agency-project-card">
+              <div class="agency-project-thumb">
+                <img src="images/portfolio/frost-thumbnail.png" alt="Frost">
+              </div>
+              <div class="agency-project-content">
                 <div class="d-flex gap-2 mb-2 flex-wrap">
-                  <span class="badge bg-light text-dark">Marketing Site</span>
-                  <span class="badge bg-light text-dark">Branding</span>
+                  <span class="agency-tag">Marketing Site</span>
+                  <span class="agency-tag">Branding</span>
                 </div>
-                <h3 class="h5 card-title mb-2">Frost</h3>
-                <p class="card-text text-muted flex-grow-1">Online fitness coaching. Custom programs, hands-on feedback,
-                  and accountability designed around your life.</p>
-                <p class="card-text"><small class="text-muted"><strong>Deliverables:</strong> Strategy, Brand, Website
-                    build</small></p>
-                <div class="mt-3 d-flex gap-2">
-                  <a class="btn btn-primary btn-sm rounded-pill px-3" href="https://frost-fitness.netlify.app/"
-                    target="_blank" rel="noopener">Live Site</a>
+                <h3 class="agency-project-title">Frost</h3>
+                <p class="agency-project-desc">Online fitness coaching. Custom programs, hands-on feedback, and
+                  accountability designed around your life.</p>
+                <div class="agency-project-metrics">
+                  <div class="metric"><i class="bi-check-circle text-primary me-1"></i> Strategy</div>
+                  <div class="metric"><i class="bi-check-circle text-primary me-1"></i> Visual Brand</div>
+                  <div class="metric"><i class="bi-check-circle text-primary me-1"></i> Web Build</div>
+                </div>
+                <div class="agency-project-actions">
+                  <a class="btn btn--primary btn--sm btn--full mb-2" href="https://frost-fitness.netlify.app/"
+                    target="_blank" rel="noopener">View Live Site</a>
+                  <button class="btn btn--secondary btn--sm btn--full" disabled>Case Study</button>
                 </div>
               </div>
             </div>
@@ -206,21 +266,26 @@
 
           <!-- Moody Brewer -->
           <div class="col" data-cats="websites branding">
-            <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-              <img src="images/portfolio/moody-brewer-thumbnail.png" class="card-img-top rounded-top-3"
-                alt="Moody Brewer project — branding concept">
-              <div class="card-body d-flex flex-column">
+            <div class="agency-project-card">
+              <div class="agency-project-thumb">
+                <img src="images/portfolio/moody-brewer-thumbnail.png" alt="Moody Brewer">
+              </div>
+              <div class="agency-project-content">
                 <div class="d-flex gap-2 mb-2 flex-wrap">
-                  <span class="badge bg-light text-dark">Branding</span>
-                  <span class="badge bg-light text-dark">Landing Page</span>
+                  <span class="agency-tag">Branding</span>
+                  <span class="agency-tag">Landing Page</span>
                 </div>
-                <h3 class="h5 card-title mb-2">Moody Brewer</h3>
-                <p class="card-text text-muted flex-grow-1">Brand + site concept with playful visuals, motion design,
-                  and strong identity system.</p>
-                <p class="card-text"><small class="text-muted"><strong>Deliverables:</strong> Visual identity, Motion,
-                    Web concept</small></p>
-                <div class="mt-3 d-flex gap-2">
-                  <span class="btn btn-outline-secondary btn-sm rounded-pill px-3 disabled">Coming Soon</span>
+                <h3 class="agency-project-title">Moody Brewer</h3>
+                <p class="agency-project-desc">Brand + site concept with playful visuals, motion design, and a strong
+                  identity system.</p>
+                <div class="agency-project-metrics">
+                  <div class="metric"><i class="bi-check-circle text-primary me-1"></i> Identity System</div>
+                  <div class="metric"><i class="bi-check-circle text-primary me-1"></i> Motion Design</div>
+                  <div class="metric"><i class="bi-check-circle text-primary me-1"></i> Web Concept</div>
+                </div>
+                <div class="agency-project-actions">
+                  <button class="btn btn--primary btn--sm btn--full mb-2" disabled>Deployment Pending</button>
+                  <button class="btn btn--secondary btn--sm btn--full" disabled>Case Study</button>
                 </div>
               </div>
             </div>
@@ -228,21 +293,26 @@
 
           <!-- Mula -->
           <div class="col" data-cats="apps">
-            <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-              <img src="images/portfolio/mula-thumbnail.png" class="card-img-top rounded-top-3"
-                alt="Mula project — expense manager app">
-              <div class="card-body d-flex flex-column">
+            <div class="agency-project-card">
+              <div class="agency-project-thumb">
+                <img src="images/portfolio/mula-thumbnail.png" alt="Mula">
+              </div>
+              <div class="agency-project-content">
                 <div class="d-flex gap-2 mb-2 flex-wrap">
-                  <span class="badge bg-light text-dark">Web App</span>
-                  <span class="badge bg-light text-dark">Finance</span>
+                  <span class="agency-tag">Web App</span>
+                  <span class="agency-tag">Finance</span>
                 </div>
-                <h3 class="h5 card-title mb-2">Mula</h3>
-                <p class="card-text text-muted flex-grow-1">Expense manager with charts, filters, category tracking, and
-                  CSV export.</p>
-                <p class="card-text"><small class="text-muted"><strong>Deliverables:</strong> UX, Charts, Full-stack
-                    build</small></p>
-                <div class="mt-3 d-flex gap-2">
-                  <span class="btn btn-outline-secondary btn-sm rounded-pill px-3 disabled">Coming Soon</span>
+                <h3 class="agency-project-title">Mula</h3>
+                <p class="agency-project-desc">Expense manager with charts, filters, category tracking, and CSV export
+                  functionality.</p>
+                <div class="agency-project-metrics">
+                  <div class="metric"><i class="bi-check-circle text-primary me-1"></i> UX Testing</div>
+                  <div class="metric"><i class="bi-check-circle text-primary me-1"></i> Data Viz</div>
+                  <div class="metric"><i class="bi-check-circle text-primary me-1"></i> Custom API</div>
+                </div>
+                <div class="agency-project-actions">
+                  <button class="btn btn--primary btn--sm btn--full mb-2" disabled>Deployment Pending</button>
+                  <button class="btn btn--secondary btn--sm btn--full" disabled>Case Study</button>
                 </div>
               </div>
             </div>
@@ -250,22 +320,27 @@
 
           <!-- ScholarLink -->
           <div class="col" data-cats="websites">
-            <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-              <img src="images/portfolio/scholar-link-thumbnail.png" class="card-img-top rounded-top-3"
-                alt="ScholarLink project — tutoring platform">
-              <div class="card-body d-flex flex-column">
+            <div class="agency-project-card">
+              <div class="agency-project-thumb">
+                <img src="images/portfolio/scholar-link-thumbnail.png" alt="ScholarLink">
+              </div>
+              <div class="agency-project-content">
                 <div class="d-flex gap-2 mb-2 flex-wrap">
-                  <span class="badge bg-light text-dark">Marketing Site</span>
-                  <span class="badge bg-light text-dark">Education</span>
+                  <span class="agency-tag">Marketing Site</span>
+                  <span class="agency-tag">Education</span>
                 </div>
-                <h3 class="h5 card-title mb-2">ScholarLink</h3>
-                <p class="card-text text-muted flex-grow-1">A website connecting students with tutors and teachers.
-                  Course browsing and profile matching.</p>
-                <p class="card-text"><small class="text-muted"><strong>Deliverables:</strong> Strategy, Design,
-                    Build</small></p>
-                <div class="mt-3 d-flex gap-2">
-                  <a class="btn btn-primary btn-sm rounded-pill px-3" href="https://scholar-link.netlify.app/"
-                    target="_blank" rel="noopener">Live Site</a>
+                <h3 class="agency-project-title">ScholarLink</h3>
+                <p class="agency-project-desc">A website connecting students with tutors and teachers. Course browsing
+                  and profile matching.</p>
+                <div class="agency-project-metrics">
+                  <div class="metric"><i class="bi-check-circle text-primary me-1"></i> Content Strategy</div>
+                  <div class="metric"><i class="bi-check-circle text-primary me-1"></i> Site Design</div>
+                  <div class="metric"><i class="bi-check-circle text-primary me-1"></i> Webflow Sync</div>
+                </div>
+                <div class="agency-project-actions">
+                  <a class="btn btn--primary btn--sm btn--full mb-2" href="https://scholar-link.netlify.app/"
+                    target="_blank" rel="noopener">View Live Site</a>
+                  <button class="btn btn--secondary btn--sm btn--full" disabled>Case Study</button>
                 </div>
               </div>
             </div>
@@ -273,21 +348,26 @@
 
           <!-- Health Sync -->
           <div class="col" data-cats="websites apps">
-            <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-              <img src="images/portfolio/health-sync-thumbnail.png" class="card-img-top rounded-top-3"
-                alt="Health Sync project — health tracking dashboard">
-              <div class="card-body d-flex flex-column">
+            <div class="agency-project-card">
+              <div class="agency-project-thumb">
+                <img src="images/portfolio/health-sync-thumbnail.png" alt="Health Sync">
+              </div>
+              <div class="agency-project-content">
                 <div class="d-flex gap-2 mb-2 flex-wrap">
-                  <span class="badge bg-light text-dark">Web App</span>
-                  <span class="badge bg-light text-dark">Dashboard</span>
+                  <span class="agency-tag">Web App</span>
+                  <span class="agency-tag">Dashboard</span>
                 </div>
-                <h3 class="h5 card-title mb-2">Health Sync</h3>
-                <p class="card-text text-muted flex-grow-1">Health tracking dashboard with data visualization, goal
-                  setting, and progress reporting.</p>
-                <p class="card-text"><small class="text-muted"><strong>Deliverables:</strong> UX, Data viz,
-                    Build</small></p>
-                <div class="mt-3 d-flex gap-2">
-                  <span class="btn btn-outline-secondary btn-sm rounded-pill px-3 disabled">Coming Soon</span>
+                <h3 class="agency-project-title">Health Sync</h3>
+                <p class="agency-project-desc">Health tracking dashboard with data visualization, goal setting, and
+                  progress reporting.</p>
+                <div class="agency-project-metrics">
+                  <div class="metric"><i class="bi-check-circle text-primary me-1"></i> UI Architecture</div>
+                  <div class="metric"><i class="bi-check-circle text-primary me-1"></i> Data Dashboards</div>
+                  <div class="metric"><i class="bi-check-circle text-primary me-1"></i> React Native</div>
+                </div>
+                <div class="agency-project-actions">
+                  <button class="btn btn--primary btn--sm btn--full mb-2" disabled>Deployment Pending</button>
+                  <button class="btn btn--secondary btn--sm btn--full" disabled>Case Study</button>
                 </div>
               </div>
             </div>
@@ -296,15 +376,22 @@
       </div>
     </section>
 
-    <!-- CTA -->
-    <section class="section-padding section-bg">
+    <!-- Agency CTA -->
+    <section class="section-padding">
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-lg-8 col-12 mx-auto text-center">
-            <h3 class="mb-3">Have a project in mind?</h3>
-            <p>We handle strategy, design, development, and launch. Tell us about your goals and we'll propose the
-              simplest path to results.</p>
-            <a class="btn custom-btn mt-2" href="contact.html">Start a Project</a>
+          <div class="col-lg-10 col-12">
+            <div class="p-5 text-center rounded-4"
+              style="background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%); border: 1px solid rgba(19, 84, 122, 0.05);">
+              <h2 class="display-5 fw-bold text-dark mb-4">Ready to build something exceptional?</h2>
+              <p class="lead text-muted mb-4 mx-auto" style="max-width: 600px;">We handle strategy, design, development,
+                and launch. Tell us about your core objective and we'll engineer the simplest path to undeniable
+                results.</p>
+              <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <a class="btn btn--primary btn--lg" href="contact.html">Start a Project</a>
+                <a class="btn btn--outline btn--lg" href="packages.html">View Pricing</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -336,8 +423,8 @@
         <nav class="enterprise-footer__col" aria-label="Contact">
           <h6>Contact</h6>
           <a href="contact.html" class="enterprise-footer__link">Contact Page</a>
-          <a href="mailto:volatile-soulutions@outlook.com"
-            class="enterprise-footer__link">volatile-soulutions@outlook.com</a>
+          <a href="mailto:volatile-solutions@outlook.com"
+            class="enterprise-footer__link">volatile-solutions@outlook.com</a>
           <a href="tel:401-545-6860" class="enterprise-footer__link">401-545-6860</a>
           <span class="enterprise-footer__meta">Providence, Rhode Island</span>
         </nav>
@@ -355,7 +442,7 @@
             target="_blank" rel="noopener">LinkedIn</a>
           <a href="https://github.com/AVolatile" class="enterprise-footer__link" target="_blank"
             rel="noopener">GitHub</a>
-          <a href="mailto:volatile-soulutions@outlook.com" class="enterprise-footer__link">Email Support</a>
+          <a href="mailto:volatile-solutions@outlook.com" class="enterprise-footer__link">Email Support</a>
         </nav>
       </div>
 
@@ -375,6 +462,32 @@
   <script src="js/jquery.sticky.js"></script>
   <script src="js/click-scroll.js"></script>
   <script src="js/custom.js"></script>
+
+  <!-- Agency Filter Logic -->
+  <script>
+    $(document).ready(function () {
+      $('.agency-chip').on('click', function () {
+        // Handle Active State
+        $('.agency-chip').removeClass('active').attr('aria-pressed', 'false');
+        $(this).addClass('active').attr('aria-pressed', 'true');
+
+        var filterValue = $(this).attr('data-filter');
+
+        // Filter Logic
+        if (filterValue === 'all') {
+          $('.portfolio-grid .col').fadeIn(300);
+        } else {
+          $('.portfolio-grid .col').hide();
+          $('.portfolio-grid .col').each(function () {
+            var cats = $(this).attr('data-cats');
+            if (cats && cats.split(' ').includes(filterValue)) {
+              $(this).fadeIn(300);
+            }
+          });
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>

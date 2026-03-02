@@ -23,7 +23,7 @@
         rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-icons.css" rel="stylesheet">
-    <link href="css/templatemo-topic-listing.css" rel="stylesheet">
+    <link href="css/templatemo-topic-listing.css?v=20260302l" rel="stylesheet">
     <link rel="icon" type="image/png" href="images/favicon.png?v=1" />
     <link rel="shortcut icon" type="image/png" href="images/favicon.png?v=1" />
     <link rel="apple-touch-icon" href="images/favicon.png?v=1" />
@@ -45,7 +45,6 @@
                     <ul class="navbar-nav ms-lg-5 ms-lg-auto align-items-lg-center">
                         <li class="nav-item"><a class="nav-link" href="index.html#section_1">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="index.html#section_3">Process</a></li>
                         <li class="nav-item"><a class="nav-link" href="index.html#section_4">FAQs</a></li>
                         <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
                         <li class="nav-item"><a class="nav-link" href="packages.html">Packages</a></li>
@@ -56,180 +55,179 @@
             </div>
         </nav>
 
-        <header class="site-header d-flex flex-column justify-content-center align-items-center">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-5 col-12">
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.html">Homepage</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Contact</li>
-                            </ol>
-                        </nav>
-                        <h1 class="text-white">Get in Touch</h1>
+        <section class="contact-split-layout position-relative pt-5 pb-5">
+            <!-- Left Dark Pane -->
+            <div class="contact-pane-dark">
+                <div class="contact-pane-dark-inner">
+                    <nav aria-label="breadcrumb" class="mb-4">
+                        <ol class="breadcrumb m-0">
+                            <li class="breadcrumb-item"><a href="index.html"
+                                    class="text-white-50 text-decoration-none">Homepage</a></li>
+                            <li class="breadcrumb-item active text-white" aria-current="page">Contact</li>
+                        </ol>
+                    </nav>
+                    <h2 class="text-white mb-4 display-4 fw-bold">Let's build<br>something great.</h2>
+                    <p class="text-white-50 mb-5 pb-3">Skip the generic agencies. We work directly with founders to
+                        launch premium, high-converting digital experiences with pure clarity.</p>
+
+                    <div class="contact-direct-info mb-5">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="contact-icon-wrapper"><i class="bi-envelope"></i></div>
+                            <div class="ms-3">
+                                <span class="d-block text-white-50 small text-uppercase fw-bold">Email Us</span>
+                                <a href="mailto:volatile-soulutions@outlook.com"
+                                    class="text-white fw-bold text-decoration-none">volatile-soulutions@outlook.com</a>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="contact-icon-wrapper"><i class="bi-telephone"></i></div>
+                            <div class="ms-3">
+                                <span class="d-block text-white-50 small text-uppercase fw-bold">Call Us</span>
+                                <a href="tel:401-545-6860"
+                                    class="text-white fw-bold text-decoration-none">401-545-6860</a>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="contact-icon-wrapper"><i class="bi-geo-alt"></i></div>
+                            <div class="ms-3">
+                                <span class="d-block text-white-50 small text-uppercase fw-bold">Location</span>
+                                <span class="text-white fw-bold">Providence, RI (Remote US)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-timeline-box d-none d-lg-block">
+                        <h6 class="text-white mb-3 fw-bold">What happens next?</h6>
+                        <ul class="contact-timeline">
+                            <li>Review within 1 business day</li>
+                            <li>30-minute discovery call</li>
+                            <li>Custom scope & proposal delivered</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </header>
 
-        <section class="section-padding section-bg">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 col-12">
-                        <h2 class="mb-4 pb-2">We'd love to hear from you</h2>
-                    </div>
+            <!-- Right Light Pane (Overlapping Form) -->
+            <div class="contact-pane-light">
+                <div class="contact-form-glass">
+                    <h3 class="mb-2 h4 fw-bold">Project Details</h3>
+                    <p class="text-muted mb-4 small">Give us a quick overview. We’ll come to the call prepared.</p>
 
-                    <div class="col-lg-7 col-12">
-                        <div class="contact-card mb-4">
-                            <h3 class="mb-2">Start a Project</h3>
-                            <p class="contact-subtle mb-4">Share a few details and we'll reply within 1 business day.
-                            </p>
-                            <form id="contactForm" action="#" method="post" class="custom-form contact-form" role="form"
-                                novalidate>
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="form-floating">
-                                            <input type="text" name="name" id="contact-name" class="form-control"
-                                                placeholder="Name" required>
-                                            <label for="contact-name">Name</label>
-                                            <div class="invalid-feedback">Please enter your name.</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="form-floating">
-                                            <input type="email" name="email" id="contact-email" class="form-control"
-                                                placeholder="Email address" required>
-                                            <label for="contact-email">Email address</label>
-                                            <div class="invalid-feedback">Please enter a valid email address.</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12 col-12">
-                                        <div class="form-floating">
-                                            <input type="text" name="subject" id="contact-subject" class="form-control"
-                                                placeholder="Subject" required>
-                                            <label for="contact-subject">Subject</label>
-                                            <div class="invalid-feedback">Please enter a subject.</div>
-                                        </div>
-                                        <div class="form-floating">
-                                            <textarea class="form-control" id="contact-message" name="message"
-                                                placeholder="Tell me about the project" required></textarea>
-                                            <label for="contact-message">Tell me about the project</label>
-                                            <div class="invalid-feedback">Please include a brief project description.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-12 ms-auto">
-                                        <button type="submit" class="btn custom-btn w-100">Send Message</button>
-                                    </div>
+                    <form id="contactForm" action="#" method="post" class="custom-form contact-form" role="form"
+                        novalidate>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" name="name" id="contact-name"
+                                        class="form-control form-control-premium" placeholder="Name" required>
+                                    <label for="contact-name">Your Name</label>
                                 </div>
-                                <!-- Success state (hidden by default) -->
-                                <div id="formSuccess" class="alert alert-success mt-3" style="display:none;"
-                                    role="status">
-                                    <strong>Thanks!</strong> Your message has been received. We'll be in touch within 1
-                                    business day.
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="email" name="email" id="contact-email"
+                                        class="form-control form-control-premium" placeholder="Email address" required>
+                                    <label for="contact-email">Work Email</label>
                                 </div>
-                            </form>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <select class="form-select form-control-premium" id="project-type"
+                                        name="projectType" aria-label="Project Type">
+                                        <option selected>Select Project Type</option>
+                                        <option value="website">New Website Build</option>
+                                        <option value="webapp">Web Application</option>
+                                        <option value="brand">Brand Identity</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                    <label for="project-type">What do you need?</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <select class="form-select form-control-premium" id="budget" name="budget"
+                                        aria-label="Budget">
+                                        <option selected>Select Scope</option>
+                                        <option value="small">Under $5k</option>
+                                        <option value="medium">$5k - $15k</option>
+                                        <option value="large">$15k+</option>
+                                    </select>
+                                    <label for="budget">Estimated Scope</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control form-control-premium contact-textarea"
+                                        id="contact-message" name="message" placeholder="Project goals"
+                                        required></textarea>
+                                    <label for="contact-message">Project goals & timeline</label>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-4">
+                                <button type="submit" class="btn custom-btn w-100 py-3 rounded-pill fw-bold">Submit
+                                    Request</button>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="col-lg-5 col-12 mx-auto mt-4 mt-lg-0">
-                        <div class="contact-card">
-                            <h4 class="mb-3">Contact Details</h4>
-                            <ul class="info-list mb-4">
-                                <li>
-                                    <span class="icon-circle"><i class="bi-telephone"></i></span>
-                                    <div>
-                                        <strong>Phone</strong><br>
-                                        <a href="tel:401-545-6860">401-545-6860</a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <span class="icon-circle"><i class="bi-envelope"></i></span>
-                                    <div>
-                                        <strong>Email</strong><br>
-                                        <a
-                                            href="mailto:volatile-soulutions@outlook.com">volatile-soulutions@outlook.com</a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <span class="icon-circle"><i class="bi-geo-alt"></i></span>
-                                    <div>
-                                        <strong>Location</strong><br>
-                                        Providence, Rhode Island — Remote across the U.S.
-                                    </div>
-                                </li>
-                            </ul>
-                            <p class="mb-1"><strong>Hours</strong></p>
-                            <p class="mb-0 contact-subtle">Mon–Fri, 9am–5pm ET • 24–48h response</p>
-                            <hr class="my-4">
-                            <h6 class="mb-3">What happens next?</h6>
-                            <ol class="small text-muted ps-3 mb-0">
-                                <li class="mb-2">We review your message and reply within 1 business day.</li>
-                                <li class="mb-2">If it's a fit, we schedule a 30-minute discovery call.</li>
-                                <li>You receive a tailored proposal within 48 hours of the call.</li>
-                            </ol>
-                        </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="site-footer">
-        <div class="container footer-container">
-            <div class="footer-top">
-                <div class="footer-brand">
-                    <a class="footer-logo" href="index.html">
-                        <img src="images/logo.png" alt="Volatile Solutions logo" class="footer-logo-mark" />
-                        <img src="images/vs-text.png" alt="Volatile Solutions" class="footer-logo-text" />
-                    </a>
-                    <p class="footer-copy">Fractional web teams for founders and marketing leaders. We build, launch,
-                        and iterate websites that keep momentum.</p>
-                    <div class="footer-social">
-                        <a href="https://www.linkedin.com/in/anthony-volatile-6836062ab/" class="footer-social-link"
-                            aria-label="LinkedIn"><i class="bi-linkedin"></i></a>
-                        <a href="https://github.com/AVolatile" class="footer-social-link" aria-label="GitHub"><i
-                                class="bi-github"></i></a>
-                        <a href="mailto:volatile-soulutions@outlook.com" class="footer-social-link"
-                            aria-label="Email"><i class="bi-envelope"></i></a>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h6>Company</h6>
-                        <ul>
-                            <li><a href="index.html#services" class="footer-link">Services</a></li>
-                            <li><a href="index.html#section_3" class="footer-link">Process</a></li>
-                            <li><a href="portfolio.html" class="footer-link">Work</a></li>
-                            <li><a href="about.html" class="footer-link">About</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h6>Support</h6>
-                        <ul>
-                            <li><a href="index.html#section_4" class="footer-link">FAQs</a></li>
-                            <li><a href="packages.html" class="footer-link">Pricing</a></li>
-                            <li><a href="contact.html" class="footer-link">Contact</a></li>
-                            <li><a href="mailto:volatile-soulutions@outlook.com" class="footer-link">Email us</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h6>Contact</h6>
-                        <ul>
-                            <li><a href="tel:401-545-6860" class="footer-link">401-545-6860</a></li>
-                            <li><a href="mailto:volatile-soulutions@outlook.com"
-                                    class="footer-link">volatile-soulutions@outlook.com</a></li>
-                            <li><span class="footer-label">Based in Providence, RI</span></li>
-                        </ul>
-                        <a href="contact.html" class="btn footer-cta">Book a discovery call</a>
-                    </div>
-                </div>
+    <footer class="site-footer enterprise-footer">
+        <div class="container enterprise-footer__inner">
+            <div class="enterprise-footer__top">
+                <a class="enterprise-footer__brand" href="index.html" aria-label="Volatile Solutions home">
+                    <img src="images/logo.png" alt="Volatile Solutions logo" class="enterprise-footer__logo-mark" />
+                    <img src="images/vs-text.png" alt="Volatile Solutions" class="enterprise-footer__logo-text" />
+                </a>
+                <p class="enterprise-footer__tagline">Enterprise-ready websites for founders and marketing teams who
+                    need speed, clarity, and measurable outcomes.</p>
+                <a href="contact.html" class="enterprise-footer__cta">Start a Project</a>
             </div>
-            <div class="footer-bottom">
-                <p class="footer-meta">© 2025 Volatile | Solutions. All rights reserved.</p>
-                <div class="footer-meta-links">
-                    <a href="privacy.html" class="footer-link" data-no-transition>Privacy</a>
-                    <a href="terms.html" class="footer-link" data-no-transition>Terms</a>
+
+            <div class="enterprise-footer__grid">
+                <nav class="enterprise-footer__col" aria-label="Primary">
+                    <h6>Navigate</h6>
+                    <a href="index.html" class="enterprise-footer__link">Home</a>
+                    <a href="index.html#services" class="enterprise-footer__link">Services</a>
+                    <a href="portfolio.html" class="enterprise-footer__link">Portfolio</a>
+                    <a href="packages.html" class="enterprise-footer__link">Packages</a>
+                    <a href="about.html" class="enterprise-footer__link">About</a>
+                </nav>
+
+                <nav class="enterprise-footer__col" aria-label="Contact">
+                    <h6>Contact</h6>
+                    <a href="contact.html" class="enterprise-footer__link">Contact Page</a>
+                    <a href="mailto:volatile-soulutions@outlook.com"
+                        class="enterprise-footer__link">volatile-soulutions@outlook.com</a>
+                    <a href="tel:401-545-6860" class="enterprise-footer__link">401-545-6860</a>
+                    <span class="enterprise-footer__meta">Providence, Rhode Island</span>
+                </nav>
+
+                <nav class="enterprise-footer__col" aria-label="Legal">
+                    <h6>Legal</h6>
+                    <a href="privacy.html" class="enterprise-footer__link" data-no-transition>Privacy</a>
+                    <a href="terms.html" class="enterprise-footer__link" data-no-transition>Legal / Terms</a>
+                    <a href="cookies.html" class="enterprise-footer__link" data-no-transition>Cookies</a>
+                </nav>
+
+                <nav class="enterprise-footer__col" aria-label="Social and support">
+                    <h6>Connect</h6>
+                    <a href="https://www.linkedin.com/in/anthony-volatile-6836062ab/" class="enterprise-footer__link"
+                        target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://github.com/AVolatile" class="enterprise-footer__link" target="_blank"
+                        rel="noopener">GitHub</a>
+                    <a href="mailto:volatile-soulutions@outlook.com" class="enterprise-footer__link">Email Support</a>
+                </nav>
+            </div>
+
+            <div class="enterprise-footer__bottom">
+                <p class="enterprise-footer__copyright">© 2026 Volatile Solutions. All rights reserved.</p>
+                <div class="enterprise-footer__bottom-links">
+                    <a href="privacy.html" class="enterprise-footer__bottom-link" data-no-transition>Privacy</a>
+                    <a href="terms.html" class="enterprise-footer__bottom-link" data-no-transition>Legal</a>
+                    <a href="cookies.html" class="enterprise-footer__bottom-link" data-no-transition>Cookies</a>
                 </div>
             </div>
         </div>

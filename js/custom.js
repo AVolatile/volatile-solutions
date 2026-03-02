@@ -294,4 +294,25 @@
     updateEstimator();
   }
 
+  /* ─── Global Print Invoice Hook ─── */
+  window.printEstimate = function () {
+    var dateString = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+    var tierText = $('#calc-tier-badge').text();
+    var timelineText = $('#calc-timeline').text();
+    var priceText = $('#calc-price-range').text();
+
+    var summaryHtml = '';
+    $('#calc-summary-list .summary-text').each(function () {
+      summaryHtml += '<tr><td style="padding: 12px 0; border-bottom: 1px solid #dee2e6; color: #495057;">' + $(this).text() + '</td></tr>';
+    });
+
+    $('#print-date').text(dateString);
+    $('#print-tier').text(tierText);
+    $('#print-timeline').text(timelineText);
+    $('#print-price').text(priceText);
+    $('#print-summary-body').html(summaryHtml);
+
+    window.print();
+  };
+
 })(jQuery);

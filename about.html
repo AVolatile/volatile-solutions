@@ -24,7 +24,7 @@
     rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/bootstrap-icons.css" rel="stylesheet">
-  <link href="css/templatemo-topic-listing.css?v=20260410e" rel="stylesheet">
+  <link href="css/templatemo-topic-listing.css?v=20260410nav3" rel="stylesheet">
   <link rel="icon" type="image/png" href="images/favicon.png?v=1" />
   <link rel="shortcut icon" type="image/png" href="images/favicon.png?v=1" />
   <link rel="apple-touch-icon" href="images/favicon.png?v=1" />
@@ -32,26 +32,31 @@
 
 <body id="top">
   <main>
-    <nav class="navbar navbar-expand-lg" aria-label="Main menu">
+    <nav class="navbar navbar-expand-lg site-navbar" aria-label="Main menu">
       <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img src="images/logo.png" alt="Volatile Solutions" class="logo-img">
-          <img src="images/vs-text.png" alt="Volatile Solutions" class="logo-text-img">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-lg-5 ms-lg-auto align-items-lg-center">
-            <li class="nav-item"><a class="nav-link" href="index.html#section_1">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
-
-            <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-            <li class="nav-item"><a class="nav-link" href="packages.html">Packages</a></li>
-            <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-          </ul>
+        <div class="site-navbar__shell">
+          <a class="navbar-brand site-navbar__brand" href="index.html">
+            <img src="images/logo.png" alt="Volatile Solutions" class="logo-img">
+            <img src="images/vs-text.png" alt="Volatile Solutions" class="logo-text-img">
+          </a>
+          <button class="navbar-toggler site-navbar__toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="site-navbar__toggle-label">Menu</span>
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse site-navbar__collapse" id="navbarNav">
+            <ul class="navbar-nav site-navbar__nav ms-lg-auto align-items-lg-center">
+              <li class="nav-item"><a class="nav-link" href="index.html#section_1">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
+              <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+              <li class="nav-item"><a class="nav-link" href="packages.html">Packages</a></li>
+              <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+            <div class="site-navbar__actions">
+              <a class="site-navbar__cta" href="contact.html">Book a Call</a>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
@@ -314,7 +319,7 @@
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/jquery.sticky.js"></script>
-  <script src="js/custom.js"></script>
+  <script src="js/custom.js?v=20260410nav"></script>
 </body>
 
 </html>

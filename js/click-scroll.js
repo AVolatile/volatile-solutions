@@ -2,10 +2,33 @@
 (function ($) {
   'use strict';
 
-  var HEADER_OFFSET = 75;
+  function getHeaderOffset() {
+    var navHeight = $('.site-navbar__shell').outerHeight() || $('.navbar').outerHeight() || 75;
+    return navHeight + 16;
+  }
+
+  function closeMobileNav(callback) {
+    var $navCollapse = $('#navbarNav');
+
+    if (window.innerWidth >= 992 || !$navCollapse.length || !$navCollapse.hasClass('show')) {
+      if (callback) callback();
+      return;
+    }
+
+    var bsCollapse = bootstrap.Collapse.getInstance($navCollapse[0]);
+    if (!bsCollapse) {
+      bsCollapse = new bootstrap.Collapse($navCollapse[0], { toggle: false });
+    }
+
+    $navCollapse.one('hidden.bs.collapse', function () {
+      if (callback) callback();
+    });
+
+    bsCollapse.hide();
+  }
 
   function setActiveLink(targetId) {
-    var $links = $('.navbar-nav .nav-item .nav-link');
+    var $links = $('.navbar-nav .nav-item .nav-link[href^="#"]');
     $links.removeClass('active').addClass('inactive');
     $links.filter('[href="#' + targetId + '"]').addClass('active').removeClass('inactive');
   }
@@ -17,8 +40,10 @@
       var $target = $(href);
       if ($target.length) {
         e.preventDefault();
-        $('html, body').animate({ scrollTop: $target.offset().top - HEADER_OFFSET }, 300);
-        setActiveLink(href.replace('#', ''));
+        closeMobileNav(function () {
+          $('html, body').animate({ scrollTop: $target.offset().top - getHeaderOffset() }, 360);
+          setActiveLink(href.replace('#', ''));
+        });
       }
     }
   });
@@ -27,11 +52,12 @@
   var sections = ['section_1', 'section_2', 'section_3', 'section_4', 'section_5'];
   $(document).on('scroll', function () {
     var docScroll = $(document).scrollTop() + 1;
+    var headerOffset = getHeaderOffset();
     var current = null;
     for (var i = 0; i < sections.length; i++) {
       var id = sections[i];
       var $el = $('#' + id);
-      if ($el.length && docScroll >= ($el.offset().top - HEADER_OFFSET)) {
+      if ($el.length && docScroll >= ($el.offset().top - headerOffset)) {
         current = id;
       }
     }
@@ -40,7 +66,7 @@
 
   // Initialize states
   $(function () {
-    var $links = $('.navbar-nav .nav-item .nav-link:link');
+    var $links = $('.navbar-nav .nav-item .nav-link[href^="#"]');
     $links.addClass('inactive');
     // Set Home active on load if nothing else matches
     $('.navbar-nav .nav-item .nav-link[href="#section_1"]').addClass('active').removeClass('inactive');

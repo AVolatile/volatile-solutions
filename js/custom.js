@@ -1,6 +1,35 @@
 (function ($) {
   'use strict';
 
+  var $navCollapse = $('#navbarNav');
+  var $navbar = $('.site-navbar');
+
+  function setNavOpenState(isOpen) {
+    $('body').toggleClass('nav-open', isOpen).css('overflow', isOpen ? 'hidden' : '');
+    $navbar.toggleClass('menu-open', isOpen);
+    $('.navbar-toggler').attr('aria-expanded', isOpen ? 'true' : 'false');
+  }
+
+  function closeMobileNav(restoreFocus) {
+    if (!$navCollapse.length || window.innerWidth >= 992 || !$navCollapse.hasClass('show')) {
+      setNavOpenState(false);
+      return;
+    }
+
+    var bsCollapse = bootstrap.Collapse.getInstance($navCollapse[0]);
+    if (!bsCollapse) {
+      bsCollapse = new bootstrap.Collapse($navCollapse[0], { toggle: false });
+    }
+
+    if (restoreFocus) {
+      $navCollapse.one('hidden.bs.collapse', function () {
+        $('.navbar-toggler').trigger('focus');
+      });
+    }
+
+    bsCollapse.hide();
+  }
+
   /* ─── Sticky nav ─── */
   $(window).on('scroll', function () {
     var scrollTop = $(window).scrollTop();
@@ -11,31 +40,51 @@
     }
   });
 
-  /* ─── Smooth scroll for anchor links ─── */
-  $('a.click-scroll').on('click', function (e) {
-    var target = $(this.hash);
-    if (target.length) {
-      e.preventDefault();
-      $('html, body').animate({ scrollTop: target.offset().top - 72 }, 600);
-    }
-  });
-
   /* ─── Mobile nav: ESC key closes + focus trap ─── */
   $(document).on('keydown', function (e) {
     if (e.key === 'Escape') {
-      var $navCollapse = $('#navbarNav');
       if ($navCollapse.hasClass('show')) {
-        var bsCollapse = bootstrap.Collapse.getInstance($navCollapse[0]);
-        if (bsCollapse) bsCollapse.hide();
-        $('.navbar-toggler').focus();
+        closeMobileNav(true);
       }
     }
   });
 
-  /* Keep focus inside open mobile nav */
-  $('#navbarNav').on('shown.bs.collapse', function () {
-    var $focusable = $(this).find('a, button').filter(':visible');
-    if ($focusable.length) $focusable.first().focus();
+  if ($navCollapse.length) {
+    $navCollapse.on('show.bs.collapse', function () {
+      setNavOpenState(true);
+    });
+
+    /* Keep focus inside open mobile nav */
+    $navCollapse.on('shown.bs.collapse', function () {
+      var $focusable = $(this).find('a, button').filter(':visible');
+      if ($focusable.length) $focusable.first().focus();
+    });
+
+    $navCollapse.on('hidden.bs.collapse', function () {
+      setNavOpenState(false);
+    });
+  }
+
+  $(window).on('resize', function () {
+    if (window.innerWidth >= 992) {
+      setNavOpenState(false);
+      if ($navCollapse.length) {
+        $navCollapse.removeClass('show').attr('style', '');
+      }
+    }
+  });
+
+  $(document).on('click', '.navbar-nav .nav-link, .site-navbar__cta', function () {
+    if (window.innerWidth < 992) {
+      var href = $(this).attr('href') || '';
+      if (href.charAt(0) !== '#') {
+        setNavOpenState(false);
+      }
+      if (!$navCollapse.length || !$navCollapse.hasClass('show')) return;
+      if (href.charAt(0) !== '#') {
+        closeMobileNav(false);
+      }
+    }
   });
 
   /* ─── Active nav link highlighting ─── */

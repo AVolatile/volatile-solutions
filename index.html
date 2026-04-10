@@ -30,7 +30,7 @@
     rel="stylesheet" />
   <link href="css/bootstrap.min.css" rel="stylesheet" />
   <link href="css/bootstrap-icons.css" rel="stylesheet" />
-  <link href="css/templatemo-topic-listing.css?v=20260302m" rel="stylesheet" />
+  <link href="css/templatemo-topic-listing.css?v=20260410nav3" rel="stylesheet" />
   <link rel="icon" type="image/png" href="images/favicon.png?v=1" />
   <link rel="shortcut icon" type="image/png" href="images/favicon.png?v=1" />
   <link rel="apple-touch-icon" href="images/favicon.png?v=1" />
@@ -38,25 +38,31 @@
 
 <body id="top">
   <header>
-    <nav class="navbar navbar-expand-lg" aria-label="Main menu">
+    <nav class="navbar navbar-expand-lg site-navbar" aria-label="Main menu">
       <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img src="images/logo.png" alt="Volatile Solutions logo" class="logo-img" />
-          <img src="images/vs-text.png" alt="Volatile Solutions" class="logo-text-img" />
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-lg-5 ms-lg-auto align-items-lg-center">
-            <li class="nav-item"><a class="nav-link active" href="#section_1">Home</a></li>
-            <li class="nav-item"><a class="nav-link click-scroll" href="#services">Services</a></li>
-            <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-            <li class="nav-item"><a class="nav-link" href="packages.html">Packages</a></li>
-            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-          </ul>
+        <div class="site-navbar__shell">
+          <a class="navbar-brand site-navbar__brand" href="index.html">
+            <img src="images/logo.png" alt="Volatile Solutions logo" class="logo-img" />
+            <img src="images/vs-text.png" alt="Volatile Solutions" class="logo-text-img" />
+          </a>
+          <button class="navbar-toggler site-navbar__toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="site-navbar__toggle-label">Menu</span>
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse site-navbar__collapse" id="navbarNav">
+            <ul class="navbar-nav site-navbar__nav ms-lg-auto align-items-lg-center">
+              <li class="nav-item"><a class="nav-link active click-scroll" href="#section_1">Home</a></li>
+              <li class="nav-item"><a class="nav-link click-scroll" href="#services">Services</a></li>
+              <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+              <li class="nav-item"><a class="nav-link" href="packages.html">Packages</a></li>
+              <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+            <div class="site-navbar__actions">
+              <a class="site-navbar__cta" href="contact.html">Book a Call</a>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
@@ -346,13 +352,28 @@
     <section class="section-padding section-bg" id="portfolio-preview">
       <div class="container">
         <div class="text-center mb-5">
-          <span class="section-eyebrow">Recent work</span>
-          <h2 class="section-title">Websites Built for Real Businesses</h2>
-          <p class="section-lead mx-auto" style="max-width:560px;">A small sample of projects that show the range of
-            what we build.</p>
+          <span class="section-eyebrow">Featured projects</span>
+          <h2 class="section-title">Websites and Product Experiences Built for Real Businesses</h2>
+          <p class="section-lead mx-auto" style="max-width:560px;">A small sample of websites and web apps that show
+            the range of what we build.</p>
         </div>
         <div class="row g-4 justify-content-center">
-          <div class="col-lg-4 col-md-6">
+          <div class="col-xl-3 col-md-6">
+            <div class="card project-card h-100 shadow-sm border-0 rounded-3">
+              <img src="images/portfolio/metric-forge-thumbnail.png" class="card-img-top rounded-top-3"
+                alt="MetricForge analytics SaaS dashboard" />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title mb-2">MetricForge</h5>
+                <p class="card-text text-muted flex-grow-1">An analytics SaaS built around live dashboards, session
+                  replay, and cohort reporting for growth teams.</p>
+                <div class="mt-3 d-flex gap-2">
+                  <a class="btn btn-primary btn-sm rounded-pill px-3" href="https://metric-forge.netlify.app/"
+                    target="_blank" rel="noopener">View Live</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-6">
             <div class="card project-card h-100 shadow-sm border-0 rounded-3">
               <img src="images/portfolio/cloud-keep-thumbnail.png" class="card-img-top rounded-top-3"
                 alt="Cloud Keep file management dashboard" />
@@ -367,22 +388,22 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6">
+          <div class="col-xl-3 col-md-6">
             <div class="card project-card h-100 shadow-sm border-0 rounded-3">
-              <img src="images/portfolio/frost-thumbnail.png" class="card-img-top rounded-top-3"
-                alt="Frost fitness coaching website" />
+              <img src="images/portfolio/glass-dash-thumbnail.png" class="card-img-top rounded-top-3"
+                alt="GlassDash finance dashboard" />
               <div class="card-body d-flex flex-column">
-                <h5 class="card-title mb-2">Frost</h5>
-                <p class="card-text text-muted flex-grow-1">A coaching website built to explain the offer clearly and
-                  turn visitors into inquiries.</p>
+                <h5 class="card-title mb-2">GlassDash</h5>
+                <p class="card-text text-muted flex-grow-1">A finance dashboard built to monitor revenue, account
+                  growth, and rollout health in one command center.</p>
                 <div class="mt-3 d-flex gap-2">
-                  <a class="btn btn-primary btn-sm rounded-pill px-3" href="https://frost-fitness.netlify.app/"
+                  <a class="btn btn-primary btn-sm rounded-pill px-3" href="https://glass-dash-admin.netlify.app/"
                     target="_blank" rel="noopener">View Live</a>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6">
+          <div class="col-xl-3 col-md-6">
             <div class="card project-card h-100 shadow-sm border-0 rounded-3">
               <img src="images/portfolio/birdie-bay-thumbnail.png" class="card-img-top rounded-top-3"
                 alt="Birdie Bay e-commerce storefront" />
@@ -613,8 +634,8 @@
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/jquery.sticky.js"></script>
-  <script src="js/click-scroll.js"></script>
-  <script src="js/custom.js"></script>
+  <script src="js/click-scroll.js?v=20260410nav"></script>
+  <script src="js/custom.js?v=20260410nav"></script>
 </body>
 
 </html>

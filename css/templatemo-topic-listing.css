@@ -2945,6 +2945,16 @@ blockquote {
   display: inline-block;
 }
 
+.founder-avatar-frame {
+  width: 140px;
+  height: 140px;
+  border: 4px solid var(--white-color);
+  overflow: hidden;
+  position: relative;
+  isolation: isolate;
+  background-color: var(--white-color);
+}
+
 .founder-avatar-wrapper::after {
   content: "";
   position: absolute;
@@ -2957,6 +2967,72 @@ blockquote {
   border-radius: 50%;
   box-shadow: 0 4px 10px rgba(70, 211, 157, 0.4);
   z-index: 2;
+}
+
+.founder-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.founder-avatar-frame--marten {
+  background-color: #d7dce4;
+  background-image: url("../images/aboutme/marten-about.jpg");
+  background-position: center top;
+  background-size: cover;
+}
+
+.founder-avatar-frame--marten::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: inherit;
+  background-position: inherit;
+  background-size: inherit;
+  filter: blur(18px);
+  transform: scale(1.18);
+  opacity: 0.8;
+  z-index: 0;
+}
+
+.founder-avatar-img--marten {
+  position: relative;
+  z-index: 1;
+  object-fit: cover;
+  object-position: center 16%;
+  transform: scale(1.18);
+}
+
+.founder-profile {
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.founder-team-row {
+  align-items: flex-start;
+}
+
+.founder-profile-name {
+  font-size: clamp(2.85rem, 4vw, 4.75rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+}
+
+.founder-profile-links {
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1.75rem;
+}
+
+.founder-profile-links .btn {
+  min-width: 220px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.founder-team-copy {
+  max-width: 720px;
 }
 
 .founder-narrative {
@@ -2991,6 +3067,17 @@ blockquote {
 .founder-skills-grid .card:hover {
   transform: translateY(-4px);
   box-shadow: 0 16px 32px -12px rgba(19, 84, 122, 0.12) !important;
+}
+
+@media screen and (max-width: 991px) {
+  .founder-profile-name {
+    font-size: clamp(2.4rem, 10vw, 4rem);
+  }
+
+  .founder-profile-links .btn {
+    min-width: 0;
+    width: 100%;
+  }
 }
 
 .founder-philosophy {

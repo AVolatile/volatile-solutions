@@ -54,20 +54,6 @@
     });
   })();
 
-  /* ─── Timeline scroll animation ─── */
-  var items = document.querySelectorAll('.vertical-scrollable-timeline li');
-  var observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('active');
-      }
-    });
-  }, { threshold: 0.25 });
-
-  items.forEach(function (item) {
-    observer.observe(item);
-  });
-
   /* ─── Portfolio filtering ─── */
   $(document).on('click', '.portfolio-filter-btn', function () {
     var $btn = $(this);
@@ -163,163 +149,220 @@
     }, 300);
   });
 
-  /* ─── Packages Page: Pricing Estimator ─── */
-  var $estimatorForm = $('#pricing-estimator-form');
+  /* ─── Packages Page: Starting Scope Estimator ─── */
+  var $estimatorForm = $('#packages-estimator-form');
   if ($estimatorForm.length) {
-
-    // Configuration object
-    var pricingConfig = {
-      base: {
-        launch: { min: 2500, max: 4000, weeksMin: 1, weeksMax: 3, label: 'Launch' },
-        business: { min: 5000, max: 8000, weeksMin: 3, weeksMax: 6, label: 'Business' },
-        growth: { min: 8000, max: 15000, weeksMin: 6, weeksMax: 10, label: 'Growth' },
-        enterprise: { min: 15000, max: 25000, weeksMin: 10, weeksMax: 16, label: 'Enterprise' }
+    var packageOrder = ['starter', 'standard', 'premium'];
+    var packageConfig = {
+      starter: {
+        label: 'Starter',
+        subtitle: 'Simple starting scope',
+        timeline: '1-2 weeks',
+        weeksMin: 1,
+        weeksMax: 2,
+        siteType: 'Focused website',
+        context: 'Best fit for businesses getting online with a focused website and a clear first contact path.',
+        features: [
+          'Clear message and contact path',
+          'Professional design that builds trust',
+          'A strong first online presence'
+        ],
+        nextStep: 'Book a Discovery Call and we will confirm the exact pages you need and what content is already ready.'
       },
-      perPage: { min: 100, max: 200 }, // added to base after 5 pages
-      copywriting: {
-        client: { min: 0, max: 0, wMin: 0, wMax: 0, list: 'Client-provided copy' },
-        assisted: { min: 800, max: 1500, wMin: 1, wMax: 2, list: 'Assisted copywriting' },
-        full: { min: 2000, max: 4500, wMin: 2, wMax: 4, list: 'Full copywriting' }
+      standard: {
+        label: 'Standard',
+        subtitle: 'Flexible starting scope',
+        timeline: '4-6 weeks',
+        weeksMin: 4,
+        weeksMax: 6,
+        siteType: 'Multi-page website',
+        context: 'Best fit for businesses ready to grow and improve lead flow with a clearer multi-page structure.',
+        features: [
+          'Multi-page site built around your services',
+          'Stronger lead paths and clearer structure',
+          'Room to grow as your business grows'
+        ],
+        nextStep: 'Book a Discovery Call and we will confirm the exact page structure, content needs, and what should happen first.'
       },
-      cms: {
-        none: { min: 0, max: 0, wMin: 0, wMax: 0, list: 'Static pages (No CMS)' },
-        basic: { min: 600, max: 1200, wMin: 1, wMax: 2, list: 'Basic CMS mapping' },
-        full: { min: 1500, max: 3500, wMin: 2, wMax: 4, list: 'Full CMS integration' }
-      },
-      ecommerce: { min: 2500, max: 6000, wMin: 2, wMax: 4, list: 'E-commerce setup' },
-      seo: { min: 800, max: 1800, wMin: 1, wMax: 2, list: 'Advanced SEO' },
-      a11y: { min: 1000, max: 2500, wMin: 1, wMax: 2, list: 'Enhanced ADA/WCAG' },
-      support: {
-        none: { list: 'Standard warranty' },
-        monthly: { list: 'Monthly Retainer' },
-        quarterly: { list: 'Quarterly Audits' }
+      premium: {
+        label: 'Premium',
+        subtitle: 'Tailored to scope',
+        timeline: '6-8 weeks',
+        weeksMin: 6,
+        weeksMax: 8,
+        siteType: 'Advanced website or custom build',
+        context: 'Best fit for businesses that need more structure, custom requirements, or a larger build from the start.',
+        features: [
+          'Larger site structure or custom features',
+          'Built around how your business works',
+          'Designed to support growth over time'
+        ],
+        nextStep: 'Book a Discovery Call so we can sort the custom requirements, decide what should be phased, and define the right first build.'
       }
     };
 
-    function updateEstimator() {
-      // Read values
-      var type = $('#est-site-type').val();
-      var pages = parseInt($('#est-pages').val(), 10);
-      var copy = $('#est-copywriting').val();
-      var cms = $('#est-cms').val();
-      var isEcom = $('#est-ecommerce').is(':checked');
-      var isSeo = $('#est-seo').is(':checked');
-      var isA11y = $('#est-a11y').is(':checked');
-      var support = $('#est-support').val();
-
-      // UI Sync
-      $('#est-pages-display').text(pages);
-
-      // Calculations
-      var base = pricingConfig.base[type];
-      var mPrice = base.min;
-      var maxPrice = base.max;
-      var mWeeks = base.weeksMin;
-      var maxWeeks = base.weeksMax;
-
-      // Add pages scaling
-      if (pages > 5) {
-        var extraPages = pages - 5;
-        mPrice += extraPages * pricingConfig.perPage.min;
-        maxPrice += extraPages * pricingConfig.perPage.max;
-        if (extraPages > 10) { mWeeks += 1; maxWeeks += 2; }
+    var goalConfig = {
+      'getting-online': {
+        package: 'starter',
+        detail: 'The project is centered on getting the business online with a clear first impression.'
+      },
+      'ready-grow': {
+        package: 'standard',
+        detail: 'The project needs a stronger structure and clearer paths for visitors to become leads.'
+      },
+      'custom-build': {
+        package: 'premium',
+        detail: 'The project likely needs more custom planning, structure, or special requirements.'
       }
+    };
 
-      // Add logic objects
-      var copyObj = pricingConfig.copywriting[copy];
-      mPrice += copyObj.min; maxPrice += copyObj.max;
-      mWeeks += copyObj.wMin; maxWeeks += copyObj.wMax;
-
-      var cmsObj = pricingConfig.cms[cms];
-      mPrice += cmsObj.min; maxPrice += cmsObj.max;
-      mWeeks += cmsObj.wMin; maxWeeks += cmsObj.wMax;
-
-      var summaryItems = [];
-      summaryItems.push(`Up to ${pages} Pages`);
-      summaryItems.push(copyObj.list);
-      summaryItems.push(cmsObj.list);
-
-      if (isEcom) {
-        mPrice += pricingConfig.ecommerce.min; maxPrice += pricingConfig.ecommerce.max;
-        mWeeks += pricingConfig.ecommerce.wMin; maxWeeks += pricingConfig.ecommerce.wMax;
-        summaryItems.push(pricingConfig.ecommerce.list);
+    var structureConfig = {
+      focused: {
+        package: 'starter',
+        detail: 'A focused website with a few key pages is the best fit.'
+      },
+      multi: {
+        package: 'standard',
+        detail: 'A multi-page service site with clearer structure is the best fit.'
+      },
+      advanced: {
+        package: 'premium',
+        detail: 'A larger site or custom build with more moving parts is the best fit.'
       }
-      if (isSeo) {
-        mPrice += pricingConfig.seo.min; maxPrice += pricingConfig.seo.max;
-        mWeeks += pricingConfig.seo.wMin; maxWeeks += pricingConfig.seo.wMax;
-        summaryItems.push(pricingConfig.seo.list);
+    };
+
+    var contentConfig = {
+      ready: {
+        addMin: 0,
+        addMax: 0,
+        detail: 'Content is mostly ready, so the project can move faster.'
+      },
+      refine: {
+        addMin: 0,
+        addMax: 1,
+        detail: 'Some message refinement will likely be part of the scope.'
+      },
+      guided: {
+        addMin: 1,
+        addMax: 2,
+        detail: 'The project will need more guidance around message and page direction.'
       }
-      if (isA11y) {
-        mPrice += pricingConfig.a11y.min; maxPrice += pricingConfig.a11y.max;
-        mWeeks += pricingConfig.a11y.wMin; maxWeeks += pricingConfig.a11y.wMax;
-        summaryItems.push(pricingConfig.a11y.list);
+    };
+
+    var supportConfig = {
+      none: {
+        detail: 'No ongoing support has been added beyond launch planning.'
+      },
+      light: {
+        detail: 'A short post-launch support window would be helpful after launch.'
+      },
+      ongoing: {
+        detail: 'Ongoing updates after launch should be part of the conversation.'
       }
+    };
 
-      summaryItems.push(pricingConfig.support[support].list);
-
-      // Pricing mapped to descriptive strings
-      var priceString = "Flexible options available";
-      if (mPrice < 5000) {
-        priceString = "Cost-effective options";
-      } else if (mPrice >= 5000 && mPrice < 10000) {
-        priceString = "Standard growth options";
-      } else if (mPrice >= 10000 && mPrice < 20000) {
-        priceString = "Tailored project scope";
-      } else {
-        priceString = "Custom enterprise quote";
-      }
-
-      // Updates
-      $('#calc-price-range').fadeOut(150, function () {
-        $(this).text(priceString).fadeIn(150);
-      });
-
-      $('#calc-timeline').text(mWeeks + '–' + maxWeeks + ' Weeks');
-      $('#calc-tier-badge').text(base.label);
-
-      // Update Summary List Elements cleanly
-      var $summaryList = $('#calc-summary-list');
-      $summaryList.empty();
-      summaryItems.forEach(function (item) {
-        $summaryList.append('<li class="mb-2"><i class="bi bi-arrow-right-short text-primary fs-6 me-1"></i> <span class="summary-text">' + item + '</span></li>');
-      });
+    function formatTimeline(minWeeks, maxWeeks) {
+      return minWeeks + '-' + maxWeeks + ' weeks';
     }
 
-    // Attach listeners
-    $estimatorForm.on('change input', 'select, input', function () {
+    function resolvePackageKey() {
+      var goalKey = goalConfig[$('#est-goal').val()].package;
+      var structureKey = structureConfig[$('#est-structure').val()].package;
+      var score = Math.max(packageOrder.indexOf(goalKey), packageOrder.indexOf(structureKey));
+
+      if ($('#est-content').val() === 'guided' && score < 2) {
+        score += 1;
+      }
+
+      return packageOrder[Math.min(score, packageOrder.length - 1)];
+    }
+
+    function renderSummaryItem(text) {
+      return '<li><i class="bi bi-check2"></i><span class="summary-text">' + text + '</span></li>';
+    }
+
+    function updateEstimator() {
+      var packageKey = resolvePackageKey();
+      var selectedPackage = packageConfig[packageKey];
+      var selectedGoal = goalConfig[$('#est-goal').val()];
+      var selectedStructure = structureConfig[$('#est-structure').val()];
+      var selectedContent = contentConfig[$('#est-content').val()];
+      var selectedSupport = supportConfig[$('#est-support').val()];
+
+      var minWeeks = selectedPackage.weeksMin + selectedContent.addMin;
+      var maxWeeks = selectedPackage.weeksMax + selectedContent.addMax;
+
+      if ($('#est-support').val() === 'ongoing') {
+        maxWeeks += 1;
+      }
+
+      $('#calc-package-name').text(selectedPackage.label);
+      $('#calc-package-subtitle').text(selectedPackage.subtitle);
+      $('#calc-timeline').text(formatTimeline(minWeeks, maxWeeks));
+      $('#calc-site-type').text(selectedPackage.siteType);
+      $('#calc-context').text(selectedPackage.context);
+      $('#calc-next-step').text(selectedPackage.nextStep);
+
+      var $summaryList = $('#calc-summary-list');
+      $summaryList.empty();
+      selectedPackage.features.forEach(function (feature) {
+        $summaryList.append(renderSummaryItem(feature));
+      });
+      $summaryList.append(renderSummaryItem(selectedGoal.detail));
+      $summaryList.append(renderSummaryItem(selectedStructure.detail));
+      $summaryList.append(renderSummaryItem(selectedContent.detail));
+      $summaryList.append(renderSummaryItem(selectedSupport.detail));
+    }
+
+    function presetPackage(packageKey) {
+      if (packageKey === 'starter') {
+        $('#est-goal').val('getting-online');
+        $('#est-structure').val('focused');
+        $('#est-content').val('ready');
+        $('#est-support').val('none');
+      }
+
+      if (packageKey === 'standard') {
+        $('#est-goal').val('ready-grow');
+        $('#est-structure').val('multi');
+        $('#est-content').val('refine');
+        $('#est-support').val('light');
+      }
+
+      if (packageKey === 'premium') {
+        $('#est-goal').val('custom-build');
+        $('#est-structure').val('advanced');
+        $('#est-content').val('guided');
+        $('#est-support').val('ongoing');
+      }
+    }
+
+    $estimatorForm.on('change input', 'select', function () {
       updateEstimator();
     });
 
-    // Handle "Customize this package" buttons from Tier Section
-    $('.select-tier-btn').on('click', function (e) {
+    $('.select-package-btn').on('click', function (e) {
       e.preventDefault();
-      var tier = $(this).data('tier');
-      $('#est-site-type').val(tier);
-
-      // Auto-adjust pages based on tier preset logic
-      if (tier === 'launch') { $('#est-pages').val(2); $('#est-cms').val('none'); }
-      if (tier === 'business') { $('#est-pages').val(8); $('#est-cms').val('basic'); }
-      if (tier === 'growth') { $('#est-pages').val(15); $('#est-cms').val('full'); }
-      if (tier === 'enterprise') { $('#est-pages').val(25); $('#est-cms').val('full'); }
-
+      presetPackage($(this).data('package'));
       updateEstimator();
 
-      // Scroll to estimator smoothly
       $('html, body').animate({
-        scrollTop: $('#estimator').offset().top - 80
+        scrollTop: $('#scope-estimator').offset().top - 80
       }, 500);
     });
 
-    // Initialize to default selected state on load
     updateEstimator();
   }
 
   /* ─── Global Print Invoice Hook ─── */
   window.printEstimate = function () {
+    if (!$('#packages-estimator-form').length) return;
+
     var dateString = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-    var tierText = $('#calc-tier-badge').text();
+    var packageText = $('#calc-package-name').text();
+    var subtitleText = $('#calc-package-subtitle').text();
     var timelineText = $('#calc-timeline').text();
-    var priceText = $('#calc-price-range').text();
+    var siteTypeText = $('#calc-site-type').text();
 
     var summaryHtml = '';
     $('#calc-summary-list .summary-text').each(function () {
@@ -327,12 +370,52 @@
     });
 
     $('#print-date').text(dateString);
-    $('#print-tier').text(tierText);
+    $('#print-package').text(packageText);
     $('#print-timeline').text(timelineText);
-    $('#print-price').text(priceText);
+    $('#print-site-type').text(siteTypeText);
+    $('#print-package-repeat').text(packageText);
+    $('#print-package-subtitle').text(subtitleText);
+    $('#print-package-meta').text(siteTypeText);
     $('#print-summary-body').html(summaryHtml);
 
     window.print();
+  };
+
+  window.emailEstimate = function () {
+    if (!$('#packages-estimator-form').length) return;
+
+    var packageText = $('#calc-package-name').text();
+    var subtitleText = $('#calc-package-subtitle').text();
+    var timelineText = $('#calc-timeline').text();
+    var siteTypeText = $('#calc-site-type').text();
+    var nextStepText = $('#calc-next-step').text();
+    var summaryLines = [];
+
+    $('#calc-summary-list .summary-text').each(function () {
+      summaryLines.push('- ' + $(this).text());
+    });
+
+    var subject = 'Starting scope request - ' + packageText;
+    var body = [
+      'Hi Volatile Solutions,',
+      '',
+      'I built a starting scope on your packages page and would like to talk through it.',
+      '',
+      'Recommended package: ' + packageText,
+      'Starting scope: ' + subtitleText,
+      'Estimated timeline: ' + timelineText,
+      'Website type: ' + siteTypeText,
+      '',
+      'Summary:',
+      summaryLines.join('\n'),
+      '',
+      'Next step:',
+      nextStepText,
+      '',
+      'Thanks,'
+    ].join('\n');
+
+    window.location.href = 'mailto:volatile-solutions@outlook.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
   };
 
 })(jQuery);

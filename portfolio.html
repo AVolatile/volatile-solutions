@@ -23,7 +23,7 @@
     rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/bootstrap-icons.css" rel="stylesheet">
-  <link href="css/templatemo-topic-listing.css?v=20260302e" rel="stylesheet">
+  <link href="css/templatemo-topic-listing.css?v=20260409b" rel="stylesheet">
   <link rel="icon" type="image/png" href="images/favicon.png?v=1" />
   <link rel="shortcut icon" type="image/png" href="images/favicon.png?v=1" />
   <link rel="apple-touch-icon" href="images/favicon.png?v=1" />
@@ -56,70 +56,93 @@
       </div>
     </nav>
 
-    <header class="site-header site-header--agency d-flex flex-column justify-content-center align-items-center">
+    <header class="site-header site-header--agency portfolio-hero">
       <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-8 col-12 mx-auto text-center">
-            <h1 class="text-white display-4 fw-bold mb-3">Selected Work</h1>
-            <p class="text-white-50 lead mb-0">Websites, brand systems, and growth projects we've shipped for clients.
-            </p>
+        <div class="portfolio-hero__inner">
+          <div class="portfolio-hero__eyebrow">
+            <span class="portfolio-hero__eyebrow-chip">Portfolio</span>
+            <span class="portfolio-hero__eyebrow-copy">Built for real clients, launches, and brand momentum.</span>
+          </div>
+
+          <h1 class="portfolio-hero__title">Selected Work</h1>
+          <p class="portfolio-hero__subtitle">Websites, brand systems, and growth projects we&rsquo;ve shipped for
+            clients.</p>
+
+          <div class="portfolio-hero__meta" aria-label="Portfolio categories">
+            <span class="portfolio-hero__meta-item">Websites</span>
+            <span class="portfolio-hero__meta-item">Brand Systems</span>
+            <span class="portfolio-hero__meta-item">Live Launches</span>
           </div>
         </div>
       </div>
     </header>
 
     <!-- Featured Project -->
-    <section class="section-padding section-bg pb-0">
+    <section class="section-padding section-bg pb-0 portfolio-showcase">
       <div class="container">
-        <div class="row align-items-center mb-5">
+        <div class="row mb-5">
           <div class="col-12">
-            <div class="d-flex align-items-center mb-4">
-              <span class="badge bg-primary rounded-pill px-3 py-2 text-uppercase tracking-wider fw-semibold"
-                style="letter-spacing: 0.05em; font-size: 0.75rem;">Featured</span>
-              <div class="ms-3" style="height: 1px; flex-grow: 1; background-color: rgba(19, 84, 122, 0.1);"></div>
-            </div>
+            <div class="portfolio-feature">
+              <div class="portfolio-feature__content">
+                <div class="portfolio-feature__eyebrow">
+                  <span class="portfolio-feature__eyebrow-chip">Featured Site</span>
+                  <span class="portfolio-feature__eyebrow-copy">First real client project, now fully live.</span>
+                </div>
 
-            <div class="agency-featured-card">
-              <div class="row g-0 align-items-center">
-                <div class="col-lg-6 col-12 p-4 p-lg-5 order-2 order-lg-1">
-                  <div class="d-flex gap-2 mb-3 flex-wrap">
-                    <span class="badge bg-light text-dark shadow-sm">SaaS Application</span>
-                    <span class="badge bg-light text-dark shadow-sm">Enterprise Identity</span>
+                <h2 class="portfolio-feature__title">Moody Brewer Coffee Shop</h2>
+                <p class="portfolio-feature__lede">A coffee shop website built with a richer, more atmospheric visual
+                  tone. This project marked a major milestone for the studio: the first real client site carried from
+                  concept through completion.</p>
+
+                <div class="portfolio-feature__tags" aria-label="Project highlights">
+                  <span class="portfolio-feature__tag">Coffee Shop</span>
+                  <span class="portfolio-feature__tag">Brand Presence</span>
+                  <span class="portfolio-feature__tag">Completed Website</span>
+                </div>
+
+                <div class="portfolio-feature__details">
+                  <article class="portfolio-feature__detail">
+                    <span class="portfolio-feature__detail-label">Project Type</span>
+                    <strong>Cafe website</strong>
+                    <p>Built to feel warm, welcoming, and on-brand from the first scroll.</p>
+                  </article>
+                  <article class="portfolio-feature__detail">
+                    <span class="portfolio-feature__detail-label">Milestone</span>
+                    <strong>First real client</strong>
+                    <p>An early turning point that set the tone for the work that followed.</p>
+                  </article>
+                  <article class="portfolio-feature__detail">
+                    <span class="portfolio-feature__detail-label">Status</span>
+                    <strong>Live and complete</strong>
+                    <p>The site is finished and available at its production domain.</p>
+                  </article>
+                </div>
+
+                <div class="portfolio-feature__actions">
+                  <a class="btn btn--primary portfolio-feature__cta" href="https://themoodybrewer.net" target="_blank"
+                    rel="noopener">Visit Live Site <i class="bi-arrow-right ms-2"></i></a>
+                  <a class="portfolio-feature__domain" href="https://themoodybrewer.net" target="_blank"
+                    rel="noopener">themoodybrewer.net</a>
+                </div>
+              </div>
+
+              <div class="portfolio-feature__visual">
+                <div class="portfolio-feature__visual-frame">
+                  <div class="portfolio-feature__screen-bar">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <p>Moody Brewer</p>
                   </div>
-                  <h2 class="h1 fw-bold mb-3 text-dark">Cloud Keep Enterprise</h2>
-                  <p class="text-muted lead mb-4">A complete ground-up rebuild of the Cloud Keep client portal. We
-                    engineered a robust, intuitive interface for managing complex data hierarchies while establishing a
-                    commanding new brand identity.</p>
-
-                  <div class="agency-metrics-grid mb-4">
-                    <div class="metric-item">
-                      <strong class="d-block text-primary h4 mb-0">+40%</strong>
-                      <span class="text-muted small text-uppercase" style="letter-spacing: 0.05em;">User
-                        Retention</span>
-                    </div>
-                    <div class="metric-item">
-                      <strong class="d-block text-primary h4 mb-0">React</strong>
-                      <span class="text-muted small text-uppercase" style="letter-spacing: 0.05em;">Frontend
-                        Stack</span>
-                    </div>
-                    <div class="metric-item">
-                      <strong class="d-block text-primary h4 mb-0">6 Wks</strong>
-                      <span class="text-muted small text-uppercase" style="letter-spacing: 0.05em;">Total Build
-                        Time</span>
-                    </div>
-                  </div>
-
-                  <div class="d-flex gap-3 mt-2">
-                    <a class="btn btn--primary btn--lg" href="https://cloud-keep.netlify.app/" target="_blank"
-                      rel="noopener">View Live Site <i class="bi-arrow-right ms-2"></i></a>
-                    <button class="btn btn--secondary btn--lg" disabled>Case Study Coming Soon</button>
+                  <div class="portfolio-feature__image-shell">
+                    <img src="images/portfolio/moody-brewer-thumbnail.png" class="img-fluid w-100"
+                      alt="Moody Brewer Coffee Shop website preview">
                   </div>
                 </div>
-                <div class="col-lg-6 col-12 order-1 order-lg-2">
-                  <div class="featured-image-wrapper p-3 p-lg-0">
-                    <img src="images/portfolio/cloud-keep-thumbnail.png" class="img-fluid rounded-4 shadow-lg w-100"
-                      alt="Cloud Keep Showcase" style="object-fit: cover; aspect-ratio: 4/3;">
-                  </div>
+
+                <div class="portfolio-feature__note">
+                  <span class="portfolio-feature__note-label">Studio note</span>
+                  <p>The featured spot now highlights the launch that made the portfolio feel real.</p>
                 </div>
               </div>
             </div>
@@ -272,19 +295,20 @@
               </div>
               <div class="agency-project-content">
                 <div class="d-flex gap-2 mb-2 flex-wrap">
+                  <span class="agency-tag">Coffee Shop</span>
                   <span class="agency-tag">Branding</span>
-                  <span class="agency-tag">Landing Page</span>
                 </div>
-                <h3 class="agency-project-title">Moody Brewer</h3>
-                <p class="agency-project-desc">Brand + site concept with playful visuals, motion design, and a strong
-                  identity system.</p>
+                <h3 class="agency-project-title">Moody Brewer Coffee Shop</h3>
+                <p class="agency-project-desc">Coffee shop website with a warm, cinematic brand feel and a polished
+                  browsing experience built for a real client launch.</p>
                 <div class="agency-project-metrics">
-                  <div class="metric"><i class="bi-check-circle text-primary me-1"></i> Identity System</div>
-                  <div class="metric"><i class="bi-check-circle text-primary me-1"></i> Motion Design</div>
-                  <div class="metric"><i class="bi-check-circle text-primary me-1"></i> Web Concept</div>
+                  <div class="metric"><i class="bi-check-circle text-primary me-1"></i> Brand Identity</div>
+                  <div class="metric"><i class="bi-check-circle text-primary me-1"></i> Custom Website</div>
+                  <div class="metric"><i class="bi-check-circle text-primary me-1"></i> Live Launch</div>
                 </div>
                 <div class="agency-project-actions">
-                  <button class="btn btn--primary btn--sm btn--full mb-2" disabled>Deployment Pending</button>
+                  <a class="btn btn--primary btn--sm btn--full mb-2" href="https://themoodybrewer.net"
+                    target="_blank" rel="noopener">View Live Site</a>
                   <button class="btn btn--secondary btn--sm btn--full" disabled>Case Study</button>
                 </div>
               </div>

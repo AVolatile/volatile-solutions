@@ -5284,13 +5284,13 @@ footer.site-footer.enterprise-footer {
    PORTFOLIO PAGE REBUILD
    ========================================================================= */
 .portfolio-page-hero .hero-title {
-  max-width: 13ch;
+  max-width: 10ch;
   margin-left: auto;
   margin-right: auto;
 }
 
 .portfolio-page-hero .hero-lead {
-  max-width: 780px;
+  max-width: 44ch;
 }
 
 .portfolio-spotlight-section {
@@ -5455,18 +5455,19 @@ footer.site-footer.enterprise-footer {
   position: relative;
   overflow: hidden;
   border-bottom: 1px solid #edf2f7;
+  background: linear-gradient(180deg, #f7fafc 0%, #edf3f8 100%);
 }
 
 .portfolio-work-card__media img {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
-  transition: transform 0.45s ease;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
 }
 
 .portfolio-work-card:hover .portfolio-work-card__media img {
-  transform: scale(1.04);
+  transform: none;
 }
 
 .portfolio-work-card__body {

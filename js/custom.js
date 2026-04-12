@@ -113,13 +113,10 @@
     $btn.addClass('active').attr('aria-pressed', 'true');
 
     // Show / hide cards
-    $('.portfolio-grid .col').each(function () {
-      var cats = ($(this).data('cats') || '').toString();
-      if (filter === 'all' || cats.indexOf(filter) !== -1) {
-        $(this).removeClass('d-none');
-      } else {
-        $(this).addClass('d-none');
-      }
+    $('.portfolio-grid > [data-cats]').each(function () {
+      var cats = ($(this).data('cats') || '').toString().split(/\s+/).filter(Boolean);
+      var isMatch = filter === 'all' || cats.indexOf(filter) !== -1;
+      $(this).toggleClass('d-none', !isMatch);
     });
   });
 

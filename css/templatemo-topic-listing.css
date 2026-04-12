@@ -6380,3 +6380,139 @@ body.sticky-active .site-navbar__shell,
     gap: 8px;
   }
 }
+
+
+/*---------------------------------------
+  CONTACT PAGE — HERO PANEL FORM
+-----------------------------------------*/
+
+.contact-hero-panel {
+  max-width: none;
+  margin-left: 0;
+}
+
+/* Override hero-panel-status for the bi-calendar-check icon size on contact */
+.contact-hero-panel .hero-panel-status .bi {
+  font-size: 0.85rem;
+  color: #7fe7bc;
+}
+
+/* Form inside the dark hero panel */
+.contact-hero-panel .form-control,
+.contact-hero-panel .form-select {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #f0f8ff;
+  border-radius: 12px;
+}
+
+.contact-hero-panel .form-control::placeholder,
+.contact-hero-panel .form-select option {
+  color: rgba(230, 244, 255, 0.55);
+}
+
+.contact-hero-panel .form-control:focus,
+.contact-hero-panel .form-select:focus {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.08) !important;
+  color: #ffffff;
+}
+
+/* Keep Bootstrap's own select arrow; just override bg/border/color */
+.contact-hero-panel .form-select {
+  background-color: rgba(255, 255, 255, 0.07);
+}
+
+/* Floating label colours inside dark panel */
+.contact-hero-panel .form-floating > label {
+  color: rgba(230, 244, 255, 0.65);
+}
+
+.contact-hero-panel .form-floating > .form-control:focus ~ label,
+.contact-hero-panel .form-floating > .form-control:not(:placeholder-shown) ~ label,
+.contact-hero-panel .form-floating > .form-select ~ label {
+  color: rgba(230, 244, 255, 0.85);
+}
+
+.contact-hero-panel .form-control.is-invalid,
+.contact-hero-panel .form-select.is-invalid {
+  border-color: #f87171;
+}
+
+.contact-hero-panel .contact-textarea {
+  min-height: 120px;
+}
+
+/* Success state inside panel */
+.contact-hero-panel #formSuccess h4 {
+  color: #f0f8ff !important;
+}
+
+.contact-hero-panel #formSuccess .text-muted {
+  color: rgba(230, 244, 255, 0.75) !important;
+}
+
+/*---------------------------------------
+  CONTACT PAGE — DIRECT LINKS BLOCK
+-----------------------------------------*/
+
+/* ── Direct contact links block (lives inside white about-story-section) ── */
+.contact-direct-links {
+  display: grid;
+  gap: 20px;
+  padding: 1.5rem;
+  border-radius: 20px;
+  background: var(--section-bg-color);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-direct-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.contact-icon-wrapper-light {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(19, 84, 122, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+  border: 1px solid rgba(19, 84, 122, 0.12);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.contact-direct-label {
+  display: block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-muted);
+  margin-bottom: 4px;
+  font-family: var(--title-font-family);
+  font-weight: var(--font-weight-semibold);
+}
+
+.contact-direct-value {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--dark-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a.contact-direct-value:hover {
+  color: var(--primary-color);
+}
+
+span.contact-direct-value {
+  color: #333;
+}
+

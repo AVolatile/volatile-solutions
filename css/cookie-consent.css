@@ -1,0 +1,303 @@
+/* ═══════════════════════════════════════════════════════════════
+   VOLATILE SOLUTIONS — Cookie Consent Banner + Rate Limiter UI
+   Appended styles only — never overwrites existing rules.
+   ═══════════════════════════════════════════════════════════════
+
+   THEME SNAPSHOT (from templatemo-topic-listing.css :root)
+   ─────────────────────────────────────────────────────────────
+   --primary-color:              #13547a
+   --secondary-color:            #1a6fa0
+   --custom-btn-bg-hover-color:  #0e2f48
+   --white-color:                #ffffff
+   --dark-color:                 #000000
+   --p-color:                    #717275
+   --border-color:               #e3e9f2
+   --section-bg-color:           #f0f8ff
+
+   --title-font-family:  'Montserrat', sans-serif
+   --body-font-family:   'Open Sans', sans-serif
+
+   --radius-sm:   10px
+   --radius-md:   20px
+   --radius-lg:   100px   (pill)
+
+   --shadow-sm:   0 4px 12px rgba(0,0,0,.06)
+   --shadow-md:   0 12px 30px rgba(0,0,0,.08)
+   --shadow-lg:   0 24px 50px -12px rgba(15,41,73,.18)
+
+   --font-weight-semibold: 600
+   --font-weight-bold:     700
+
+   Button pattern (site): bg --primary-color, white text, radius pill,
+                           hover --custom-btn-bg-hover-color
+   ─────────────────────────────────────────────────────────────
+*/
+
+/* ─────────────────────────────────────────
+   COOKIE CONSENT BANNER
+   ───────────────────────────────────────── */
+
+#vs-cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  padding: 16px 24px 20px;
+  pointer-events: none; /* outer wrapper transparent to clicks */
+  /* Isolate from any ancestor transform/filter that could break position:fixed */
+  will-change: transform;
+  isolation: isolate;
+  animation: vs-banner-slideup 380ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes vs-banner-slideup {
+  from {
+    transform: translateY(110%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #vs-cookie-banner {
+    animation: none;
+  }
+}
+
+/* ── Banner card ── */
+#vs-cookie-banner__card {
+  pointer-events: all;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background: var(--white-color);
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-md); /* 20px — matches site cards */
+  box-shadow: var(--shadow-lg);
+  padding: 20px 28px;
+  max-width: 880px;
+  width: 100%;
+}
+
+/* ── Icon badge ── */
+#vs-cookie-banner__icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm); /* 10px */
+  background: rgba(19, 84, 122, 0.1);
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+/* ── Copy ── */
+#vs-cookie-banner__copy {
+  flex: 1;
+  min-width: 0;
+}
+
+#vs-cookie-banner__heading {
+  font-family: var(--title-font-family);
+  font-size: 15px;
+  font-weight: var(--font-weight-semibold);
+  color: var(--dark-color);
+  margin: 0 0 3px 0;
+  line-height: 1.2;
+}
+
+#vs-cookie-banner__body {
+  font-family: var(--body-font-family);
+  font-size: 13px;
+  color: var(--p-color);
+  line-height: 1.55;
+  margin: 0;
+}
+
+#vs-cookie-banner__body a {
+  color: var(--primary-color);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.15s ease;
+}
+
+#vs-cookie-banner__body a:hover {
+  color: var(--secondary-color);
+}
+
+/* ── Action buttons ── */
+#vs-cookie-banner__actions {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+  align-items: center;
+}
+
+/* Base button — resets all browser defaults */
+.vs-cookie-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--body-font-family);
+  font-size: 13px;
+  font-weight: var(--font-weight-semibold);
+  line-height: 1;
+  padding: 10px 22px;
+  border-radius: var(--radius-lg); /* pill — matches site's CTAs */
+  border: 2px solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: background-color 0.18s ease, border-color 0.18s ease,
+              color 0.18s ease, transform 0.15s ease, box-shadow 0.15s ease;
+  -webkit-font-smoothing: antialiased;
+}
+
+.vs-cookie-btn:focus-visible {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Accept = site's primary button */
+#vs-cookie-accept {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border-color: var(--primary-color);
+}
+
+#vs-cookie-accept:hover {
+  background-color: var(--custom-btn-bg-hover-color);
+  border-color: var(--custom-btn-bg-hover-color);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(19, 84, 122, 0.35);
+}
+
+#vs-cookie-accept:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Decline = ghost / outline */
+#vs-cookie-decline {
+  background-color: transparent;
+  color: var(--p-color);
+  border-color: var(--border-color);
+}
+
+#vs-cookie-decline:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  background-color: rgba(19, 84, 122, 0.06);
+}
+
+/* ── Responsive ── */
+@media (max-width: 680px) {
+  #vs-cookie-banner {
+    padding: 12px 16px 16px;
+  }
+
+  #vs-cookie-banner__card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px;
+  }
+
+  #vs-cookie-banner__icon {
+    display: none; /* save space on mobile */
+  }
+
+  #vs-cookie-banner__actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .vs-cookie-btn {
+    flex: 1;
+    text-align: center;
+    justify-content: center;
+    padding: 11px 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  #vs-cookie-banner__actions {
+    flex-direction: column;
+  }
+
+  .vs-cookie-btn {
+    width: 100%;
+  }
+}
+
+/* ─────────────────────────────────────────
+   RATE LIMITER — Inline Error Message
+   ───────────────────────────────────────── */
+
+.vs-rate-error {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  background: rgba(231, 76, 60, 0.06);
+  border: 1px solid rgba(231, 76, 60, 0.28);
+  border-radius: var(--radius-sm); /* 10px */
+  padding: 10px 14px;
+  margin-top: 10px;
+  font-family: var(--body-font-family);
+  font-size: 13px;
+  color: #b03a2e; /* darkened red — passes 4.5:1 WCAG AA on white */
+  line-height: 1.5;
+}
+
+.vs-rate-error[hidden] {
+  display: none !important;
+}
+
+.vs-rate-error__icon {
+  flex-shrink: 0;
+  font-size: 0.95rem;
+  margin-top: 1px;
+}
+
+.vs-rate-error__text {
+  flex: 1;
+}
+
+.vs-rate-error__countdown {
+  font-weight: var(--font-weight-semibold);
+}
+
+/* ── Cookie Preferences footer button ── */
+#vs-cookie-prefs-link {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  /* Inherits .enterprise-footer__bottom-link color/size from templatemo */
+  font-family: var(--body-font-family);
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.65);
+  text-decoration: none;
+  transition: color 0.15s ease;
+  display: inline;
+  line-height: inherit;
+}
+
+#vs-cookie-prefs-link:hover {
+  color: var(--white-color);
+}
+
+#vs-cookie-prefs-link:focus-visible {
+  outline: 2px solid rgba(128, 208, 199, 0.8);
+  outline-offset: 2px;
+  border-radius: 2px;
+}

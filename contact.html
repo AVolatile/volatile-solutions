@@ -30,6 +30,7 @@
   <link href="css/bootstrap.min.css" rel="stylesheet" />
   <link href="css/bootstrap-icons.css" rel="stylesheet" />
   <link href="css/templatemo-topic-listing.css?v=20260412portfolioimg1" rel="stylesheet" />
+  <link href="css/cookie-consent.css" rel="stylesheet" />
   <link rel="icon" type="image/png" href="images/favicon.png?v=1" />
   <link rel="shortcut icon" type="image/png" href="images/favicon.png?v=1" />
   <link rel="apple-touch-icon" href="images/favicon.png?v=1" />
@@ -140,6 +141,14 @@
                     <label for="contact-message" class="contact-form-label">Project goals &amp; timeline</label>
                     <textarea class="form-control contact-textarea" id="contact-message" name="message"
                       placeholder="Tell us a bit about your business and what you're looking to accomplish…" required></textarea>
+                  </div>
+                  <div id="contactFormError" class="col-12" style="display:none;">
+                    <div class="alert alert-danger d-flex align-items-start gap-2 mb-0 py-3 px-3" role="alert" style="border-radius:10px;font-size:0.875rem;">
+                      <i class="bi bi-exclamation-circle-fill flex-shrink-0 mt-1"></i>
+                      <div>
+                        <strong>Something went wrong.</strong> Your message couldn't be sent right now. Please email us directly at <a href="mailto:volatile-solutions@outlook.com" class="alert-link">volatile-solutions@outlook.com</a> or call <a href="tel:401-545-6860" class="alert-link">401-545-6860</a>.
+                      </div>
+                    </div>
                   </div>
                   <div class="col-12 mt-2">
                     <button type="submit" id="contact-submit-btn" class="btn btn-primary w-100">Send Request</button>
@@ -314,6 +323,8 @@
           <a href="privacy.html" class="enterprise-footer__bottom-link" data-no-transition>Privacy</a>
           <a href="terms.html" class="enterprise-footer__bottom-link" data-no-transition>Legal</a>
           <a href="cookies.html" class="enterprise-footer__bottom-link" data-no-transition>Cookies</a>
+        
+          <button type="button" id="vs-cookie-prefs-link" class="enterprise-footer__bottom-link">Cookie Preferences</button>
         </div>
       </div>
     </div>
@@ -325,6 +336,8 @@
   <!-- EmailJS SDK -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script>emailjs.init({ publicKey: 'QkYLIjv5ekuBu2-qK' });</script>
+  <script src="js/rate-limiter.js"></script>
+  <script src="js/cookie-consent.js"></script>
   <script src="js/custom.js?v=20260412filters1"></script>
 </body>
 

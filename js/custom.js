@@ -123,6 +123,13 @@
   /* ─── Contact form validation ─── */
   var $contactForm = $('#contactForm');
   if ($contactForm.length) {
+
+    // Rate limiter: 5 submissions per 60 seconds (form_submission default)
+    // ASSUMPTION: RateLimiter is loaded from rate-limiter.js before custom.js
+    var _contactLimiter = (typeof RateLimiter !== 'undefined')
+      ? new RateLimiter('contact_submit', 5, 60000)
+      : null;
+
     $contactForm.on('submit', function (e) {
       e.preventDefault();
 
@@ -131,6 +138,18 @@
 
       // Clear previous errors
       $(form).find('.is-invalid').removeClass('is-invalid');
+
+      // ── Rate limit check (before field validation to avoid extra localStorage writes) ──
+      if (_contactLimiter) {
+        var rlStatus = _contactLimiter.check();
+        if (!rlStatus.allowed) {
+          var submitBtn = form.querySelector('button[type="submit"]');
+          RateLimiter.showLockoutUI(submitBtn, rlStatus.retryAfterMs, function () {
+            // Re-enable naturally handled by showLockoutUI's clear()
+          });
+          return; // stop processing
+        }
+      }
 
       // Required field checks
       $(form).find('[required]').each(function () {
@@ -144,15 +163,20 @@
       var $email = $(form).find('#contact-email');
       if ($email.length && $email.val()) {
         var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailPattern.test($email.val())) {
+        if (!emailPattern.test($email.val().trim())) {
           $email.addClass('is-invalid');
           valid = false;
         }
       }
 
       if (valid) {
+        // Record attempt only after passing field validation
+        if (_contactLimiter) _contactLimiter.record();
+
         var $submitBtn = $(form).find('button[type="submit"]');
         var originalText = $submitBtn.text();
+        var $errorBanner = $('#contactFormError');
+        $errorBanner.hide();
         $submitBtn.prop('disabled', true).html('<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Sending...');
 
         var templateParams = {
@@ -171,8 +195,9 @@
           })
           .catch(function (error) {
             console.error('EmailJS error:', error);
-            alert('There was an issue sending your request. Please email volatile-solutions@outlook.com directly.');
+            $errorBanner.show();
             $submitBtn.prop('disabled', false).text(originalText);
+            $('html, body').animate({ scrollTop: $errorBanner.offset().top - 20 }, 300);
           });
       }
     });

@@ -6391,6 +6391,18 @@ body.sticky-active .site-navbar__shell,
   margin-left: 0;
 }
 
+/* Label above the input fields */
+.contact-form-label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.76rem;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(220, 238, 255, 0.72);
+  font-family: var(--title-font-family);
+}
+
 /* Override hero-panel-status for the bi-calendar-check icon size on contact */
 .contact-hero-panel .hero-panel-status .bi {
   font-size: 0.85rem;
@@ -6422,17 +6434,6 @@ body.sticky-active .site-navbar__shell,
 /* Keep Bootstrap's own select arrow; just override bg/border/color */
 .contact-hero-panel .form-select {
   background-color: rgba(255, 255, 255, 0.07);
-}
-
-/* Floating label colours inside dark panel */
-.contact-hero-panel .form-floating > label {
-  color: rgba(230, 244, 255, 0.65);
-}
-
-.contact-hero-panel .form-floating > .form-control:focus ~ label,
-.contact-hero-panel .form-floating > .form-control:not(:placeholder-shown) ~ label,
-.contact-hero-panel .form-floating > .form-select ~ label {
-  color: rgba(230, 244, 255, 0.85);
 }
 
 .contact-hero-panel .form-control.is-invalid,

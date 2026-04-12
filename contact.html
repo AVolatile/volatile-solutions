@@ -102,65 +102,51 @@
               </div>
 
               <!-- Contact Form -->
-              <form id="contactForm" action="https://formsubmit.co/volatile-solutions@outlook.com" method="post"
-                class="custom-form contact-form" role="form" novalidate>
-                <!-- Formsubmit routing settings -->
-                <input type="hidden" name="_subject" value="New Project Inquiry — Volatile Solutions">
-                <input type="hidden" name="_template" value="table">
-                <input type="hidden" name="_captcha" value="false">
+              <form id="contactForm" class="custom-form contact-form" role="form" novalidate>
 
                 <div class="row g-3">
                   <div class="col-md-6">
-                    <div class="form-floating">
-                      <input type="text" name="name" id="contact-name" class="form-control"
-                        placeholder=" " required>
-                      <label for="contact-name">Your Name</label>
-                    </div>
+                    <label for="contact-name" class="contact-form-label">Your Name</label>
+                    <input type="text" name="name" id="contact-name" class="form-control"
+                      placeholder="Jane Smith" required>
                   </div>
                   <div class="col-md-6">
-                    <div class="form-floating">
-                      <input type="email" name="email" id="contact-email" class="form-control"
-                        placeholder=" " required>
-                      <label for="contact-email">Your Email</label>
-                    </div>
+                    <label for="contact-email" class="contact-form-label">Your Email</label>
+                    <input type="email" name="email" id="contact-email" class="form-control"
+                      placeholder="you@company.com" required>
                   </div>
                   <div class="col-12">
-                    <div class="form-floating">
-                      <select class="form-select" id="project-type" name="projectType" aria-label="Project Type">
-                        <option selected>Select Project Type</option>
-                        <option value="New Website Build">New Website Build</option>
-                        <option value="Website Refresh">Website Refresh</option>
-                        <option value="Custom Web Application">Custom Web Application</option>
-                        <option value="Ongoing Support">Ongoing Support</option>
-                        <option value="Other">Other / Not Sure Yet</option>
-                      </select>
-                      <label for="project-type">What do you need?</label>
-                    </div>
+                    <label for="project-type" class="contact-form-label">What do you need?</label>
+                    <select class="form-select" id="project-type" name="projectType" aria-label="Project Type">
+                      <option value="" selected disabled>Select a project type…</option>
+                      <option value="New Website Build">New Website Build</option>
+                      <option value="Website Refresh">Website Refresh</option>
+                      <option value="Custom Web Application">Custom Web Application</option>
+                      <option value="Ongoing Support">Ongoing Support</option>
+                      <option value="Other">Other / Not Sure Yet</option>
+                    </select>
                   </div>
                   <div class="col-12">
-                    <div class="form-floating">
-                      <select class="form-select" id="budget" name="budget" aria-label="Budget">
-                        <option selected>Select Scope</option>
-                        <option value="Small Scope (Starter)">Small Scope — Starter</option>
-                        <option value="Medium Scope (Standard)">Medium Scope — Standard</option>
-                        <option value="Large Scope (Premium)">Large Scope — Premium</option>
-                        <option value="Not Sure Yet">Not Sure Yet</option>
-                      </select>
-                      <label for="budget">Estimated Scope</label>
-                    </div>
+                    <label for="budget" class="contact-form-label">Estimated Scope</label>
+                    <select class="form-select" id="budget" name="budget" aria-label="Budget">
+                      <option value="" selected disabled>Select a scope…</option>
+                      <option value="Small Scope (Starter)">Small Scope — Starter</option>
+                      <option value="Medium Scope (Standard)">Medium Scope — Standard</option>
+                      <option value="Large Scope (Premium)">Large Scope — Premium</option>
+                      <option value="Not Sure Yet">Not Sure Yet</option>
+                    </select>
                   </div>
                   <div class="col-12">
-                    <div class="form-floating">
-                      <textarea class="form-control contact-textarea" id="contact-message" name="message"
-                        placeholder=" " required></textarea>
-                      <label for="contact-message">Project goals &amp; timeline</label>
-                    </div>
+                    <label for="contact-message" class="contact-form-label">Project goals &amp; timeline</label>
+                    <textarea class="form-control contact-textarea" id="contact-message" name="message"
+                      placeholder="Tell us a bit about your business and what you're looking to accomplish…" required></textarea>
                   </div>
                   <div class="col-12 mt-2">
                     <button type="submit" id="contact-submit-btn" class="btn btn-primary w-100">Send Request</button>
                   </div>
                 </div>
               </form>
+
 
               <!-- Success State -->
               <div id="formSuccess" class="text-center py-5" style="display: none;">
@@ -336,6 +322,9 @@
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/jquery.sticky.js"></script>
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>emailjs.init({ publicKey: 'QkYLIjv5ekuBu2-qK' });</script>
   <script src="js/custom.js?v=20260412filters1"></script>
 </body>
 

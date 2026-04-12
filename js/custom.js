@@ -155,24 +155,23 @@
         var originalText = $submitBtn.text();
         $submitBtn.prop('disabled', true).html('<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Sending...');
 
-        var formData = new FormData(form);
+        var templateParams = {
+          from_name:    $(form).find('#contact-name').val().trim(),
+          from_email:   $(form).find('#contact-email').val().trim(),
+          project_type: $(form).find('#project-type').val() || 'Not specified',
+          budget:       $(form).find('#budget').val() || 'Not specified',
+          message:      $(form).find('#contact-message').val().trim()
+        };
 
-        fetch("https://formsubmit.co/ajax/volatile-solutions@outlook.com", {
-          method: "POST",
-          body: formData,
-          headers: {
-            'Accept': 'application/json'
-          }
-        })
-          .then(function (response) { return response.json(); })
-          .then(function (data) {
-            // Show success state
+        emailjs.send('service_7yk7d1s', 'template_i4hq8r5', templateParams)
+          .then(function () {
             $(form).find('.row').fadeOut(200, function () {
               $('#formSuccess').fadeIn(300);
             });
           })
           .catch(function (error) {
-            alert('There was an issue sending your request. Please try emailing volatile-solutions@outlook.com directly.');
+            console.error('EmailJS error:', error);
+            alert('There was an issue sending your request. Please email volatile-solutions@outlook.com directly.');
             $submitBtn.prop('disabled', false).text(originalText);
           });
       }

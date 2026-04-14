@@ -37,59 +37,31 @@ https://templatemo.com/tm-590-topic-listing
 
         <main>
 
-            <nav class="navbar navbar-expand-lg">
-                <div class="container">
-                    <a class="navbar-brand" href="index.html">
-                        <i class="bi-back"></i>
-                        <span>Topic</span>
-                    </a>
-
-                    <div class="d-lg-none ms-auto me-4">
-                        <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
-                    </div>
-    
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-    
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ms-lg-5 me-lg-auto">
-                            <li class="nav-item">
-                                <a class="nav-link click-scroll" href="index.html#section_1">Home</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link click-scroll" href="index.html#section_2">Browse Topics</a>
-                            </li>
-    
-                            <li class="nav-item">
-                                <a class="nav-link click-scroll" href="index.html#section_3">How it works</a>
-                            </li>
-
-                            <li class="nav-item">
-                            </li>
-    
-                            <li class="nav-item">
-                                <a class="nav-link click-scroll" href="index.html#section_5">Contact</a>
-                            </li>
-
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#section_5" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
-
-                                <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                                    <li><a class="dropdown-item active" href="topics-listing.html">Topics Listing</a></li>
-
-                                    <li><a class="dropdown-item" href="contact.html">Contact Form</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-
-                        <div class="d-none d-lg-block">
-                            <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
-                        </div>
-                    </div>
-                </div>
-            </nav>
+                    <nav class="metric-nav" id="navbar">
+        <div class="container">
+            <a href="index.html" class="metric-nav__brand">
+                <img src="images/logo.png" alt="Volatile Solutions" class="metric-nav__logo-img">
+                <img src="images/vs-text.png" alt="Volatile Solutions" class="metric-nav__logo-text">
+            </a>
+            <ul class="metric-nav__links" id="navLinks">
+                <li><a href="index.html#section_1" class="click-scroll">Home</a></li>
+                <li><a href="index.html#services" class="click-scroll">Services</a></li>
+                <li><a href="portfolio.html" class="">Portfolio</a></li>
+                <li><a href="packages.html" class="">Packages</a></li>
+                <li><a href="about.html" class="">About</a></li>
+                <li><a href="contact.html" class="">Contact</a></li>
+                <li class="metric-nav__mobile-actions">
+                    <a href="contact.html" class="metric-nav__btn">Book a Call</a>
+                </li>
+            </ul>
+            <div class="metric-nav__actions">
+                <a href="contact.html" class="metric-nav__btn">Book a Call</a>
+            </div>
+            <button class="metric-nav__toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
 
 
             <header class="site-header d-flex flex-column justify-content-center align-items-center">
@@ -293,15 +265,16 @@ https://templatemo.com/tm-590-topic-listing
             </section>
         </main>
 
-		      <footer class="site-footer enterprise-footer">
+		          <footer class="site-footer enterprise-footer">
     <div class="container enterprise-footer__inner">
       <div class="enterprise-footer__top">
         <a class="enterprise-footer__brand" href="index.html" aria-label="Volatile Solutions home">
           <img src="images/logo.png" alt="Volatile Solutions logo" class="enterprise-footer__logo-mark" />
           <img src="images/vs-text.png" alt="Volatile Solutions" class="enterprise-footer__logo-text" />
         </a>
-        <p class="enterprise-footer__tagline">Enterprise-ready websites for founders and marketing teams who need speed, clarity, and measurable outcomes.</p>
-        <a href="contact.html" class="enterprise-footer__cta">Start a Project</a>
+        <p class="enterprise-footer__tagline">Websites and custom online tools for businesses that need a stronger,
+          more credible online presence.</p>
+        <a href="contact.html" class="enterprise-footer__cta">Contact</a>
       </div>
 
       <div class="enterprise-footer__grid">
@@ -317,7 +290,8 @@ https://templatemo.com/tm-590-topic-listing
         <nav class="enterprise-footer__col" aria-label="Contact">
           <h6>Contact</h6>
           <a href="contact.html" class="enterprise-footer__link">Contact Page</a>
-          <a href="mailto:volatile-soulutions@outlook.com" class="enterprise-footer__link">volatile-soulutions@outlook.com</a>
+          <a href="mailto:volatile-solutions@outlook.com"
+            class="enterprise-footer__link">volatile-solutions@outlook.com</a>
           <a href="tel:401-545-6860" class="enterprise-footer__link">401-545-6860</a>
           <span class="enterprise-footer__meta">Providence, Rhode Island</span>
         </nav>
@@ -331,9 +305,11 @@ https://templatemo.com/tm-590-topic-listing
 
         <nav class="enterprise-footer__col" aria-label="Social and support">
           <h6>Connect</h6>
-          <a href="https://www.linkedin.com/in/anthony-volatile-6836062ab/" class="enterprise-footer__link" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://github.com/AVolatile" class="enterprise-footer__link" target="_blank" rel="noopener">GitHub</a>
-          <a href="mailto:volatile-soulutions@outlook.com" class="enterprise-footer__link">Email Support</a>
+          <a href="https://www.linkedin.com/in/anthony-volatile-6836062ab/" class="enterprise-footer__link"
+            target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/AVolatile" class="enterprise-footer__link" target="_blank"
+            rel="noopener">GitHub</a>
+          <a href="mailto:volatile-solutions@outlook.com" class="enterprise-footer__link">Email Support</a>
         </nav>
       </div>
 
@@ -343,6 +319,8 @@ https://templatemo.com/tm-590-topic-listing
           <a href="privacy.html" class="enterprise-footer__bottom-link" data-no-transition>Privacy</a>
           <a href="terms.html" class="enterprise-footer__bottom-link" data-no-transition>Legal</a>
           <a href="cookies.html" class="enterprise-footer__bottom-link" data-no-transition>Cookies</a>
+        
+          <button type="button" id="vs-cookie-prefs-link" class="enterprise-footer__bottom-link">Cookie Preferences</button>
         </div>
       </div>
     </div>

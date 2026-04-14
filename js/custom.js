@@ -1,89 +1,42 @@
 (function ($) {
   'use strict';
 
-  var $navCollapse = $('#navbarNav');
-  var $navbar = $('.site-navbar');
+  /* ─── Metric Forge Nav Logic ─── */
+  var $navbar = $('.metric-nav');
+  var $navToggle = $('.metric-nav__toggle');
+  var $navLinks = $('.metric-nav__links');
 
-  function setNavOpenState(isOpen) {
-    $('body').toggleClass('nav-open', isOpen).css('overflow', isOpen ? 'hidden' : '');
-    $navbar.toggleClass('menu-open', isOpen);
-    $('.navbar-toggler').attr('aria-expanded', isOpen ? 'true' : 'false');
-  }
-
-  function closeMobileNav(restoreFocus) {
-    if (!$navCollapse.length || window.innerWidth >= 992 || !$navCollapse.hasClass('show')) {
-      setNavOpenState(false);
-      return;
-    }
-
-    var bsCollapse = bootstrap.Collapse.getInstance($navCollapse[0]);
-    if (!bsCollapse) {
-      bsCollapse = new bootstrap.Collapse($navCollapse[0], { toggle: false });
-    }
-
-    if (restoreFocus) {
-      $navCollapse.one('hidden.bs.collapse', function () {
-        $('.navbar-toggler').trigger('focus');
-      });
-    }
-
-    bsCollapse.hide();
-  }
-
-  /* ─── Sticky nav ─── */
+  /* Sticky nav with scroll blur */
   $(window).on('scroll', function () {
-    var scrollTop = $(window).scrollTop();
-    if (scrollTop > 250) {
+    if ($(window).scrollTop() > 40) {
+      $navbar.addClass('scrolled');
       $('body').addClass('sticky-active');
     } else {
+      $navbar.removeClass('scrolled');
       $('body').removeClass('sticky-active');
     }
   });
 
-  /* ─── Mobile nav: ESC key closes + focus trap ─── */
+  /* Custom Mobile nav slide-in */
+  $navToggle.on('click', function () {
+    $navToggle.toggleClass('active');
+    $navLinks.toggleClass('open');
+    $('body').css('overflow', $navLinks.hasClass('open') ? 'hidden' : '');
+  });
+
+  /* Close mobile menu on link click */
+  $navLinks.find('a').on('click', function () {
+    $navToggle.removeClass('active');
+    $navLinks.removeClass('open');
+    $('body').css('overflow', '');
+  });
+
+  /* Close mobile menu on ESC key */
   $(document).on('keydown', function (e) {
-    if (e.key === 'Escape') {
-      if ($navCollapse.hasClass('show')) {
-        closeMobileNav(true);
-      }
-    }
-  });
-
-  if ($navCollapse.length) {
-    $navCollapse.on('show.bs.collapse', function () {
-      setNavOpenState(true);
-    });
-
-    /* Keep focus inside open mobile nav */
-    $navCollapse.on('shown.bs.collapse', function () {
-      var $focusable = $(this).find('a, button').filter(':visible');
-      if ($focusable.length) $focusable.first().focus();
-    });
-
-    $navCollapse.on('hidden.bs.collapse', function () {
-      setNavOpenState(false);
-    });
-  }
-
-  $(window).on('resize', function () {
-    if (window.innerWidth >= 992) {
-      setNavOpenState(false);
-      if ($navCollapse.length) {
-        $navCollapse.removeClass('show').attr('style', '');
-      }
-    }
-  });
-
-  $(document).on('click', '.navbar-nav .nav-link, .site-navbar__cta', function () {
-    if (window.innerWidth < 992) {
-      var href = $(this).attr('href') || '';
-      if (href.charAt(0) !== '#') {
-        setNavOpenState(false);
-      }
-      if (!$navCollapse.length || !$navCollapse.hasClass('show')) return;
-      if (href.charAt(0) !== '#') {
-        closeMobileNav(false);
-      }
+    if (e.key === 'Escape' && $navLinks.hasClass('open')) {
+      $navToggle.removeClass('active');
+      $navLinks.removeClass('open');
+      $('body').css('overflow', '');
     }
   });
 
@@ -92,7 +45,7 @@
     var currentPage = window.location.pathname.split('/').pop() || 'index.html';
     if (currentPage === '') currentPage = 'index.html';
 
-    $('.navbar-nav .nav-link').each(function () {
+    $('.metric-nav__links a').each(function () {
       var href = $(this).attr('href') || '';
       var linkPage = href.split('#')[0];
 

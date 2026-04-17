@@ -5961,8 +5961,67 @@ footer.site-footer.enterprise-footer {
 }
 
 @media (max-width: 767.98px) {
+  .about-page-hero {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .about-page-hero .container {
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .about-page-hero .hero-enterprise-shell {
+    --bs-gutter-x: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .about-page-hero .hero-enterprise-shell > [class*="col-"] {
+    min-width: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .about-page-hero .hero-enterprise-copy,
+  .about-page-hero .hero-proof-strip,
+  .about-page-hero .hero-panel {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .about-page-hero .hero-title,
+  .about-page-hero .hero-lead {
+    max-width: 100%;
+  }
+
+  .about-page-hero .hero-title {
+    font-size: clamp(1.85rem, 7.6vw, 2.15rem);
+  }
+
   .about-page-hero .hero-panel {
     padding: 1.4rem;
+  }
+
+  .about-page-hero .hero-proof-item,
+  .about-page-hero .hero-panel {
+    overflow-wrap: break-word;
+  }
+
+  .about-page-hero .hero-proof-strip {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .about-page-hero .hero-panel-header {
+    align-items: flex-start;
+  }
+
+  .about-page-hero .hero-panel-status,
+  .about-team-role {
+    max-width: 100%;
+    white-space: normal;
+    line-height: 1.45;
   }
 
   .about-team-card {
